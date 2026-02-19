@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SignUp</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font Awesome -->
+     <link rel="icon" href="./bg remove.webp">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="signup.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- LEFT SECTION -->
+    <div class="left" data-aos="fade-up">
+        
+        <div class="form-box">
+            <!-- Common Heading -->
+            <div class="common-text">
+                <h2>Welcome Back!</h2>
+                <p>Please login or create an account to continue</p>
+            </div>
+
+            <!-- LOGIN -->
+            <div class="login">
+                <form id="loginForm">
+
+                    <label>Email</label>
+                    <div class="input-group">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" id="loginEmail" placeholder="Enter your email">
+                    </div>
+
+                    <label>Password</label>
+                    <div class="input-group">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" id="loginPassword" placeholder="Enter password">
+                    </div>
+
+                    <div class="forgot" onclick="showForgot()">Forgot Password?</div>
+                    <div class="error" id="loginError"></div>
+
+                    <button type="submit">Login</button>
+                </form>
+
+                <div class="switch" onclick="showSignup()">Don't have account? Sign Up</div>
+            </div>
+
+            <!-- SIGNUP -->
+            <div class="signup">
+                <form id="signupForm">
+
+                    <label>Full Name</label>
+                    <div class="input-group">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" id="signupName" placeholder="Enter your name">
+                    </div>
+
+                    <label>Email</label>
+                    <div class="input-group">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" id="signupEmail" placeholder="Enter email">
+                    </div>
+
+                    <label>Password</label>
+                    <div class="input-group">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" id="signupPassword" placeholder="Enter password">
+                    </div>
+
+                    <div class="forgot" onclick="showForgot()">Forgot Password?</div>
+                    <div class="error" id="signupError"></div>
+
+                    <button type="submit">Sign Up</button>
+                </form>
+
+                <div class="switch" onclick="showLogin()">Already have account? Login</div>
+            </div>
+
+            <!-- FORGOT -->
+            <div class="forgot-section">
+                <form id="forgotForm">
+
+                    <label>Email</label>
+                    <div class="input-group">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" id="forgotEmail" placeholder="Enter your email">
+                    </div>
+
+                    <div class="error" id="forgotError"></div>
+                    <button type="submit">Reset Password</button>
+                </form>
+
+                <div class="switch" onclick="showLogin()">Back to Login</div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- RIGHT SECTION -->
+    <div class="right" data-aos="fade-down">
+        <div class="overlay-content">
+            <h2 data-aos="zoom-in">Secure Software Authentication System</h2>
+            <p>Modern login & signup protection for your applications.</p>
+        </div>
+    </div>
+
+</div>
+
+<script src="signup.js"></script>
+
+
+
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 900,
+    easing: 'ease-in-out',
+    once: true,   // animation runs only once
+  });
+</script>
+
+</body>
+</html>
