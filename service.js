@@ -48,3 +48,20 @@ tabs.forEach(tab => {
     });
 
 });
+
+
+
+
+
+
+
+
+
+
+// const cards = document.querySelectorAll(".service-card");
+
+// cards.forEach(card => {
+//     card.addEventListener("click", function() {
+//         this.classList.toggle("active");
+//     });
+// });
