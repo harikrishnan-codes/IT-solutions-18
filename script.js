@@ -12,7 +12,14 @@ window.addEventListener("load", () => {
 
 
 
-// hamburger js 
+
+
+
+
+
+
+
+// ================= HAMBURGER =================
 
 const hamburger = document.getElementById("hamburger");
 const nav = document.querySelector(".nav");
@@ -20,6 +27,51 @@ const nav = document.querySelector(".nav");
 hamburger.addEventListener("click", () => {
     nav.classList.toggle("active");
 });
+
+
+// Close menu when clicking link (Better UX)
+
+document.querySelectorAll(".nav-links a").forEach(link => {
+    link.addEventListener("click", () => {
+        nav.classList.remove("active");
+    });
+});
+
+
+// ================= MOBILE DROPDOWN =================
+
+const dropdown = document.querySelector(".dropdown");
+
+dropdown.addEventListener("click", () => {
+    dropdown.classList.toggle("open");
+});
+
+// hamburger js 
+
+// const hamburger = document.getElementById("hamburger");
+// const nav = document.querySelector(".nav");
+
+// hamburger.addEventListener("click", () => {
+//     nav.classList.toggle("active");
+// });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

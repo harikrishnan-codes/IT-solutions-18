@@ -24,25 +24,39 @@
 
     <section class="hero-section">
 
-        <!-- HEADER -->
         <header class="header">
-            <a class="logo"><img src="./orange.webp" alt="" width="160px"></a>
+            <a class="logo">
+                <img src="./orange.webp" alt="" width="160px">
+            </a>
 
+            <!-- Navigation -->
             <nav class="nav">
                 <ul class="nav-links">
-                    <li><a href="./index.html">Home</a></li>
+
+                    <!-- ✅ Dropdown -->
+                    <li class="dropdown">
+                        <a href="./index.html">Home</a>
+
+                        <ul class="dropdown-menu">
+                            <li><a href="./home2.html">Home Style 1</a></li>
+                        </ul>
+                    </li>
+
                     <li><a href="./about.html">About</a></li>
                     <li><a href="./service.html">Services</a></li>
                     <li><a href="./contact.html">Contact</a></li>
                     <li><a href="./dashboard.html">Dashboard</a></li>
 
+                    <!-- Mobile Buttons -->
                     <div class="right-mobile">
-                        <a class="talk" href="./contact.html">Let's talk</a>
+                        <a class="talk" href="#">Let's talk</a>
                         <a class="talk" href="./signup.html">LogIn</a>
                     </div>
+
                 </ul>
             </nav>
 
+            <!-- Desktop Buttons -->
             <div class="right">
                 <a class="talk" href="#">Let's talk</a>
                 <a class="talk" href="./signup.html">LogIn</a>
@@ -54,6 +68,7 @@
                 <span></span>
                 <span></span>
             </div>
+
         </header>
 
         <!-- HERO CONTENT -->
