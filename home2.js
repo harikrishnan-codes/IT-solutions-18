@@ -52,6 +52,59 @@ counters.forEach(counter => {
 
 
 
+// stats js
+
+const st_initCounterObserver = () => {
+    const st_section = document.querySelector('.st-impact-section');
+    const st_counters = document.querySelectorAll('.st-count');
+    const st_duration = 2000; 
+
+    const st_runAnimation = () => {
+        st_counters.forEach(counter => {
+            const target = +counter.getAttribute('data-target');
+            const startTime = performance.now();
+
+            const update = (currentTime) => {
+                const elapsed = currentTime - startTime;
+                const progress = Math.min(elapsed / st_duration, 1);
+                
+                 const easeOut = 1 - Math.pow(1 - progress, 3);
+                
+                counter.innerText = Math.floor(easeOut * target);
+
+                if (progress < 1) {
+                    requestAnimationFrame(update);
+                } else {
+                    counter.innerText = target;
+                }
+            };
+            requestAnimationFrame(update);
+        });
+    };
+
+     const observerOptions = {
+        threshold: 0.5 
+    };
+
+    const st_observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                st_runAnimation();
+                st_observer.unobserve(entry.target); 
+            }
+        });
+    }, observerOptions);
+
+    st_observer.observe(st_section);
+};
+
+document.addEventListener('DOMContentLoaded', st_initCounterObserver);
+
+
+
+
+
+
 
 
 // bar js 
