@@ -23,8 +23,7 @@
 }
 
 
-/* LOADER WRAPPER */
-.loader-wrapper {
+ .loader-wrapper {
     position: fixed;
     top: 0;
     left: 0;
@@ -37,8 +36,7 @@
     z-index: 9999;
 }
 
-/* LOADER ANIMATION */
-.loader {
+ .loader {
     width: 60px;
     height: 60px;
     border: 6px solid var(--white);
@@ -63,15 +61,14 @@
     height: 100vh;
     background:
         linear-gradient(rgba(78, 43, 73, 0.85), rgba(78, 43, 73, 0.85)),
-        url("./hero.webp");
+        url("./meeting.webp");
     background-size: cover;
     background-position: center;
     color: var(--white);
     position: relative;
 }
 
-/* HEADER */
-.header{
+ .header{
     display:flex;
     justify-content:space-between;
     align-items:center;
@@ -103,16 +100,12 @@
     display: none;
 }
 
-/* ================= DROPDOWN ================= */
-
-/* ================= DROPDOWN ================= */
-
+ 
 .dropdown{
     position:relative;
 }
 
-/* Hidden */
-
+ 
 .dropdown-menu{
     position:absolute;
     top:100%;
@@ -121,16 +114,33 @@
     min-width:220px;
     padding:10px 0;
     border-radius:10px;
-
-    opacity:0;
-    visibility:hidden;
-    transform:translateY(15px);
-    transition:0.3s ease;
+    display:none;
     z-index:1000;
 }
 
-/* Links */
+.dropdown.open .dropdown-menu{
+    display:block;
+}
 
+/* Dropdown toggle layout */
+.dropdown-toggle{
+    display:flex;
+    align-items:center;
+    gap:6px;
+}
+
+.arrow{
+    font-size:14px;
+    cursor:pointer;
+    margin-left:5px;
+    transition:0.3s;
+    color:var(--white);
+}
+
+.dropdown.open .arrow{
+    transform:rotate(180deg);
+}
+ 
 .dropdown-menu li{
     list-style:none;
 }
@@ -147,13 +157,8 @@
     background:var(--orange);
 }
 
-/* ✅ Desktop Hover */
+ 
 
-.dropdown:hover .dropdown-menu{
-    opacity:1;
-    visibility:visible;
-    transform:translateY(0);
-}
 
 
 .right {
@@ -190,8 +195,7 @@
      border-radius: 50px;
 }
 
-/* HAMBURGER */
-.hamburger{
+ .hamburger{
     display:none;
     flex-direction:column;
     gap:6px;
@@ -204,8 +208,7 @@
     background:var(--white);
 }
 
-/* HERO */
-.hero-content {
+ .hero-content {
     height: 80%;
     display: flex;
     flex-direction: column;
@@ -239,34 +242,30 @@
     color: var(--black);
 }
 
-/* MOBILE */
-@media (max-width:768px) {
+ @media (max-width:768px) {
 
     .nav{
-        position:fixed;
-        top:0;
-        left:-100%;
+        position:absolute;
+        top:100%;
+        left:0;
         width:100%;
-        height:100vh;
         background:var(--violet);
-        display:flex;
-        justify-content:center;
-        align-items:center;
-        text-align:center;
-        transition:0.4s ease-in-out;
-        z-index:999;
+        padding:30px 0;
+        display:none;
         flex-direction:column;
+        text-align:center;
+        z-index:999;
+        height: 100vh;
     }
 
     .nav.active{
-        left:0;
+        display:flex;
     }
 
     .nav-links{
         flex-direction:column;
-        gap:40px;
+        gap:30px;
     }
-
 
     .right{
         display:none;
@@ -276,6 +275,7 @@
         display:flex;
         flex-direction:column;
         gap:20px;
+        margin-top:20px;
     }
 
     .right-mobile .talk {
@@ -302,16 +302,23 @@
 
     .nav-links {
         display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
+    /* Show arrow only in mobile */
+    .arrow{
+        display:inline-block;
+        color:var(--white);
+    }
+
+    /* Mobile dropdown */
     .dropdown-menu{
         position:static;
         width:100%;
         display:none;
-        opacity:1;
-        visibility:visible;
-        transform:none;
         background:rgba(255,255,255,0.05);
+        margin-top:10px;
     }
 
     .dropdown.open .dropdown-menu{
@@ -334,8 +341,7 @@
 
 
 
-/* ================= HERO SECTION ================= */
-
+ 
 .hero{
     height:100vh;
     display:flex;
@@ -351,8 +357,7 @@
     padding: 45px;
 }
 
-/* ================= LEFT SIDE ================= */
-
+ 
 .hero-left{
     max-width:550px;
 }
@@ -380,8 +385,7 @@
     line-height:1.6;
 }
 
-/* ================= BUTTONS ================= */
-
+ 
 .buttons{
     display:flex;
     gap:15px;
@@ -395,8 +399,7 @@
     transition:0.3s ease;
 }
 
-/* Primary Button */
-.primary{
+ .primary{
     background:var(--orange);
     color:var(--white);
 }
@@ -1502,7 +1505,7 @@
     padding: 70px 0;
     margin-bottom: 80px;
     height: 80vh;
-    background: url("./hero.webp") center/cover no-repeat;
+    background: url("./team.webp") center/cover no-repeat;
     background-attachment: fixed;
 
     display: flex;
@@ -1673,9 +1676,7 @@
     font-size: 14px;
 }
 
-/* ========================= */
-/* 768px Responsive */
-/* ========================= */
+
 
 @media (max-width: 768px) {
 

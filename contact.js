@@ -26,3 +26,39 @@ hamburger.addEventListener("click", () => {
 
 
 
+
+// 404 error js
+
+const form = document.getElementById("contactForm");
+ 
+form.addEventListener("submit", function(e){
+
+    e.preventDefault(); 
+
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+     const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+    if(name === "" || email === "" || message === ""){
+        alert("Please fill all the fields properly!");
+        return;
+    }
+
+    if(!email.match(emailPattern)){
+        alert("Please enter a valid email address!");
+        return;
+    }
+
+     form.reset();
+
+     window.location.href = "./404.html";
+
+});
+
+
+
+
+
+

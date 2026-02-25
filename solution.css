@@ -1466,7 +1466,7 @@ h2 {
     position:relative;
     z-index:2;
     display:grid;
-    grid-template-columns:repeat(4,1fr);
+    grid-template-columns:repeat(5,1fr);
     gap:50px;
     padding:0 10% 60px;
 }

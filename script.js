@@ -18,7 +18,6 @@ window.addEventListener("load", () => {
 
 
 
-
 // ================= HAMBURGER =================
 
 const hamburger = document.getElementById("hamburger");
@@ -29,7 +28,7 @@ hamburger.addEventListener("click", () => {
 });
 
 
-// Close menu when clicking link (Better UX)
+// Close nav when clicking normal links (not dropdown toggle)
 
 document.querySelectorAll(".nav-links a").forEach(link => {
     link.addEventListener("click", () => {
@@ -38,35 +37,15 @@ document.querySelectorAll(".nav-links a").forEach(link => {
 });
 
 
-// ================= MOBILE DROPDOWN =================
+// ================= DROPDOWN CLICK (ALL DEVICES) =================
 
 const dropdown = document.querySelector(".dropdown");
+const toggle = document.querySelector(".dropdown-toggle");
 
-dropdown.addEventListener("click", () => {
+toggle.addEventListener("click", (e) => {
+    e.preventDefault(); // prevent link jump
     dropdown.classList.toggle("open");
 });
-
-// hamburger js 
-
-// const hamburger = document.getElementById("hamburger");
-// const nav = document.querySelector(".nav");
-
-// hamburger.addEventListener("click", () => {
-//     nav.classList.toggle("active");
-// });
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

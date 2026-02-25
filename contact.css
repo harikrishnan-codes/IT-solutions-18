@@ -63,7 +63,7 @@
     height: 50vh;
     background:
         linear-gradient(rgba(59, 57, 59, 0.65), rgba(59, 57, 59, 0.95)),
-        url("./about.webp");
+        url("./stratergy.webp");
     background-size: cover;
     background-position: center;
     color: var(--white);
@@ -250,19 +250,15 @@
 
 
 
-/* ========================= */
-/* Secondary Hero Section */
-/* ========================= */
+
 
 .sec-hero-container {
-    /* background: var(--violet); */
-    padding: 100px 20px;
+     padding: 100px 20px;
     text-align: center;
     color: var(--white);
 }
 
-/* Page Title */
-
+ 
 .sec-hero-container h1 {
     font-size: 50px;
     margin-bottom: 20px;
@@ -355,7 +351,7 @@
 .contact-left{
     flex:1;
     height:500px;
-    background:url('https://images.unsplash.com/photo-1521791136064-7986c2920216') center/cover no-repeat;
+    background:url('./contact.webp') center/cover no-repeat;
     position:relative;
     border-radius:10px;
     overflow:hidden;

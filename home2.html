@@ -34,7 +34,17 @@
 
             <!-- Navigation Links -->
             <ul class="nav-links" id="navLinks">
-                <li><a href="./home2.html">Home</a></li>
+                <li class="dropdown">
+                    <div class="dropdown-toggle">
+                        <a href="./home2.html">Home</a>
+                        <span class="arrow">&#9662;</span>
+                    </div>
+
+                    <ul class="dropdown-menu">
+                        <li><a href="./index.html">Home Style 1</a></li>
+                    </ul>
+                </li>
+
                 <li><a href="solution.html">Solutions</a></li>
                 <li><a href="./industries.html">Industries</a></li>
                 <li><a href="./project.html">Projects</a></li>
@@ -82,7 +92,7 @@
                 end-to-end IT services that keep your business running smoothly.
             </p>
 
-            <a href="#" class="hero-btn">Get Started Now</a>
+            <a href="./error.html" class="hero-btn">Get Started Now</a>
 
         </div>
 
@@ -91,16 +101,6 @@
 
     </section>
 
-
-
-
-
-
-
-
-
-
-</section>
 
 
 
@@ -201,54 +201,54 @@
 
 
     <section class="st-impact-section">
-    <div class="st-bg-glow"></div>
+        <div class="st-bg-glow"></div>
 
-    <div class="st-container">
-        <div class="st-stats-grid">
-            <div class="st-stat-card">
-                <div class="st-stat-val"><span class="st-count" data-target="250">0</span>+</div>
-                <p class="st-stat-desc">Enterprise Deployments</p>
-                <div class="st-card-line"></div>
+        <div class="st-container">
+            <div class="st-stats-grid">
+                <div class="st-stat-card">
+                    <div class="st-stat-val"><span class="st-count" data-target="250">0</span>+</div>
+                    <p class="st-stat-desc">Enterprise Deployments</p>
+                    <div class="st-card-line"></div>
+                </div>
+
+                <div class="st-stat-card">
+                    <div class="st-stat-val"><span class="st-count" data-target="99">0</span>.99%</div>
+                    <p class="st-stat-desc">Uptime Guarantee (SLA)</p>
+                    <div class="st-card-line"></div>
+                </div>
+
+                <div class="st-stat-card">
+                    <div class="st-stat-val"><span class="st-count" data-target="15">0</span>PB+</div>
+                    <p class="st-stat-desc">Secure Data Orchestrated</p>
+                    <div class="st-card-line"></div>
+                </div>
+
+                <div class="st-stat-card">
+                    <div class="st-stat-val"><span class="st-count" data-target="300">0</span>ms</div>
+                    <p class="st-stat-desc">Global Response Latency</p>
+                    <div class="st-card-line"></div>
+                </div>
             </div>
 
-            <div class="st-stat-card">
-                <div class="st-stat-val"><span class="st-count" data-target="99">0</span>.99%</div>
-                <p class="st-stat-desc">Uptime Guarantee (SLA)</p>
-                <div class="st-card-line"></div>
-            </div>
-
-            <div class="st-stat-card">
-                <div class="st-stat-val"><span class="st-count" data-target="15">0</span>PB+</div>
-                <p class="st-stat-desc">Secure Data Orchestrated</p>
-                <div class="st-card-line"></div>
-            </div>
-
-            <div class="st-stat-card">
-                <div class="st-stat-val"><span class="st-count" data-target="300">0</span>ms</div>
-                <p class="st-stat-desc">Global Response Latency</p>
-                <div class="st-card-line"></div>
-            </div>
-        </div>
-
-        <div class="st-partners-wrapper">
-            <div class="st-partners-label">Powering Infrastructure For</div>
-            <div class="st-logo-slider">
-                <div class="st-logo-track">
-                    <div class="st-logo"><i class="fa-brands fa-aws"></i> AWS</div>
-                    <div class="st-logo"><i class="fa-brands fa-google"></i> Cloud</div>
-                    <div class="st-logo"><i class="fa-brands fa-microsoft"></i> Azure</div>
-                    <div class="st-logo"><i class="fa-brands fa-digital-ocean"></i> Ocean</div>
-                    <div class="st-logo"><i class="fa-brands fa-docker"></i> Docker</div>
-                    <div class="st-logo"><i class="fa-brands fa-aws"></i> AWS</div>
-                    <div class="st-logo"><i class="fa-brands fa-google"></i> Cloud</div>
-                    <div class="st-logo"><i class="fa-brands fa-microsoft"></i> Azure</div>
-                    <div class="st-logo"><i class="fa-brands fa-digital-ocean"></i> Ocean</div>
-                    <div class="st-logo"><i class="fa-brands fa-docker"></i> Docker</div>
+            <div class="st-partners-wrapper">
+                <div class="st-partners-label">Powering Infrastructure For</div>
+                <div class="st-logo-slider">
+                    <div class="st-logo-track">
+                        <div class="st-logo"><i class="fa-brands fa-aws"></i> AWS</div>
+                        <div class="st-logo"><i class="fa-brands fa-google"></i> Cloud</div>
+                        <div class="st-logo"><i class="fa-brands fa-microsoft"></i> Azure</div>
+                        <div class="st-logo"><i class="fa-brands fa-digital-ocean"></i> Ocean</div>
+                        <div class="st-logo"><i class="fa-brands fa-docker"></i> Docker</div>
+                        <div class="st-logo"><i class="fa-brands fa-aws"></i> AWS</div>
+                        <div class="st-logo"><i class="fa-brands fa-google"></i> Cloud</div>
+                        <div class="st-logo"><i class="fa-brands fa-microsoft"></i> Azure</div>
+                        <div class="st-logo"><i class="fa-brands fa-digital-ocean"></i> Ocean</div>
+                        <div class="st-logo"><i class="fa-brands fa-docker"></i> Docker</div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
 
 
@@ -338,8 +338,7 @@
                 <div class="case-card">
                     <div class="case-image">
                         <div class="case-overlay"></div>
-                        <img src="./bank.webp"
-                            alt="Cyber Security Case">
+                        <img src="./bank.webp" alt="Cyber Security Case">
                     </div>
                     <div class="case-content">
                         <span class="case-tag">Cyber Security</span>
@@ -351,15 +350,14 @@
                             <div class="stat"><strong>
                                     < 1ms</strong><span>Latency</span></div>
                         </div>
-                        <a href="./404.html" class="view-case">View Full Brief <span>→</span></a>
+                        <a href="./error.html" class="view-case">View Full Brief <span>→</span></a>
                     </div>
                 </div>
 
                 <div class="case-card">
                     <div class="case-image">
                         <div class="case-overlay"></div>
-                        <img src="./cloud1.webp"
-                            alt="Cloud Migration Case">
+                        <img src="./cloud1.webp" alt="Cloud Migration Case">
                     </div>
                     <div class="case-content">
                         <span class="case-tag">Cloud Migration</span>
@@ -369,15 +367,14 @@
                             <div class="stat"><strong>40%</strong><span>Cost Down</span></div>
                             <div class="stat"><strong>100%</strong><span>Uptime</span></div>
                         </div>
-                        <a href="./404.html" class="view-case">View Full Brief <span>→</span></a>
+                        <a href="./error.html" class="view-case">View Full Brief <span>→</span></a>
                     </div>
                 </div>
 
                 <div class="case-card">
                     <div class="case-image">
                         <div class="case-overlay"></div>
-                        <img src="./AI.webp"
-                            alt="AI Automation Case">
+                        <img src="./AI.webp" alt="AI Automation Case">
                     </div>
                     <div class="case-content">
                         <span class="case-tag">AI Automation</span>
@@ -388,15 +385,14 @@
                             <div class="stat"><strong>85%</strong><span>Auto-Resolved</span></div>
                             <div class="stat"><strong>24/7</strong><span>Availability</span></div>
                         </div>
-                        <a href="./404.html" class="view-case">View Full Brief <span>→</span></a>
+                        <a href="./error.html" class="view-case">View Full Brief <span>→</span></a>
                     </div>
                 </div>
 
                 <div class="case-card">
                     <div class="case-image">
                         <div class="case-overlay"></div>
-                        <img src="./cloud2.webp"
-                            alt="Data Center Case">
+                        <img src="./cloud2.webp" alt="Data Center Case">
                     </div>
                     <div class="case-content">
                         <span class="case-tag">Infrastructure</span>
@@ -407,7 +403,7 @@
                             <div class="stat"><strong>$2M</strong><span>OPEX Saved</span></div>
                             <div class="stat"><strong>Zero</strong><span>Data Leaks</span></div>
                         </div>
-                        <a href="./404.html" class="view-case">View Full Brief <span>→</span></a>
+                        <a href="./error.html" class="view-case">View Full Brief <span>→</span></a>
                     </div>
                 </div>
             </div>
@@ -460,7 +456,7 @@
                 We follow a structured and strategic approach to ensure
                 high-quality IT solution delivery for every client.
             </p>
-            <a href="./404.html" class="process-btn">Explore All →</a>
+            <a href="./error.html" class="process-btn">Explore All →</a>
         </div>
 
     </section>
@@ -731,6 +727,17 @@
                     <li><a href="error.html">Web Development</a></li>
                     <li><a href="error.html">Cloud Solutions</a></li>
                     <li><a href="error.html">Cyber Security</a></li>
+                    <li><a href="error.html">Data Center</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Legal Links</h4>
+                <ul>
+                    <li><a href="./error.html">Privacy Policy</a></li>
+                    <li><a href="./error.html">Terms & Conditions</a></li>
+                    <li><a href="./error.html">Cookies</a></li>
+                    <li><a href="./error.html">Disclaimer</a></li>
                 </ul>
             </div>
 
