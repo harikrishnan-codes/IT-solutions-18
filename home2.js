@@ -21,14 +21,7 @@ hamburger.addEventListener("click", () => {
 
 
 
-// ================= HAMBURGER =================
 
-// const hamburger = document.getElementById("hamburger");
-// const nav = document.querySelector(".nav");
-
-// hamburger.addEventListener("click", () => {
-//     nav.classList.toggle("active");
-// });
 
 
 // Close nav when clicking normal links (not dropdown toggle)
@@ -46,7 +39,7 @@ const dropdown = document.querySelector(".dropdown");
 const toggle = document.querySelector(".dropdown-toggle");
 
 toggle.addEventListener("click", (e) => {
-    e.preventDefault(); // prevent link jump
+    e.preventDefault(); 
     dropdown.classList.toggle("open");
 });
 

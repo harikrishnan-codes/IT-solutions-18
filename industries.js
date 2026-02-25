@@ -90,3 +90,60 @@ document.addEventListener("DOMContentLoaded", function(){
     }
 
 });
+
+
+
+
+
+
+
+
+
+// industries hero js
+
+const expObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+        }
+    });
+}, { threshold: 0.2 });
+
+document.querySelectorAll('.exp-reveal').forEach(item => {
+    expObserver.observe(item);
+});
+
+
+
+
+
+
+
+
+const chObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+        }
+    });
+}, { threshold: 0.2 });
+
+document.querySelectorAll('.ch-reveal').forEach(el => chObserver.observe(el));
+
+
+
+
+
+
+
+// our solutions js
+
+const ind_observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+        }
+    });
+}, { threshold: 0.2 });
+
+document.querySelectorAll('.ind-reveal').forEach(el => ind_observer.observe(el));

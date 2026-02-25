@@ -615,12 +615,14 @@ input:checked+.slider:before {
     gap: 40px;
     max-width: 1100px;
     margin: 0 auto;
-    opacity: 0.6; /* Slight transparency for all logos */
+    opacity: 0.6;
+    /* Slight transparency for all logos */
 }
 
 .logo-item {
     transition: all 0.4s ease;
-    filter: grayscale(100%) brightness(200%); /* Makes logos white/gray */
+    filter: grayscale(100%) brightness(200%);
+    /* Makes logos white/gray */
     cursor: pointer;
 }
 
@@ -745,9 +747,18 @@ input:checked+.slider:before {
     gap: 12px;
 }
 
-.features li span { color: var(--light); font-weight: bold; }
-.features li.disabled { color: rgba(255, 255, 255, 0.2); }
-.features li.disabled span { color: rgba(255, 255, 255, 0.2); }
+.features li span {
+    color: var(--light);
+    font-weight: bold;
+}
+
+.features li.disabled {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.features li.disabled span {
+    color: rgba(255, 255, 255, 0.2);
+}
 
 .price-btn {
     display: block;
@@ -777,8 +788,10 @@ input:checked+.slider:before {
         grid-template-columns: 1fr;
         gap: 50px;
     }
+
     .price-card.featured {
-        transform: scale(1); /* Reset scale for mobile */
+        transform: scale(1);
+        /* Reset scale for mobile */
     }
 }
 
@@ -897,7 +910,7 @@ input:checked+.slider:before {
     .footer-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .guarantee-card {
         text-align: center;
         border-left: none;
@@ -971,6 +984,10 @@ input:checked+.slider:before {
     transition: 0.7s ease;
     opacity: 0;
     transform: scale(0.7);
+}
+
+.testimonial-card .content p {
+    color: black;
 }
 
 .testimonial-card img {
@@ -1404,7 +1421,7 @@ input:checked+.slider:before {
     position: relative;
     z-index: 2;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 50px;
     padding: 0 10% 60px;
 }
