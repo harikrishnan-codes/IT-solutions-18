@@ -127,6 +127,35 @@ input{
     outline:none;
 }
 
+.input-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px 40px;
+}
+
+.input-group .fa-lock {
+    position: absolute;
+    left: 10px;
+    color: gray;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    color: gray;
+        position: absolute;
+    right: 12px;
+    top: 50%;
+    left: 90% !important;
+
+}
+
 button{
     margin-top:15px;
     padding:12px;
