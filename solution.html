@@ -9,6 +9,9 @@
     <link rel="icon" href="./bg remove.webp">
     <link rel="stylesheet" href="./solution.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
 
 </head>
@@ -57,7 +60,7 @@
 
 
 
- <div class="sec-hero-container">
+    <div class="sec-hero-container" data-aos="fade-up">
         <div class="page-overlay"></div>
         <div class="page-particles"></div>
 
@@ -73,64 +76,65 @@
 
 
 
+    <section class="tech-stack-section" data-aos="fade-down">
+        <div class="container">
+            <div class="section-header">
+                <span class="sub-title">Engineered for Performance</span>
+                <h2>Our Tech <span class="highlight">Ecosystem</span></h2>
+                <p class="header-desc">We leverage industry-leading technologies to build secure, scalable, and
+                    high-performance digital foundations.</p>
+            </div>
 
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <div class="tech-icon">☁️</div>
+                    <h3>Cloud & Edge</h3>
+                    <p>Distributed infrastructure using AWS, Azure, and private cloud clusters for low-latency delivery.
+                    </p>
+                    <div class="tech-tags">
+                        <span>Kubernetes</span>
+                        <span>Docker</span>
+                        <span>Terraform</span>
+                    </div>
+                </div>
 
+                <div class="tech-card active-tech">
+                    <div class="tech-icon">🔒</div>
+                    <h3>DevSecOps</h3>
+                    <p>Automated security pipelines and continuous integration ensuring your code is secure from day
+                        one.</p>
+                    <div class="tech-tags">
+                        <span>Jenkins</span>
+                        <span>GitLab CI</span>
+                        <span>Snyk</span>
+                    </div>
+                </div>
 
-    <section class="tech-stack-section">
-    <div class="container">
-        <div class="section-header">
-            <span class="sub-title">Engineered for Performance</span>
-            <h2>Our Tech <span class="highlight">Ecosystem</span></h2>
-            <p class="header-desc">We leverage industry-leading technologies to build secure, scalable, and high-performance digital foundations.</p>
+                <div class="tech-card">
+                    <div class="tech-icon">🧬</div>
+                    <h3>AI & Analytics</h3>
+                    <p>Integrating machine learning models and big data processing to drive intelligent business
+                        decisions.</p>
+                    <div class="tech-tags">
+                        <span>PyTorch</span>
+                        <span>TensorFlow</span>
+                        <span>Apache Spark</span>
+                    </div>
+                </div>
+
+                <div class="tech-card">
+                    <div class="tech-icon">📡</div>
+                    <h3>Cyber Security</h3>
+                    <p>Next-gen threat detection and zero-trust architectures to protect your enterprise assets.</p>
+                    <div class="tech-tags">
+                        <span>WAF</span>
+                        <span>SIEM</span>
+                        <span>IAM</span>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <div class="tech-grid">
-            <div class="tech-card">
-                <div class="tech-icon">☁️</div>
-                <h3>Cloud & Edge</h3>
-                <p>Distributed infrastructure using AWS, Azure, and private cloud clusters for low-latency delivery.</p>
-                <div class="tech-tags">
-                    <span>Kubernetes</span>
-                    <span>Docker</span>
-                    <span>Terraform</span>
-                </div>
-            </div>
-
-            <div class="tech-card active-tech">
-                <div class="tech-icon">🔒</div>
-                <h3>DevSecOps</h3>
-                <p>Automated security pipelines and continuous integration ensuring your code is secure from day one.</p>
-                <div class="tech-tags">
-                    <span>Jenkins</span>
-                    <span>GitLab CI</span>
-                    <span>Snyk</span>
-                </div>
-            </div>
-
-            <div class="tech-card">
-                <div class="tech-icon">🧬</div>
-                <h3>AI & Analytics</h3>
-                <p>Integrating machine learning models and big data processing to drive intelligent business decisions.</p>
-                <div class="tech-tags">
-                    <span>PyTorch</span>
-                    <span>TensorFlow</span>
-                    <span>Apache Spark</span>
-                </div>
-            </div>
-
-            <div class="tech-card">
-                <div class="tech-icon">📡</div>
-                <h3>Cyber Security</h3>
-                <p>Next-gen threat detection and zero-trust architectures to protect your enterprise assets.</p>
-                <div class="tech-tags">
-                    <span>WAF</span>
-                    <span>SIEM</span>
-                    <span>IAM</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+    </section>
 
 
 
@@ -139,9 +143,7 @@
 
 
 
-
-
-    <section class="solutions">
+    <section class="solutions" data-aos="zoom-in">
         <div class="solutions-container">
 
             <div class="solutions-title">
@@ -218,7 +220,7 @@
 
 
     <section class="solution-highlight">
-        <div class="solution-wrapper">
+        <div class="solution-wrapper" data-aos="fade-left">
 
             <!-- Left Image -->
             <div class="solution-image">
@@ -245,8 +247,6 @@
                 <a href="error.html" class="solution-btn">Explore Our Solutions</a>
             </div>
 
-
-
         </div>
     </section>
 
@@ -257,8 +257,7 @@
 
 
 
-
-    <section class="solutions">
+    <section class="solutions" data-aos="fade-right">
 
         <div class="solutions-container solution">
 
@@ -277,8 +276,7 @@
                     Technology Solutions
                 </h2>
 
-                <!-- Solution Item 1 -->
-                <div class="solution-item">
+                 <div class="solution-item">
                     <div class="solution-title">
                         <span>01.</span> Cloud Infrastructure Management
                     </div>
@@ -288,8 +286,7 @@
                     </p>
                 </div>
 
-                <!-- Solution Item 2 -->
-                <div class="solution-item">
+                 <div class="solution-item">
                     <div class="solution-title">
                         <span>02.</span> Cybersecurity & Data Protection
                     </div>
@@ -299,8 +296,7 @@
                     </p>
                 </div>
 
-                <!-- Solution Item 3 -->
-                <div class="solution-item">
+                 <div class="solution-item">
                     <div class="solution-title">
                         <span>03.</span> Enterprise Software Integration
                     </div>
@@ -310,8 +306,7 @@
                     </p>
                 </div>
 
-                <!-- Solution Item 4 -->
-                <div class="solution-item">
+                 <div class="solution-item">
                     <div class="solution-title">
                         <span>04.</span> IT Support & Automation
                     </div>
@@ -335,7 +330,7 @@
 
 
 
-    <section class="testimonial-section">
+    <section class="testimonial-section" data-aos="zoom-in">
         <div class="testimonial-header">
             <span class="section-tag">CLIENT REVIEWS</span>
             <h2>What Our Clients Say About Our IT Solutions</h2>
@@ -408,12 +403,7 @@
 
 
 
-
-
-
-
-
-    <section class="faq-section">
+    <section class="faq-section" data-aos="fade-up">
 
         <div class="faq-header">
             <h2>Frequently Asked Questions</h2>
@@ -422,8 +412,7 @@
 
         <div class="faq-grid">
 
-            <!-- FAQ 1 -->
-            <div class="faq-item">
+             <div class="faq-item">
                 <div class="faq-question">
                     <h3>What IT services do you provide?</h3>
                     <span class="faq-icon">+</span>
@@ -434,8 +423,7 @@
                 </div>
             </div>
 
-            <!-- FAQ 2 -->
-            <div class="faq-item">
+             <div class="faq-item">
                 <div class="faq-question">
                     <h3>Do you offer cloud migration?</h3>
                     <span class="faq-icon">+</span>
@@ -446,8 +434,7 @@
                 </div>
             </div>
 
-            <!-- FAQ 3 -->
-            <div class="faq-item">
+             <div class="faq-item">
                 <div class="faq-question">
                     <h3>How secure are your systems?</h3>
                     <span class="faq-icon">+</span>
@@ -457,8 +444,7 @@
                 </div>
             </div>
 
-            <!-- FAQ 4 -->
-            <div class="faq-item">
+             <div class="faq-item">
                 <div class="faq-question">
                     <h3>Do you provide support & maintenance?</h3>
                     <span class="faq-icon">+</span>
@@ -468,8 +454,7 @@
                 </div>
             </div>
 
-            <!-- FAQ 5 -->
-            <div class="faq-item">
+             <div class="faq-item">
                 <div class="faq-question">
                     <h3>How long does a typical IT project take?</h3>
                     <span class="faq-icon">+</span>
@@ -480,8 +465,7 @@
                 </div>
             </div>
 
-            <!-- FAQ 6 -->
-            <div class="faq-item">
+             <div class="faq-item">
                 <div class="faq-question">
                     <h3>Can you integrate with our existing systems?</h3>
                     <span class="faq-icon">+</span>
@@ -492,8 +476,7 @@
                 </div>
             </div>
 
-            <!-- FAQ 7 -->
-            <div class="faq-item">
+             <div class="faq-item">
                 <div class="faq-question">
                     <h3>Do you provide cybersecurity assessments?</h3>
                     <span class="faq-icon">+</span>
@@ -504,8 +487,7 @@
                 </div>
             </div>
 
-            <!-- FAQ 8 -->
-            <div class="faq-item">
+             <div class="faq-item">
                 <div class="faq-question">
                     <h3>What industries do you serve?</h3>
                     <span class="faq-icon">+</span>
@@ -526,9 +508,7 @@
 
 
 
-
-
-    <section class="cta-wrapper">
+    <section class="cta-wrapper" data-aos="fade-down">
 
         <div class="cta-box">
 
@@ -608,6 +588,13 @@
                 <p>Email: info@smartit.com</p>
                 <p>Phone: +91 98765 43210</p>
                 <p>Chennai, India</p>
+
+                <div class="social-icons">
+                    <a href="error.html"><i class="fab fa-facebook-f"></i></a>
+                    <a href="error.html"><i class="fab fa-instagram"></i></a>
+                    <a href="error.html"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="error.html"><i class="fab fa-twitter"></i></a>
+                </div>
             </div>
 
         </div>
@@ -620,12 +607,18 @@
 
 
 
-
-
-
-
-
     <script src="./solution.js"></script>
+
+
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 900,
+            easing: 'ease-in-out',
+            once: true,   // animation runs only once
+        });
+    </script>
 
 </body>
 
