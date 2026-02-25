@@ -15,6 +15,7 @@
 
 
 
+
 * {
     margin: 0;
     padding: 0;
@@ -548,7 +549,7 @@
     align-items:center;
     background:var(--violet);
     overflow:hidden;
-    /* padding: 30px; */
+    overflow-x: hidden;
     margin-top: 50px;
 }
 
@@ -646,6 +647,7 @@
 .about{
     padding:100px 10%;
     background:var(--white);
+    overflow-x: hidden;
 }
 
 .about-container{
@@ -850,6 +852,7 @@
     padding:100px 10%;
     background:var(--violet);
     color:var(--white);
+    overflow-x: hidden;
 }
 
 .service-header{
@@ -1042,6 +1045,7 @@
     padding: 80px 0;
     background: var(--white);
     text-align: center;
+    overflow-x: hidden;
 }
 
 .sub-title {
@@ -1409,6 +1413,7 @@
     padding: 80px 0;
     background: var(--white);
     text-align: center;
+    overflow-x: hidden;
 }
 
 .faq-subtitle {
@@ -1512,7 +1517,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* gap: 40px; */
+    overflow-x: hidden;
 }
 
 /* Sky color overlay */
@@ -1676,6 +1681,28 @@
     font-size: 14px;
 }
 
+.social-icons {
+    margin-top: 15px;
+    display: flex;
+    justify-content:flex-start;
+    align-items:center;
+    gap: 25px;
+     border-radius: 8px;
+    width: fit-content;
+    padding-top: 20px;
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 22px;
+    transition: 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #ff5b2e;
+    transform: translateY(-4px);
+}
+
 
 
 @media (max-width: 768px) {
@@ -1685,11 +1712,12 @@
         gap: 30px;
     }
 
+    .social-icons{
+        margin: 0 auto;
+    }
+
 }
 
-/* ========================= */
-/* Mobile */
-/* ========================= */
 
 @media (max-width: 480px) {
 

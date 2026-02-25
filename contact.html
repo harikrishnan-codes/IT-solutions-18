@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="./contact.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -27,7 +30,7 @@
 
         <!-- HEADER -->
         <header class="header">
-            <a class="logo"><img src="./orange.webp" alt="" width="160px"></a>
+            <a class="logo" href="#"><img src="./orange.webp" alt="" width="160px"></a>
 
             <nav class="nav">
                 <ul class="nav-links">
@@ -58,7 +61,7 @@
         </header>
 
 
-        <div class="sec-hero-container">
+        <div class="sec-hero-container" data-aos="fade-up">
             <h1>Contact</h1>
             <div class="breadcrumb">
                 <a href="index.html">Home</a>
@@ -75,9 +78,7 @@
 
 
 
-
-
-    <section class="contact-section">
+    <section class="contact-section" data-aos="fade-down">
 
         <div class="contact-container">
 
@@ -132,11 +133,7 @@
 
 
 
-
-
-
-
-    <section class="contact-info-section">
+    <section class="contact-info-section" data-aos="zoom-in">
 
         <div class="contact-info-container">
 
@@ -184,25 +181,20 @@
 
 
 
-
-
     <section class="contact-map-section">
 
-        <div class="map-container">
+        <div class="map-container" data-aos="fade-left">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18..." allowfullscreen="" loading="lazy">
             </iframe>
         </div>
 
-        <div class="contact-cta">
+        <div class="contact-cta" data-aos="fade-up">
             <h2>Let’s Build Something Great Together</h2>
             <p>Contact us today and transform your ideas into reality.</p>
             <a href="./404.html" class="cta-btn">Schedule A Meeting</a>
         </div>
 
     </section>
-
-
-
 
 
 
@@ -257,6 +249,14 @@
                 <p>Email: info@itsolutions.com</p>
                 <p>Phone: +91 98765 43210</p>
                 <p>Location: Chennai, India</p>
+
+                <!-- Social Icons -->
+                <div class="social-icons">
+                    <a href="./404.html"><i class="fab fa-facebook-f"></i></a>
+                    <a href="./404.html"><i class="fab fa-instagram"></i></a>
+                    <a href="./404.html"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="./404.html"><i class="fab fa-twitter"></i></a>
+                </div>
             </div>
 
         </div>
@@ -265,6 +265,16 @@
             <p>© 2026 IT Solutions. All Rights Reserved.</p>
         </div>
     </footer>
+
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 900,
+            easing: 'ease-in-out',
+            once: true,   // animation runs only once
+        });
+    </script>
 
 
     <script src="contact.js"></script>
