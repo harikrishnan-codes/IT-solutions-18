@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./contact2.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
 </head>
 
@@ -31,7 +32,6 @@
                 <a href="#"><img src="./stackly.webp" alt="" width="150px"></a>
             </div>
 
-            <!-- Navigation Links -->
             <ul class="nav-links" id="navLinks">
                 <li><a href="./home2.html">Home</a></li>
                 <li><a href="solution.html">Solutions</a></li>
@@ -42,7 +42,6 @@
             </ul>
             <a href="./contact2.html" class="contact">Contact <span class="material-icons">call_made</span></a>
 
-            <!-- Hamburger -->
             <div class="hamburger" id="hamburger">
                 <span></span>
                 <span></span>
@@ -54,7 +53,7 @@
     </header>
 
 
-    <div class="sec-hero-container">
+    <div class="sec-hero-container" data-aos="fade-up">
         <div class="page-overlay"></div>
         <div class="page-particles"></div>
 
@@ -72,7 +71,7 @@
 
 
 
-    <section class="contact-hero">
+    <section class="contact-hero" data-aos="fade-down">
         <div class="container">
             <div class="hero-text">
                 <span class="status-badge"><span class="dot"></span> Systems Operational</span>
@@ -116,10 +115,7 @@
 
 
 
-
-
-
-    <section class="contact-form-section">
+    <section class="contact-form-section" data-aos="zoom-in">
         <div class="container">
             <div class="form-wrapper">
                 <div class="form-glow"></div>
@@ -171,11 +167,8 @@
 
 
 
-
-
-
     <section class="it-support-section">
-        <div class="container">
+        <div class="container" data-aos="fade-left">
             <div class="section-header">
                 <span class="sub-title">IT Support Framework</span>
                 <h2>Our Commitment to <span class="highlight">Availability</span></h2>
@@ -229,9 +222,7 @@
 
 
 
-
-
-    <section class="final-cta">
+    <section class="final-cta" data-aos="fade-right">
         <div class="container">
             <div class="cta-box">
                 <div class="cta-content">
@@ -306,6 +297,13 @@
                 <p>Email: info@smartit.com</p>
                 <p>Phone: +91 98765 43210</p>
                 <p>Chennai, India</p>
+
+                <div class="social-icons">
+                    <a href="error.html"><i class="fab fa-facebook-f"></i></a>
+                    <a href="error.html"><i class="fab fa-instagram"></i></a>
+                    <a href="error.html"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="error.html"><i class="fab fa-twitter"></i></a>
+                </div>
             </div>
 
         </div>
@@ -318,13 +316,18 @@
 
 
 
-
-
-
-
-
     <script src="./contact2.js"></script>
 
+
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 900,
+            easing: 'ease-in-out',
+            once: true,   // animation runs only once
+        });
+    </script>
 </body>
 
 </html>

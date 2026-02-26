@@ -141,7 +141,7 @@ input{
 .input-group .fa-lock {
     position: absolute;
     left: 10px;
-    color: gray;
+    color: var(--orange);
 }
 
 .toggle-password {

@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./pricing.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
 </head>
 
@@ -31,8 +32,7 @@
                 <a href="#"><img src="./stackly.webp" alt="" width="150px"></a>
             </div>
 
-            <!-- Navigation Links -->
-            <ul class="nav-links" id="navLinks">
+             <ul class="nav-links" id="navLinks">
                 <li><a href="./home2.html">Home</a></li>
                 <li><a href="solution.html">Solutions</a></li>
                 <li><a href="./industries.html">Industries</a></li>
@@ -54,7 +54,7 @@
     </header>
 
 
-    <div class="sec-hero-container">
+    <div class="sec-hero-container" data-aos="fade-up">
         <div class="page-overlay"></div>
         <div class="page-particles"></div>
 
@@ -71,10 +71,7 @@
 
 
 
-
-
-
-    <section class="pricing-hero">
+    <section class="pricing-hero" data-aos="fade-down">
         <div class="container">
             <div class="hero-content">
                 <span class="badge">Transparent Investment</span>
@@ -101,9 +98,7 @@
 
 
 
-
-
-    <section class="trust-bar">
+    <section class="trust-bar" data-aos="zoom-in">
         <div class="container">
             <div class="trust-header">
                 <p>Powering Innovation for Global Industry Leaders</p>
@@ -137,10 +132,8 @@
 
 
 
-
-
     <section class="pricing-grid-section">
-        <div class="container">
+        <div class="container" data-aos="fade-left">
             <div class="pricing-grid">
                 <div class="price-card">
                     <div class="card-header">
@@ -206,9 +199,7 @@
 
 
 
-
-
-    <section class="pricing-footer">
+    <section class="pricing-footer" data-aos="fade-right">
         <div class="container">
             <div class="footer-grid">
                 <div class="guarantee-card">
@@ -240,10 +231,7 @@
 
 
 
-
-
-
-    <section class="testimonial-section">
+    <section class="testimonial-section" data-aos="zoom-in">
         <div class="testimonial-header">
             <span class="section-tag">CLIENT REVIEWS</span>
             <h2>What Our Clients Say About Our IT Solutions</h2>
@@ -315,13 +303,7 @@
 
 
 
-
-
-
-
-
-
-    <section class="faq-section">
+    <section class="faq-section" data-aos="fade-up">
 
         <div class="faq-header">
             <h2>Frequently Asked Questions</h2>
@@ -330,7 +312,6 @@
 
         <div class="faq-grid">
 
-            <!-- FAQ 1 -->
             <div class="faq-item">
                 <div class="faq-question">
                     <h3>What IT services do you provide?</h3>
@@ -342,7 +323,6 @@
                 </div>
             </div>
 
-            <!-- FAQ 2 -->
             <div class="faq-item">
                 <div class="faq-question">
                     <h3>Do you offer cloud migration?</h3>
@@ -354,7 +334,6 @@
                 </div>
             </div>
 
-            <!-- FAQ 3 -->
             <div class="faq-item">
                 <div class="faq-question">
                     <h3>How secure are your systems?</h3>
@@ -365,7 +344,6 @@
                 </div>
             </div>
 
-            <!-- FAQ 4 -->
             <div class="faq-item">
                 <div class="faq-question">
                     <h3>Do you provide support & maintenance?</h3>
@@ -376,7 +354,6 @@
                 </div>
             </div>
 
-            <!-- FAQ 5 -->
             <div class="faq-item">
                 <div class="faq-question">
                     <h3>How long does a typical IT project take?</h3>
@@ -388,7 +365,6 @@
                 </div>
             </div>
 
-            <!-- FAQ 6 -->
             <div class="faq-item">
                 <div class="faq-question">
                     <h3>Can you integrate with our existing systems?</h3>
@@ -400,7 +376,6 @@
                 </div>
             </div>
 
-            <!-- FAQ 7 -->
             <div class="faq-item">
                 <div class="faq-question">
                     <h3>Do you provide cybersecurity assessments?</h3>
@@ -412,7 +387,6 @@
                 </div>
             </div>
 
-            <!-- FAQ 8 -->
             <div class="faq-item">
                 <div class="faq-question">
                     <h3>What industries do you serve?</h3>
@@ -436,7 +410,7 @@
 
 
 
-    <section class="cta-wrapper">
+    <section class="cta-wrapper" data-aos="fade-down">
 
         <div class="cta-box">
 
@@ -516,6 +490,13 @@
                 <p>Email: info@smartit.com</p>
                 <p>Phone: +91 98765 43210</p>
                 <p>Chennai, India</p>
+
+                <div class="social-icons">
+                    <a href="error.html"><i class="fab fa-facebook-f"></i></a>
+                    <a href="error.html"><i class="fab fa-instagram"></i></a>
+                    <a href="error.html"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="error.html"><i class="fab fa-twitter"></i></a>
+                </div>
             </div>
 
         </div>
@@ -527,9 +508,18 @@
     </footer>
 
 
-
-
     <script src="./pricing.js"></script>
+
+
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 900,
+            easing: 'ease-in-out',
+            once: true,   // animation runs only once
+        });
+    </script>
 
 </body>
 

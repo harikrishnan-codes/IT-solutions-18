@@ -54,13 +54,22 @@ document.getElementById("forgotForm").addEventListener("submit", function (e) {
 
 
 
-const togglePassword = document.getElementById("togglePassword");
-const password = document.getElementById("loginPassword");
+const toggleIcons = document.querySelectorAll(".toggle-password");
 
-togglePassword.addEventListener("click", function () {
-    const type = password.getAttribute("type") === "password" ? "text" : "password";
-    password.setAttribute("type", type);
+toggleIcons.forEach(function(icon) {
+    icon.addEventListener("click", function() {
 
-    this.classList.toggle("fa-eye");
-    this.classList.toggle("fa-eye-slash");
+        const passwordInput = this.previousElementSibling;
+
+        if (passwordInput.type === "password") {
+            passwordInput.type = "text";
+            this.classList.remove("fa-eye");
+            this.classList.add("fa-eye-slash");
+        } else {
+            passwordInput.type = "password";
+            this.classList.remove("fa-eye-slash");
+            this.classList.add("fa-eye");
+        }
+
+    });
 });
