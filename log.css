@@ -1,0 +1,249 @@
+/* ==========================================================================
+   PREMIUM AUTH GATEWAY MULTI-PANEL SCHEDULER
+   ========================================================================== */
+
+.auth-gateway-section {
+  position: relative;
+  background-color: var(--bg-dark);
+  padding: 8rem 0;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Atmospheric Cybernetic Ambient Space Illumination */
+.auth-glow-orb-1 {
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  width: 650px;
+  height: 650px;
+  background: var(--gradient-glow);
+  filter: blur(140px);
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.auth-glow-orb-2 {
+  position: absolute;
+  bottom: -20%;
+  right: -5%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(0, 242, 254, 0.08) 0%, rgba(79, 172, 254, 0) 70%);
+  filter: blur(120px);
+  pointer-events: none;
+}
+
+.auth-flex-viewport {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  z-index: 5;
+}
+
+/* --- High-End Glassmorphic Card Container Box --- */
+.auth-glass-card-box {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  background: var(--bg-surface);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  padding: 4rem 3.5rem;
+  box-shadow: var(--shadow-overlay);
+  overflow: hidden;
+  transition: var(--transition-smooth);
+}
+
+.auth-card-shimmer {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.01) 0%, transparent 100%);
+  pointer-events: none;
+}
+
+.auth-accent-tracer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--gradient-primary);
+  box-shadow: 0 0 12px var(--accent-cyan);
+}
+
+/* ==========================================================================
+   FORM CORE STYLING & FIELD INPUT BLOCKS
+   ========================================================================== */
+
+.auth-form-segment {
+  display: none;
+  opacity: 0;
+  transform: scale(0.98) translateY(8px);
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.auth-form-segment.active-auth-panel {
+  display: block;
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+
+.auth-header-block {
+  margin-bottom: 2.5rem;
+}
+
+.auth-panel-title {
+  font-size: 1.65rem;
+  color: var(--text-main);
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: var(--lh-heading);
+}
+
+.auth-panel-subtitle {
+  font-family: monospace;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+.auth-core-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.portal-input-label {
+  font-family: monospace;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.portal-input-field {
+  background: rgba(3, 7, 18, 0.5);
+  border: 1px solid var(--glass-border);
+  border-radius: 6px;
+  padding: 0.85rem 1rem;
+  color: var(--text-main);
+  font-size: 0.9rem;
+  width: 100%;
+  outline: none;
+  transition: var(--transition-smooth);
+}
+
+.portal-input-field::placeholder {
+  color: rgba(255, 255, 255, 0.15);
+}
+
+.portal-input-field:focus {
+  border-color: rgba(0, 242, 254, 0.4);
+  box-shadow: 0 0 12px rgba(0, 242, 254, 0.08);
+  background: rgba(3, 7, 18, 0.6);
+}
+
+.mock-disabled-input {
+  background: rgba(255, 255, 255, 0.02) !important;
+  color: var(--text-muted) !important;
+  border-style: dashed !important;
+  cursor: not-allowed;
+}
+
+/* --- Inline Tab Shifting Switches --- */
+.label-row-split {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.auth-inline-switch {
+  background: transparent;
+  border: none;
+  font-family: monospace;
+  font-size: 0.75rem;
+  color: var(--accent-cyan);
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  transition: var(--transition-smooth);
+}
+
+.auth-inline-switch:hover {
+  color: var(--text-main);
+  text-shadow: 0 0 8px rgba(0, 242, 254, 0.4);
+}
+
+.auth-submit-trigger {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 1rem 2rem !important;
+}
+
+.auth-submit-trigger:hover .btn-arrow {
+  transform: translateX(4px);
+}
+
+/* --- Footnotes Options Routing Strip --- */
+.auth-footer-routing-note {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.meta-note-string {
+  color: var(--text-muted);
+}
+
+.auth-inline-switch.main-switch {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   MOBILE ADAPTIVE ENGINE (768px BREAKPOINT OVERRIDES)
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  .auth-gateway-section {
+    padding: 6rem 0;
+  }
+
+  .auth-glass-card-box {
+    padding: 3rem 2rem;
+    max-width: 100%;
+    margin: 0 1.5rem;
+  }
+
+  .auth-panel-title {
+    font-size: var(--fs-h3);
+  }
+
+  .auth-footer-routing-note {
+    flex-direction: column;
+    gap: 0.75rem;
+    text-align: center;
+  }
+}

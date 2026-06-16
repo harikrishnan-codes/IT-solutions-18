@@ -1,0 +1,210 @@
+/* ==========================================================================
+   404 VIEWPORT ARCHITECTURE & BACKGROUND GLOW ENGINE
+   ========================================================================== */
+
+.error-viewport {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-dark);
+  overflow: hidden;
+  padding: 4rem 0;
+}
+
+/* Atmospheric Ambient Light Nodes */
+.glow-orb {
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  filter: blur(140px);
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.orb-primary {
+  top: 15%;
+  left: 20%;
+  background: var(--accent-violet);
+}
+
+.orb-secondary {
+  bottom: 15%;
+  right: 20%;
+  background: var(--accent-magenta);
+}
+
+/* ==========================================================================
+   CENTRALIZED GLASSMORPHIC CONTAINER CARD
+   ========================================================================== */
+
+.error-card {
+  position: relative;
+  z-index: 5;
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 4.5rem 3.5rem;
+  background: var(--bg-surface);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: calc(var(--radius) * 2);
+  box-shadow: var(--shadow-overlay);
+  text-align: center;
+}
+
+/* ==========================================================================
+   VISUAL SIGNAL CORE DESIGN (CYBERNETIC TELEMETRY)
+   ========================================================================== */
+
+.error-graphic {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+  user-select: none;
+}
+
+.glitch-number {
+  font-size: 8rem;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.05em;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 4px 12px rgba(168, 85, 247, 0.25));
+}
+
+/* Tech Node replacing the central '0' placeholder */
+.telemetry-node {
+  position: relative;
+  width: 65px;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.core-dot {
+  width: 18px;
+  height: 18px;
+  background-color: var(--accent-magenta);
+  border-radius: 50%;
+  box-shadow: 0 0 20px var(--accent-magenta);
+}
+
+.pulse-ring {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 2px solid var(--accent-violet);
+  border-radius: 50%;
+  animation: telemetryPulseAnimation 3s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+  opacity: 0.4;
+}
+
+@keyframes telemetryPulseAnimation {
+  0% {
+    transform: scale(0.4);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1.3);
+    opacity: 0;
+  }
+}
+
+/* ==========================================================================
+   TEXT BLOCKS & CALL TO ACTIONS STACKS
+   ========================================================================== */
+
+.error-header h1 {
+  font-size: 2.2rem;
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.03em;
+  color: var(--text-main);
+}
+
+.error-header p {
+  color: var(--text-muted);
+  max-width: 520px;
+  margin: 0 auto 3rem auto;
+  font-size: var(--fs-p);
+  line-height: 1.7;
+}
+
+.error-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 3.5rem;
+}
+
+.error-meta {
+  font-family: monospace;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  color: rgba(255, 255, 255, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.03);
+  padding-top: 2rem;
+}
+
+/* ==========================================================================
+   768PX MOBILE RESPONSIVE LAYOUT ENGINE OVERRIDES
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  .error-viewport {
+    padding: 2rem 0;
+  }
+
+  .error-card {
+    padding: 3.5rem 1.75rem;
+    border-radius: var(--radius);
+    margin: 0 1rem;
+  }
+
+  .glitch-number {
+    font-size: 5.5rem;
+  }
+
+  .telemetry-node {
+    width: 45px;
+    height: 45px;
+  }
+
+  .core-dot {
+    width: 14px;
+    height: 14px;
+  }
+
+  .error-header h1 {
+    font-size: 1.75rem;
+  }
+
+  .error-header p {
+    font-size: var(--fs-p-sm);
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+  }
+
+  /* Flattens overlapping button rows cleanly into touch target blocks */
+  .error-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+  }
+
+  .error-actions .btn-main,
+  .error-actions .btn-secondary {
+    width: 100%;
+    text-align: center;
+  }
+}

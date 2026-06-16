@@ -1,280 +1,395 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dashboard</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT solutions</title>
+    <link rel="icon" href="./assets/bg remove.webp">
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="./root.css">
 
-<style>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-/* ROOT COLORS */
-:root{
-    --violet: rgb(78, 43, 73);
-    --orange: rgb(255, 91, 46);
-    --sky: rgb(146, 211, 215);
-    --white: rgb(250, 250, 250);
-    --black: rgb(38, 38, 38);
-}
-
-/* ================= GLOBAL ================= */
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    scroll-behavior:smooth;
-    font-family:sans-serif;
-}
-
-body{
-    background:linear-gradient(135deg,var(--violet),var(--sky));
-}
-
-/* ================= DASHBOARD ================= */
-
-.dashboard{
-    display:flex;
-    min-height:100vh;
-}
-
-/* Sidebar */
-.sidebar{
-    width:250px;
-    background:var(--black);
-    padding:30px 20px;
-    color:var(--white);
-    position:fixed;
-    height:100%;
-    animation:slideIn 0.6s ease;
-}
-
-@keyframes slideIn{
-    from{transform:translateX(-100%);}
-    to{transform:translateX(0);}
-}
-
-.logo{
-    margin-bottom:40px;
-    text-align:center;
-    color:var(--sky);
-}
-
-.menu{
-    list-style:none;
-}
-
-.menu li{
-    margin-bottom:15px;
-}
-
-.menu li a{
-    text-decoration:none;
-    color:var(--white);
-    display:block;
-    padding:12px;
-    border-radius:6px;
-    transition:0.3s;
-}
-
-.menu li a:hover{
-    background:var(--orange);
-    transform:translateX(5px);
-}
-
-/* Main Content */
-.main{
-    margin-left:250px;
-    padding:40px;
-    width:100%;
-}
-
-/* Sections */
-.section{
-    background:var(--white);
-    padding:40px;
-    border-radius:12px;
-    margin-bottom:40px;
-    box-shadow:0 10px 25px rgba(0,0,0,0.1);
-    animation:fadeUp 0.8s ease;
-}
-
-@keyframes fadeUp{
-    from{opacity:0; transform:translateY(30px);}
-    to{opacity:1; transform:translateY(0);}
-}
-
-.section h2{
-    margin-bottom:20px;
-    color:var(--violet);
-}
-
-/* Stats */
-.stats{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:20px;
-}
-
-.stat-box{
-    background:linear-gradient(135deg,var(--violet),var(--orange));
-    color:var(--white);
-    padding:30px;
-    border-radius:10px;
-    text-align:center;
-    transition:0.4s;
-}
-
-.stat-box:hover{
-    transform:scale(1.05);
-}
-
-/* Table */
-table{
-    width:100%;
-    border-collapse:collapse;
-}
-
-table th,
-table td{
-    padding:12px;
-    border-bottom:1px solid #ddd;
-}
-
-.success{ color:green; }
-.pending{ color:orange; }
-
-/* Profile */
-.profile-box{
-    display:flex;
-    align-items:center;
-    gap:20px;
-}
-
-.profile-box img{
-    width:100px;
-    border-radius:50%;
-}
-
-/* ================= RESPONSIVE ================= */
-
-@media (max-width:768px){
-
-    .dashboard{
-        flex-direction:column;
-    }
-
-    .sidebar{
-        width:100%;
-        position:relative;
-        height:auto;
-        text-align:center;
-    }
-
-    .main{
-        margin-left:0;
-        padding:20px;
-    }
-
-    .stats{
-        grid-template-columns:1fr;
-    }
-
-    .profile-box{
-        flex-direction:column;
-        text-align:center;
-    }
-
-}
-
-</style>
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
+
 <body>
 
-<div class="dashboard">
 
-    <!-- Sidebar -->
-    <div class="sidebar">
-        <h2 class="logo">MyDashboard</h2>
-        <ul class="menu">
-            <li><a href="#overview"><i class="fa-solid fa-gauge"></i> Overview</a></li>
-            <li><a href="#projects"><i class="fa-solid fa-briefcase"></i> Projects</a></li>
-            <li><a href="#users"><i class="fa-solid fa-users"></i> Users</a></li>
-            <li><a href="#profile"><i class="fa-solid fa-user"></i> Profile</a></li>
-        </ul>
-    </div>
 
-    <!-- Main -->
-    <div class="main">
+    <div class="dashboard-root-envelope">
 
-        <!-- Overview -->
-        <div id="overview" class="section">
-            <h2>Overview</h2>
+        <aside class="dash-sidebar-panel">
+            <div class="sidebar-brand-block">
+                <a href="#" class="logo">My<span>Dashboard</span></a>
+            </div>
 
-            <div class="stats">
-                <div class="stat-box">
-                    <h3>150</h3>
-                    <p>Total Users</p>
-                </div>
-                <div class="stat-box">
-                    <h3>85</h3>
-                    <p>Projects</p>
-                </div>
-                <div class="stat-box">
-                    <h3>230</h3>
-                    <p>Messages</p>
-                </div>
-                <div class="stat-box">
-                    <h3>₹1.2L</h3>
-                    <p>Revenue</p>
+            <nav class="sidebar-nav-engine">
+                <ul class="sidebar-nav-list">
+                    <li>
+                        <button class="nav-node-link active-node" data-target="all">
+                            <span class="nav-glyph">📊</span> Overview
+                        </button>
+                    </li>
+                    <li>
+                        <button class="nav-node-link" data-target="projects-panel">
+                            <span class="nav-glyph">💼</span> Projects
+                        </button>
+                    </li>
+                    <li>
+                        <button class="nav-node-link" data-target="users-panel">
+                            <span class="nav-glyph">👥</span> Users
+                        </button>
+                    </li>
+                    <li>
+                        <button class="nav-node-link" data-target="profile-panel">
+                            <span class="nav-glyph">👤</span> Profile
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="sidebar-user-footer">
+                <div class="user-avatar-node">SYS</div>
+                <div class="user-identity-meta">
+                    <span class="user-session-mail">root@infra-solutions.net</span>
+                    <span class="user-role-badge">Console Admin</span>
                 </div>
             </div>
-        </div>
+        </aside>
 
-        <!-- Projects -->
-        <div id="projects" class="section">
-            <h2>Projects</h2>
-            <table>
-                <tr>
-                    <th>Name</th>
-                    <th>Status</th>
-                    <th>Date</th>
-                </tr>
-                <tr>
-                    <td>Website Design</td>
-                    <td class="success">Completed</td>
-                    <td>22 Feb 2026</td>
-                </tr>
-                <tr>
-                    <td>App Development</td>
-                    <td class="pending">Pending</td>
-                    <td>21 Feb 2026</td>
-                </tr>
-            </table>
-        </div>
+        <main class="dash-command-console">
+            <div class="console-scroll-viewport">
 
-        <!-- Users -->
-        <div id="users" class="section">
-            <h2>Users</h2>
-            <p>Manage registered users and permissions here.</p>
-        </div>
+                <section id="overview-panel" class="dash-view-segment">
+                    <div class="segment-container-card">
+                        <h2 class="table-block-title">Overview</h2>
 
-        <!-- Profile -->
-        <div id="profile" class="section">
-            <h2>Profile</h2>
-            <div class="profile-box">
-                <img src="./m1-testi.webp">
-                <div>
-                    <h3>John Benedict</h3>
-                    <p>Frontend Developer</p>
-                </div>
+                        <div class="dash-telemetry-row">
+                            <div class="telemetry-glass-card intent-gradient-1">
+                                <div class="card-inner-val">150</div>
+                                <div class="card-inner-label">Total Users</div>
+                            </div>
+                            <div class="telemetry-glass-card intent-gradient-2">
+                                <div class="card-inner-val">85</div>
+                                <div class="card-inner-label">Projects</div>
+                            </div>
+                            <div class="telemetry-glass-card intent-gradient-3">
+                                <div class="card-inner-val">230</div>
+                                <div class="card-inner-label">Messages</div>
+                            </div>
+                            <div class="telemetry-glass-card intent-gradient-4">
+                                <div class="card-inner-val">₹1.2L</div>
+                                <div class="card-inner-label">Revenue</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="projects-panel" class="dash-view-segment">
+                    <div class="dash-operations-table-wrap">
+                        <div class="table-header-row">
+                            <h2 class="table-block-title">Projects</h2>
+                        </div>
+
+                        <div class="responsive-table-overflow">
+                            <table class="premium-dash-table">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 40%">Name</th>
+                                        <th style="width: 30%">Status</th>
+                                        <th style="width: 30%">Date</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Website Design</td>
+                                        <td><span class="badge-status-pill online">Completed</span></td>
+                                        <td><span class="monospace-text">22 Feb 2026</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>App Development</td>
+                                        <td><span class="badge-status-pill standby">Pending</span></td>
+                                        <td><span class="monospace-text">21 Feb 2026</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="users-panel" class="dash-view-segment">
+                    <div class="dash-operations-table-wrap">
+                        <div class="table-header-row">
+                            <div>
+                                <h2 class="table-block-title">User Access Management</h2>
+                                <p class="table-block-subtitle">// Cryptographic session tokens verified across active
+                                    cluster nodes</p>
+                            </div>
+                            <div class="table-action-controls">
+                                <button class="btn-secondary console-action-btn-sm">+ Provision Active User</button>
+                            </div>
+                        </div>
+
+                        <div class="responsive-table-overflow">
+                            <table class="premium-dash-table">
+                                <thead>
+                                    <tr>
+                                        <th>Operator Identity</th>
+                                        <th>Assigned Security Role</th>
+                                        <th>Network Data Ingestion</th>
+                                        <th>Node Authentication</th>
+                                        <th>Session Vector</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="user-profile-cell">
+                                                <div class="user-avatar-initials via-cyan">AM</div>
+                                                <div class="user-core-info">
+                                                    <span class="user-display-name">Alex Mercer</span>
+                                                    <span class="user-system-id">UID-8042-SEC</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><span class="role-badge-pill role-admin">Infra-Engineer</span></td>
+                                        <td>
+                                            <div class="data-throughput-tracker">
+                                                <span class="throughput-metric">4.2 TB /mo</span>
+                                                <div class="metric-mini-bar">
+                                                    <div class="mini-bar-fill" style="width: 78%;"></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><span class="monospace-text">RSA-4096-Key</span></td>
+                                        <td><span class="badge-status-pill online">● Active Session</span></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <div class="user-profile-cell">
+                                                <div class="user-avatar-initials via-blue">EV</div>
+                                                <div class="user-core-info">
+                                                    <span class="user-display-name">Elena Rostova</span>
+                                                    <span class="user-system-id">UID-1192-OPS</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><span class="role-badge-pill role-ops">Security SecOps</span></td>
+                                        <td>
+                                            <div class="data-throughput-tracker">
+                                                <span class="throughput-metric">1.8 TB /mo</span>
+                                                <div class="metric-mini-bar">
+                                                    <div class="mini-bar-fill" style="width: 34%;"></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><span class="monospace-text">ECDSA-P384</span></td>
+                                        <td><span class="badge-status-pill online">● Active Session</span></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <div class="user-profile-cell">
+                                                <div class="user-avatar-initials via-muted">MK</div>
+                                                <div class="user-core-info">
+                                                    <span class="user-display-name">Marcus Vance</span>
+                                                    <span class="user-system-id">UID-4401-DEV</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><span class="role-badge-pill role-dev">External Audit</span></td>
+                                        <td>
+                                            <div class="data-throughput-tracker">
+                                                <span class="throughput-metric">240.5 GB /mo</span>
+                                                <div class="metric-mini-bar">
+                                                    <div class="mini-bar-fill" style="width: 8%;"></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><span class="monospace-text">Hardware Token</span></td>
+                                        <td><span class="badge-status-pill standby">◑ Node Dormant</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="profile-panel" class="dash-view-segment">
+                    <div class="dash-profile-matrix-grid">
+
+                        <div class="dash-operations-table-wrap">
+                            <div class="table-header-row">
+                                <div>
+                                    <h2 class="table-block-title">Operator Profile Settings</h2>
+                                    <p class="table-block-subtitle">// Super-user administration credentials and
+                                        encryption configurations</p>
+                                </div>
+                            </div>
+
+                            <div class="profile-input-matrix">
+                                <div class="profile-avatar-uploader-row">
+                                    <div class="profile-large-avatar">ADM</div>
+                                    <div class="profile-avatar-meta">
+                                        <span class="avatar-title-string">Console Identity Token</span>
+                                        <span class="avatar-desc-string">UID-0001-ROOT // Hardware MFA Active</span>
+                                    </div>
+                                </div>
+
+                                <div class="profile-form-grid">
+                                    <div class="form-input-group">
+                                        <label class="portal-input-label">Administrator Identity Name</label>
+                                        <input type="text" class="portal-input-field" value="Root Administrator"
+                                            readonly>
+                                    </div>
+
+                                    <div class="form-input-group">
+                                        <label class="portal-input-label">Assigned Secure Email Route</label>
+                                        <input type="email" class="portal-input-field" value="root@enterprise-core.net"
+                                            readonly>
+                                    </div>
+
+                                    <div class="form-input-group">
+                                        <label class="portal-input-label">Active Node Access Level</label>
+                                        <div class="portal-input-field mock-disabled-input">Level 5 // Global
+                                            Infrastructure Override</div>
+                                    </div>
+
+                                    <div class="form-input-group">
+                                        <label class="portal-input-label">Session Clear Key Expiry</label>
+                                        <div class="portal-input-field mock-disabled-input">24 Hours [Tokens refresh
+                                            dynamically]</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dash-operations-table-wrap profile-key-vault-card">
+                            <div class="table-header-row">
+                                <div>
+                                    <h2 class="table-block-title">Cryptographic Key Vault</h2>
+                                    <span class="table-stream-indicator">// PGP Signature Active</span>
+                                </div>
+                            </div>
+
+                            <div class="vault-key-details">
+                                <div class="key-fingerprint-block">
+                                    <span class="portal-input-label">Active PGP Public Fingerprint</span>
+                                    <div class="fingerprint-hex-string">9F8E 4C2B 1A75 88D3 00A1 C942 F6B8 77E1</div>
+                                </div>
+
+                                <div class="security-toggle-list">
+                                    <div class="security-toggle-item">
+                                        <div class="toggle-meta">
+                                            <span class="toggle-heading">Hardware MFA Lock</span>
+                                            <span class="toggle-desc">Requires physical YubiKey validation per API
+                                                call</span>
+                                        </div>
+                                        <span class="badge-status-pill online">Enforced</span>
+                                    </div>
+
+                                    <div class="security-toggle-item">
+                                        <div class="toggle-meta">
+                                            <span class="toggle-heading">IP Whitelist Enforcement</span>
+                                            <span class="toggle-desc">Restricts terminal commands to specified data
+                                                centers</span>
+                                        </div>
+                                        <span class="badge-status-pill online">Active</span>
+                                    </div>
+
+                                    <div class="security-toggle-item">
+                                        <div class="toggle-meta">
+                                            <span class="toggle-heading">Post-Quantum Cryptography</span>
+                                            <span class="toggle-desc">Switches routing encryption algorithms to
+                                                Kyber-1024</span>
+                                        </div>
+                                        <span class="badge-status-pill standby">Testing</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
             </div>
-        </div>
-
+        </main>
     </div>
 
-</div>
+
+
+
+
+
+    <script src="script.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <script>
+        AOS.init({
+            duration: 900,
+            easing: 'ease-in-out',
+            once: true,
+        });
+
+        // data-aos="fade-up"
+        // fade-up, fade-down, fade-left, fade-right, zoom-in,	slide-up, flip-left	
+
+    </script>
+
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', () => {
+            initializeDashboardRouter();
+        });
+
+        function initializeDashboardRouter() {
+            const navButtons = document.querySelectorAll('.nav-node-link');
+            const viewSegments = document.querySelectorAll('.dash-view-segment');
+
+            navButtons.forEach(button => {
+                button.addEventListener('click', (e) => {
+                    e.preventDefault();
+
+                    // 1. Shift highlighted indicator states across links
+                    navButtons.forEach(btn => btn.classList.remove('active-node'));
+                    button.classList.add('active-node');
+
+                    // 2. Extract state token parameter target
+                    const targetSelection = button.getAttribute('data-target');
+
+                    // 3. Evaluate conditional view segment visibility paths
+                    if (targetSelection === 'all') {
+                        // Restore comprehensive snapshot display layout view
+                        viewSegments.forEach(segment => {
+                            segment.classList.remove('segment-shunted');
+                        });
+                    } else {
+                        // Isolate console view and shunt unselected layout blocks out
+                        viewSegments.forEach(segment => {
+                            if (segment.id === targetSelection) {
+                                segment.classList.remove('segment-shunted');
+                            } else {
+                                segment.classList.add('segment-shunted');
+                            }
+                        });
+                    }
+                });
+            });
+        }
+
+    </script>
+
+
+
 
 </body>
+
 </html>

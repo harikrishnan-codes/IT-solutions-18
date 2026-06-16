@@ -1,0 +1,245 @@
+/* ==========================================================================
+   STYLISH TECH DISCONNECT 404 ERROR PAGE STYLES
+   ========================================================================== */
+
+.error-section {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-dark);
+  overflow: hidden;
+  padding: 4rem 2rem;
+}
+
+/* Background Cyber Architecture Decorators */
+.error-grid-matrix {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.005) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.005) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+}
+
+.error-ambient-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  height: 800px;
+  background: radial-gradient(circle, rgba(0, 242, 254, 0.05) 0%, rgba(79, 172, 254, 0) 65%);
+  filter: blur(100px);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.error-container {
+  max-width: 720px; /* Condensed envelope to center focal sight lines */
+  width: 100%;
+  position: relative;
+  z-index: 10;
+}
+
+/* --- Style 2: Isometric 3D Space Setup --- */
+.perspective-wrapper {
+  perspective: 1200px;
+}
+
+.error-terminal-card {
+  background: linear-gradient(135deg, rgba(15, 22, 42, 0.5) 0%, rgba(7, 9, 19, 0.8) 100%);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  box-shadow: var(--shadow-overlay), 0 0 60px rgba(0, 242, 254, 0.02);
+  overflow: hidden;
+  transform: rotateY(-6deg) rotateX(6deg); /* Balanced spatial 3D angle tilt */
+  transition: var(--transition-smooth);
+}
+
+.error-terminal-card:hover {
+  transform: rotateY(0deg) rotateX(0deg) translateY(-4px); /* Flattens smoothly on hover */
+  border-color: rgba(0, 242, 254, 0.25);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6), 0 0 40px rgba(0, 242, 254, 0.08);
+}
+
+/* Chrome Header Style Bar */
+.terminal-chrome-header {
+  background: rgba(7, 9, 19, 0.5);
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--glass-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.chrome-dots-group {
+  display: flex;
+  gap: 0.45rem;
+}
+
+.chrome-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.dot-red { background-color: #ef4444; }
+.dot-yellow { background-color: #eab308; }
+.dot-green { background-color: #22c55e; }
+
+.chrome-terminal-title {
+  font-family: monospace;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  letter-spacing: 1px;
+}
+
+/* Internal Card Body Layouts */
+.error-content-body {
+  padding: 4rem 3.5rem;
+  text-align: center;
+}
+
+/* Giant Digital Glitch Numbers */
+.huge-error-code-badge {
+  margin-bottom: 1.5rem;
+  display: inline-block;
+}
+
+.error-digit {
+  font-size: 8rem;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -4px;
+  /* Massive glow underneath numbers */
+  text-shadow: 0 0 50px rgba(0, 242, 254, 0.2);
+}
+
+.error-main-title {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: var(--text-main);
+  letter-spacing: -0.8px;
+  margin-bottom: 1.25rem;
+  line-height: 1.3;
+}
+
+.error-supporting-text {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+  margin-bottom: 2.5rem;
+}
+
+/* Live Terminal Diagnostic System Logs Panel */
+.diagnostic-box {
+  background: rgba(7, 9, 19, 0.4);
+  border: 1px solid var(--glass-border);
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  text-align: left;
+}
+
+.diagnostic-line {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: monospace;
+  font-size: 0.85rem;
+}
+
+.diag-tag {
+  color: var(--text-muted);
+}
+
+.diag-value {
+  color: var(--text-main);
+  letter-spacing: 0.5px;
+}
+
+.diag-value.text-red {
+  color: #f87171;
+  text-shadow: 0 0 8px rgba(248, 113, 113, 0.2);
+}
+
+.monospace-font {
+  color: var(--accent-cyan);
+}
+
+/* Return Buttons Configuration adjustment */
+.error-home-btn {
+  width: 100%;
+  max-width: 380px;
+  padding: 0.95rem 2rem !important; /* Premium dimensional touch weight */
+}
+
+.action-symbol {
+  margin-right: 0.25rem;
+}
+
+/* ==========================================================================
+   RESPONSIVE ADAPTIVE ENGINE (768px BREAKPOINT)
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  .error-section {
+    padding: 3rem 1.5rem;
+  }
+
+  .perspective-wrapper {
+    perspective: none; /* Flatten the 3D grid depths context on mobile devices */
+  }
+
+  .error-terminal-card {
+    transform: none !important; /* Clear spatial tilts to prevent edge clippings */
+    border-radius: 12px;
+  }
+
+  .terminal-chrome-header {
+    padding: 1rem 1.25rem;
+  }
+
+  .error-content-body {
+    padding: 3rem 1.5rem; /* Compress internal whitespace grids safely */
+  }
+
+  .error-digit {
+    font-size: 5.5rem; /* Rescale typography to stay perfectly bounded */
+  }
+
+  .error-main-title {
+    font-size: 1.65rem;
+    line-height: 1.3;
+  }
+
+  .error-supporting-text {
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+  }
+
+  .diagnostic-box {
+    padding: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .diagnostic-line {
+    font-size: 0.75rem;
+    flex-direction: column; /* Stack logs vertically if viewports get tightly bounded */
+    align-items: flex-start;
+    gap: 0.2rem;
+  }
+
+  .error-home-btn {
+    max-width: 100%; /* Fully expandable fluid touch link elements across devices */
+  }
+}

@@ -1,102 +1,43 @@
-// loader js 
+document.addEventListener('DOMContentLoaded', () => {
+  const hamburgerBtn = document.getElementById('hamburgerBtn');
+  const navMenu = document.getElementById('navMenu');
+  const dropdownToggle = document.querySelector('.has-dropdown > .nav-link');
+  const dropdownParent = document.querySelector('.has-dropdown');
 
-window.addEventListener("load", () => {
-    const loader = document.getElementById("loader");
-    setTimeout(() => {
-        loader.style.display = "none";
-    }, 5000); // 10000ms = 10 seconds
-});
+  // Multi-Device Drawer Control
+  hamburgerBtn.addEventListener('click', () => {
+    hamburgerBtn.classList.toggle('active');
+    navMenu.classList.toggle('active');
+  });
 
+  // Adaptive Dropdown Interaction Engine
+  dropdownToggle.addEventListener('click', (e) => {
+    // Execute logic only under mobile breakpoint rules
+    if (window.innerWidth <= 768) {
+      e.preventDefault();
+      dropdownParent.classList.toggle('mobile-dropdown-active');
 
-
-
-
-
-
-
-
-
-
-
-// ================= HAMBURGER =================
-
-const hamburger = document.getElementById("hamburger");
-const nav = document.querySelector(".nav");
-
-hamburger.addEventListener("click", () => {
-    nav.classList.toggle("active");
-});
-
-
-// Close nav when clicking normal links (not dropdown toggle)
-
-document.querySelectorAll(".nav-links a").forEach(link => {
-    link.addEventListener("click", () => {
-        nav.classList.remove("active");
-    });
-});
-
-
-// ================= DROPDOWN CLICK (ALL DEVICES) =================
-
-const dropdown = document.querySelector(".dropdown");
-const toggle = document.querySelector(".dropdown-toggle");
-
-toggle.addEventListener("click", (e) => {
-    e.preventDefault(); // prevent link jump
-    dropdown.classList.toggle("open");
-});
-
-
-
-
-
-
-
-
-
-
-// hero js
-
-const text = "Website Template for IT Solutions and Services...";
-const typingElement = document.getElementById("typing");
-
-let index = 0;
-
-function typeEffect() {
-    if (index < text.length) {
-        typingElement.innerHTML += text.charAt(index);
-        index++;
-        setTimeout(typeEffect, 50);
+      // Dynamic inline rotation handle for mobile layout arrow
+      const icon = dropdownToggle.querySelector('.dropdown-icon');
+      if (dropdownParent.classList.contains('mobile-dropdown-active')) {
+        icon.style.transform = 'rotate(-135deg) translateY(-2px)';
+      } else {
+        icon.style.transform = 'rotate(45deg) translateY(-2px)';
+      }
     }
-}
+  });
 
-typeEffect();
-
-
-
-
-// hero image rotation js 
-
-const img1 = document.querySelector(".img1");
-const img2 = document.querySelector(".img2");
-const img3 = document.querySelector(".img3");
-
-function rotateImages() {
-
-    // Temporarily store class names
-    let class1 = img1.className;
-    let class2 = img2.className;
-    let class3 = img3.className;
-
-    // Rotate class positions
-    img1.className = class3; // third -> first
-    img2.className = class1; // first -> second
-    img3.className = class2; // second -> third
-}
-
-// Run every 3 seconds
-setInterval(rotateImages, 2000);
+  // Global Context Cleanup on Window Rescale
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) {
+      hamburgerBtn.classList.remove('active');
+      navMenu.classList.remove('active');
+      dropdownParent.classList.remove('mobile-dropdown-active');
+      const icon = dropdownToggle.querySelector('.dropdown-icon');
+      if (icon) icon.style.transform = '';
+    }
+  });
+});
 
 
 
@@ -105,25 +46,66 @@ setInterval(rotateImages, 2000);
 
 
 
-// service js
 
-const tabs = document.querySelectorAll(".tab");
-const contents = document.querySelectorAll(".content-box");
 
-tabs.forEach(tab => {
+// Drop these stylesheet links into your global HTML <head> layer:
+// <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
-    tab.addEventListener("mouseenter", () => {
+// Drop this script link right before your closing </body> tag layer:
+// <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
-        tabs.forEach(t => t.classList.remove("active"));
-        contents.forEach(c => c.classList.remove("active"));
+document.addEventListener('DOMContentLoaded', () => {
+  // Initialize the Animate On Scroll (AOS) Engine with high-performance parameters
+  AOS.init({
+    // Global settings:
+    disable: 'phone',        // Performance choice: disable animations on small mobile screens for fluid scrolling
+    startEvent: 'DOMContentLoaded',
+    initClassName: 'aos-init',
+    animatedClassName: 'aos-animate',
+    useClassNames: false,
+    disableMutationObserver: false,
+    debounceDelay: 50,
+    throttleDelay: 99,
 
-        tab.classList.add("active");
+    // Settings that can be overridden on per-element basis via data-aos-* attributes:
+    offset: 120,             // Change delay triggering points (in pixels)
+    delay: 0,                // Values from 0 to 3000, with step 50ms
+    duration: 800,           // Values from 0 to 3000, with step 50ms
+    easing: 'ease-out-cubic', // Global default easing style for premium micro-movements
+    once: true,              // Crucial choice: true means animation happens once while scrolling down, avoiding messy re-triggers
+    mirror: false,           // Whether elements should animate out while scrolling past them
+    anchorPlacement: 'top-bottom', // Defines which position of the element regarding to window should trigger animation
+  });
+});
 
-        const target = document.getElementById(tab.dataset.tab);
-        target.classList.add("active");
 
+
+
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const navButtons = document.querySelectorAll('.tech-nav-btn');
+  const tabContents = document.querySelectorAll('.tech-tab-content');
+
+  navButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const targetTabId = button.getAttribute('data-target');
+
+      // Clear layout classes across button links
+      navButtons.forEach(btn => btn.classList.remove('active'));
+      // Hide alternative display layer blocks
+      tabContents.forEach(content => content.classList.remove('active'));
+
+      // Activate chosen control node
+      button.classList.add('active');
+      // Mount designated information tab panel
+      document.getElementById(targetTabId).classList.add('active');
     });
-
+  });
 });
 
 
@@ -134,47 +116,28 @@ tabs.forEach(tab => {
 
 
 
+document.addEventListener('DOMContentLoaded', () => {
+  const faqNodes = document.querySelectorAll('.faq-node');
 
-// testimonial js 
+  faqNodes.forEach(node => {
+    const trigger = node.querySelector('.faq-trigger');
+    const panel = node.querySelector('.faq-panel');
 
-const counters = document.querySelectorAll('.counter');
+    trigger.addEventListener('click', () => {
+      const isAlreadyActive = node.classList.contains('active');
 
-counters.forEach(counter => {
-    counter.innerText = '0';
+      // 1. Reset all alternative active modules to ensure single entry visibility
+      faqNodes.forEach(item => {
+        item.classList.remove('active');
+        item.querySelector('.faq-panel').style.maxHeight = null;
+      });
 
-    const updateCounter = () => {
-        const target = +counter.getAttribute('data-target');
-        const current = +counter.innerText;
-
-        const increment = target / 200;
-
-        if (current < target) {
-            counter.innerText = Math.ceil(current + increment);
-            setTimeout(updateCounter, 10);
-        } else {
-            counter.innerText = target;
-        }
-    };
-
-    updateCounter();
-});
-
-
-
-
-
-
-
-
-
-
-// FAQ js
-
-const faqItems = document.querySelectorAll('.faq-item');
-
-faqItems.forEach(item => {
-    item.addEventListener('click', () => {
-        item.classList.toggle('active');
+      // 2. Toggle current selection parameters
+      if (!isAlreadyActive) {
+        node.classList.add('active');
+        // Calculate the exact scrollable padding footprint height of internal children dynamically
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      }
     });
+  });
 });
-

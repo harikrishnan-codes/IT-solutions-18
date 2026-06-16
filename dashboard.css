@@ -1,0 +1,754 @@
+/* ==========================================================================
+   IMAGE-MODELED LUXURY MANAGEMENT CONSOLE SYSTEM
+   ========================================================================== */
+
+.dashboard-root-envelope {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--bg-dark);
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    overflow: hidden;
+}
+
+/* --- Left Navigation Drawer Panel --- */
+.dash-sidebar-panel {
+    background: rgba(10, 15, 30, 0.8);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border-right: 1px solid var(--glass-border);
+    padding: 2.5rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sidebar-brand-block {
+    margin-bottom: 3rem;
+    padding-left: 0.5rem;
+}
+
+.sidebar-nav-engine {
+    flex-grow: 1;
+}
+
+.sidebar-nav-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.nav-node-link {
+    width: 100%;
+    background: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    padding: 0.85rem 1rem;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-align: left;
+    cursor: pointer;
+    border-radius: var(--radius);
+    transition: var(--transition-smooth);
+}
+
+.nav-glyph {
+    font-size: 1.1rem;
+}
+
+.nav-node-link:hover,
+.nav-node-link.active-node {
+    background: var(--bg-surface-hover);
+    color: var(--accent-cyan);
+}
+
+.nav-node-link.active-node {
+    border-left: 3px solid var(--accent-cyan);
+    padding-left: calc(1rem - 3px);
+    color: #ffffff;
+}
+
+/* --- Profile Ingestion Strip --- */
+.sidebar-user-footer {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--glass-border);
+    padding: 0.85rem;
+    border-radius: var(--radius);
+}
+
+.user-avatar-node {
+    width: 32px;
+    height: 32px;
+    background: var(--gradient-primary);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: monospace;
+    font-weight: 700;
+    color: #030712;
+    font-size: 0.75rem;
+}
+
+.user-identity-meta {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.user-session-mail {
+    font-size: 0.75rem;
+    color: var(--text-main);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.user-role-badge {
+    font-family: monospace;
+    font-size: 0.65rem;
+    color: var(--accent-cyan);
+}
+
+/* ==========================================================================
+   RIGHT WINDOW PANEL CONSOLE VIEWPORT
+   ========================================================================== */
+
+.dash-command-console {
+    height: 100vh;
+    overflow: hidden;
+}
+
+.console-scroll-viewport {
+    padding: 2.5rem;
+    height: 100%;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Fluid Segment Reveal Architecture */
+.dash-view-segment {
+    width: 100%;
+    opacity: 1;
+    transform: translateY(0);
+    display: block;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Hidden state classes applied dynamically via script operations */
+.dash-view-segment.segment-shunted {
+    display: none;
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+.segment-container-card,
+.dash-operations-table-wrap {
+    background: var(--bg-surface);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    padding: 2.5rem;
+    box-shadow: var(--shadow-overlay);
+}
+
+.table-block-title {
+    font-size: 1.5rem;
+    color: var(--text-main);
+    margin-bottom: 1.75rem;
+    font-weight: 700;
+}
+
+/* ==========================================================================
+   IMAGE-MATCHED DYNAMIC GRADIENT METRIC BLOCKS GRID
+   ========================================================================== */
+
+.dash-telemetry-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+}
+
+.telemetry-glass-card {
+    border-radius: var(--radius);
+    padding: 2rem 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: var(--transition-smooth);
+}
+
+/* Custom Image-accurate shifting linear gradient fills mapped onto root tokens */
+.intent-gradient-1 {
+    background: linear-gradient(135deg, #4c1d37 0%, #e65c2b 100%);
+}
+
+.intent-gradient-2 {
+    background: linear-gradient(135deg, #2d1b4e 0%, #df4337 100%);
+}
+
+.intent-gradient-3 {
+    background: linear-gradient(135deg, #1e254b 0%, #db483a 100%);
+}
+
+.intent-gradient-4 {
+    background: linear-gradient(135deg, #2a2c3a 0%, #d85431 100%);
+}
+
+.card-inner-val {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 0.35rem;
+    letter-spacing: -0.5px;
+}
+
+.card-inner-label {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 500;
+}
+
+.telemetry-glass-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(230, 92, 43, 0.25);
+}
+
+/* ==========================================================================
+   TABLE GRID INFRASTRUCTURE STYLE MAPPING
+   ========================================================================== */
+
+.responsive-table-overflow {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.premium-dash-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.premium-dash-table th {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-main);
+    padding: 1rem 0.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.premium-dash-table td {
+    padding: 1.25rem 0.5rem;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.monospace-text {
+    font-family: monospace;
+    color: var(--text-muted);
+}
+
+.segment-placeholder-text {
+    font-family: monospace;
+    font-size: 0.85rem;
+    color: var(--accent-cyan);
+    padding: 1rem 0;
+}
+
+/* Table Pill Elements Matches from the original image setup */
+.badge-status-pill {
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.badge-status-pill.online {
+    color: #22c55e;
+}
+
+/* Clean Completed Green */
+.badge-status-pill.standby {
+    color: #f59e0b;
+}
+
+/* Clean Pending Amber */
+
+/* ==========================================================================
+   768px MOBILE OVERRIDES
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    .dashboard-root-envelope {
+        grid-template-columns: 1fr;
+        height: auto;
+        overflow-y: auto;
+    }
+
+    .dash-sidebar-panel {
+        border-right: none;
+        border-bottom: 1px solid var(--glass-border);
+        padding: 1.5rem;
+    }
+
+    .sidebar-brand-block {
+        margin-bottom: 0;
+    }
+
+    .console-scroll-viewport {
+        padding: 1.5rem;
+    }
+
+    .dash-telemetry-row {
+        grid-template-columns: repeat(2, 1fr);
+        /* Forms perfect balanced 2x2 cluster arrays on tablets */
+    }
+
+    .segment-container-card,
+    .dash-operations-table-wrap {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .dash-telemetry-row {
+        grid-template-columns: 1fr;
+        /* Stack panels directly down onto 1 item track row grids on tiny phones */
+    }
+}
+
+
+
+
+
+
+
+
+
+/* users css */
+
+/* ==========================================================================
+   PREMIUM USER ACCESS PANEL EXTENSIONS
+   ========================================================================== */
+
+.table-block-subtitle {
+    font-family: monospace;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-top: -1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.console-action-btn-sm {
+    padding: 0.5rem 1rem !important;
+    font-size: 0.85rem !important;
+    border-radius: 4px !important;
+}
+
+/* --- Profile Grid Cell Configurations --- */
+.user-profile-cell {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.user-avatar-initials {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: monospace;
+    font-weight: 700;
+    font-size: 0.8rem;
+    color: #030712;
+    box-shadow: var(--shadow-overlay);
+}
+
+/* Elite variable color variants for custom team roles */
+.user-avatar-initials.via-cyan {
+    background: var(--gradient-primary);
+}
+
+.user-avatar-initials.via-blue {
+    background: linear-gradient(135deg, #2563eb 0%, var(--accent-cyan) 100%);
+}
+
+.user-avatar-initials.via-muted {
+    background: linear-gradient(135deg, #475569 0%, #94a3b8 100%);
+}
+
+.user-core-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+}
+
+.user-display-name {
+    font-weight: 600;
+    color: var(--text-main);
+    font-size: 0.95rem;
+}
+
+.user-system-id {
+    font-family: monospace;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+/* --- Specialized Operational Security Badges --- */
+.role-badge-pill {
+    font-family: monospace;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.25rem 0.65rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: inline-block;
+}
+
+.role-badge-pill.role-admin {
+    background: rgba(0, 242, 254, 0.06);
+    border: 1px solid rgba(0, 242, 254, 0.2);
+    color: var(--accent-cyan);
+}
+
+.role-badge-pill.role-ops {
+    background: rgba(79, 172, 254, 0.06);
+    border: 1px solid rgba(79, 172, 254, 0.2);
+    color: var(--accent-blue);
+}
+
+.role-badge-pill.role-dev {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--glass-border);
+    color: var(--text-muted);
+}
+
+/* --- Ingestion Telemetry Data Metric Columns --- */
+.data-throughput-tracker {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+    width: 150px;
+}
+
+.throughput-metric {
+    font-family: monospace;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+.metric-mini-bar {
+    width: 100%;
+    height: 3px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.mini-bar-fill {
+    height: 100%;
+    background: var(--gradient-primary);
+    border-radius: 2px;
+}
+
+
+
+
+
+
+/* ==========================================================================
+   PREMIUM USER PROFILE MATRIX GRID MODULE
+   ========================================================================== */
+
+.dash-profile-matrix-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 1.5rem;
+    align-items: start;
+}
+
+/* --- Subtitle Hierarchy Realignment --- */
+.table-block-subtitle {
+    font-family: monospace;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-top: -1.25rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
+}
+
+/* ==========================================================================
+   LEFT COLUMN: OPERATOR INFORMATION SETTINGS
+   ========================================================================== */
+
+.profile-input-matrix {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* --- Identity Token / Avatar Strip --- */
+.profile-avatar-uploader-row {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--glass-border);
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.03);
+}
+
+.profile-large-avatar {
+    width: 64px;
+    height: 64px;
+    background: var(--gradient-primary);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: monospace;
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: #030712;
+    box-shadow: 0 4px 20px rgba(0, 242, 254, 0.25);
+}
+
+.profile-avatar-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.avatar-title-string {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+.avatar-desc-string {
+    font-family: monospace;
+    font-size: 0.8rem;
+    color: var(--accent-cyan);
+    text-shadow: 0 0 8px rgba(0, 242, 254, 0.3);
+}
+
+/* --- Double-Track Form Architecture --- */
+.profile-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.form-input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.portal-input-label {
+    font-family: monospace;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.portal-input-field {
+    background: rgba(3, 7, 18, 0.5);
+    border: 1px solid var(--glass-border);
+    border-radius: 6px;
+    padding: 0.85rem 1rem;
+    color: var(--text-main);
+    font-size: 0.9rem;
+    width: 100%;
+    outline: none;
+    transition: var(--transition-smooth);
+}
+
+.portal-input-field[readonly] {
+    cursor: default;
+    background: rgba(3, 7, 18, 0.3);
+}
+
+/* --- Custom System States & Mock Fields --- */
+.portal-input-field:focus:not([readonly]) {
+    border-color: rgba(0, 242, 254, 0.4);
+    box-shadow: 0 0 12px rgba(0, 242, 254, 0.08);
+}
+
+.mock-disabled-input {
+    background: rgba(255, 255, 255, 0.02) !important;
+    color: var(--text-muted) !important;
+    border-style: dashed !important;
+    cursor: not-allowed;
+    display: flex;
+    align-items: center;
+}
+
+/* ==========================================================================
+   RIGHT COLUMN: CRYPTOGRAPHIC VAULT PANEL
+   ========================================================================== */
+
+.profile-key-vault-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.vault-key-details {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* --- Terminal Fingerprint Housing --- */
+.key-fingerprint-block {
+    background: rgba(3, 7, 18, 0.5);
+    border: 1px solid var(--glass-border);
+    padding: 1.25rem;
+    border-radius: 6px;
+    box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.fingerprint-hex-string {
+    font-family: monospace;
+    font-size: 0.85rem;
+    color: var(--accent-cyan);
+    text-shadow: 0 0 6px rgba(0, 242, 254, 0.2);
+    margin-top: 0.65rem;
+    word-spacing: 2px;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+}
+
+/* --- Governance Verification Switches --- */
+.security-toggle-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 1.5rem;
+}
+
+.security-toggle-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    background: rgba(255, 255, 255, 0.01);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    padding: 1rem 1.25rem;
+    border-radius: 6px;
+    transition: var(--transition-smooth);
+}
+
+.toggle-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.toggle-heading {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-main);
+    transition: var(--transition-smooth);
+}
+
+.toggle-desc {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    line-height: 1.4;
+}
+
+/* Status Pill Assignments */
+.badge-status-pill {
+    font-family: monospace;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.3rem 0.75rem;
+    border-radius: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    flex-shrink: 0;
+}
+
+.badge-status-pill.online {
+    background: rgba(34, 197, 94, 0.06);
+    border: 1px solid rgba(34, 197, 94, 0.2);
+    color: #22c55e;
+    box-shadow: 0 0 8px rgba(34, 197, 94, 0.1);
+}
+
+.badge-status-pill.standby {
+    background: rgba(234, 179, 8, 0.06);
+    border: 1px solid rgba(234, 179, 8, 0.2);
+    color: #eab308;
+}
+
+/* --- Card Interactive Micro-Glow Shifts --- */
+.security-toggle-item:hover {
+    background: rgba(255, 255, 255, 0.03);
+    border-color: rgba(0, 242, 254, 0.15);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.security-toggle-item:hover .toggle-heading {
+    color: #ffffff;
+}
+
+/* ==========================================================================
+   ADAPTIVE CONSOLE ENGINE (768px MEDIA QUERY BOUNDS)
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+
+    /* Deconstructs asymmetric side-by-side positioning into singular vertical tracks */
+    .dash-profile-matrix-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 580px) {
+
+    /* Compresses structural form grids into uniform single columns on small viewports */
+    .profile-form-grid {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+
+    .profile-avatar-uploader-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.25rem;
+        padding: 1.25rem;
+    }
+
+    .security-toggle-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .badge-status-pill {
+        align-self: flex-start;
+    }
+}

@@ -1,0 +1,854 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Core Palette */
+  --bg-dark: #070913;
+  --bg-surface: rgba(15, 22, 42, 0.65);
+  --bg-surface-hover: rgba(30, 41, 59, 0.8);
+  
+  /* Brand Accents */
+  --accent-cyan: #00f2fe;
+  --accent-blue: #4facfe;
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, var(--accent-blue) 0%, var(--accent-cyan) 100%);
+  --gradient-glow: linear-gradient(180deg, rgba(0, 242, 254, 0.15) 0%, rgba(79, 172, 254, 0) 100%);
+  
+  /* Glassmorphism & Borders */
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-blur: blur(16px);
+  --shadow-overlay: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+  
+  /* Layout */
+  --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+
+
+  /* --- Typography --- */
+
+    --fs-h1: 2.5rem;
+    --fs-h2: 2rem;
+    --fs-h3: 1.5rem;
+    --fs-h4: 1.25rem;
+    --fs-h5: 1.125rem;
+    --fs-h6: 1rem;
+
+    --fs-p: 1rem;
+    --fs-p-sm: 0.875rem;
+
+    --lh-heading: 1.2;
+    --lh-body: 1.6;
+
+
+    /* --- Layout & Effects --- */
+    --radius: 8px;
+    --transition: all 0.3s ease;
+
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--secondary-color);
+    /* Using your off-white for the body */
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+    line-height: var(--lh-body);
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0px 20px;
+}
+
+/* --- Typography Styles --- */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--text-header);
+    font-weight: 700;
+    line-height: var(--lh-heading);
+    letter-spacing: -0.02em;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: var(--fs-h1);
+}
+
+h2 {
+    font-size: var(--fs-h2);
+}
+
+h3 {
+    font-size: var(--fs-h3);
+}
+
+p {
+    font-size: var(--fs-p);
+    margin-bottom: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+}
+
+ul {
+    list-style: none;
+}
+
+
+
+
+
+
+
+/* ==========================================================================
+   PREMIUM BUTTON CORE DESIGN 
+   ========================================================================== */
+
+/* Universal Button Base Setup */
+.btn-main, .btn-secondary {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 0.85rem 2rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  border-radius: 6px;
+  overflow: hidden;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: var(--transition-smooth);
+}
+
+/* --------------------------------------------------------------------------
+   PRIMARY BUTTON: Futuristic High-Glow & Shimmer Accent
+   -------------------------------------------------------------------------- */
+.btn-main {
+  background: var(--gradient-primary);
+  color: #030712; /* Deep background tone matching for extreme text contrast */
+  border: 1px solid transparent;
+  box-shadow: 0 4px 20px rgba(0, 242, 254, 0.25);
+}
+
+/* Moving Gloss Shimmer Overlay EFFECT */
+.btn-main::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 120%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.4) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(-25deg);
+  transition: none;
+}
+
+/* Primary Hover Interaction Mechanics */
+.btn-main:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 242, 254, 0.45);
+}
+
+/* Trigger Shimmer sweep on hover */
+.btn-main:hover::before {
+  left: 150%;
+  transition: all 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-main:active {
+  transform: translateY(-1px);
+}
+
+/* --------------------------------------------------------------------------
+   SECONDARY BUTTON: High-End Glassmorphism Minimalist
+   -------------------------------------------------------------------------- */
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text-main);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Neon Trace Border Underlay */
+.btn-secondary::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 6px;
+  padding: 1px; /* Line thickness */
+  background: var(--gradient-primary);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  opacity: 0;
+  transition: var(--transition-smooth);
+}
+
+/* Secondary Hover Interaction Mechanics */
+.btn-secondary:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.07);
+  color: #ffffff;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Reveal gradient border trace on hover */
+.btn-secondary:hover::after {
+  opacity: 1;
+}
+
+.btn-secondary:active {
+  transform: translateY(-1px);
+}
+
+
+
+
+
+
+
+
+
+
+/* Base Reset for Header Context */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+  background-color: var(--bg-dark);
+}
+
+/* Header Container Styling */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: var(--bg-surface);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border-bottom: 1px solid var(--glass-border);
+  transition: var(--transition-smooth);
+}
+
+.header-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 1.25rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo Design */
+.logo {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text-main);
+  text-decoration: none;
+  letter-spacing: -0.5px;
+}
+
+.logo span {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Navigation System */
+.nav-list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 2.5rem;
+}
+
+.nav-link {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.5rem 0;
+  transition: var(--transition-smooth);
+}
+
+.nav-link:hover,
+.nav-item:hover>.nav-link {
+  color: var(--text-main);
+}
+
+/* Dropdown Arrow Indicator */
+.dropdown-icon {
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid var(--text-muted);
+  border-bottom: 2px solid var(--text-muted);
+  transform: rotate(45deg) translateY(-2px);
+  transition: var(--transition-smooth);
+  display: inline-block;
+  margin-left: 4px;
+}
+
+.nav-item:hover .dropdown-icon {
+  border-color: var(--accent-cyan);
+  transform: rotate(-135deg) translateY(-2px);
+}
+
+/* Rich Desktop Dropdown Panel */
+.has-dropdown {
+  position: relative;
+}
+
+/* Container adjustment for a cleaner, compact dropdown */
+.dropdown-matrix {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(15px);
+  width: 220px;
+  /* Reduced width since we are only displaying titles now */
+  background: rgba(10, 15, 30, 0.95);
+  backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: 8px;
+  padding: 0.75rem;
+  box-shadow: var(--shadow-overlay);
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition-smooth);
+  pointer-events: none;
+}
+
+/* Desktop Hover Activation Trigger */
+.has-dropdown:hover .dropdown-matrix {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+  pointer-events: auto;
+}
+
+/* Stack the simple link elements cleanly */
+.dropdown-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+/* Simplified Interactive Link Block */
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  padding: 0.65rem 0.85rem;
+  border-radius: 6px;
+  text-decoration: none;
+  background: transparent;
+  transition: var(--transition-smooth);
+}
+
+/* Hover Accent Micro-interaction */
+.dropdown-item:hover {
+  background: var(--bg-surface-hover);
+  border-left: 3px solid var(--accent-cyan);
+  padding-left: calc(0.85rem - 3px);
+  /* Prevents text layout shifting when border appears */
+}
+
+/* Typography alignment */
+.item-info {
+  display: flex;
+  align-items: center;
+}
+
+.item-title {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: var(--transition-smooth);
+}
+
+/* Light up the text color on hover */
+.dropdown-item:hover .item-title {
+  color: var(--text-main);
+}
+
+.item-icon {
+  font-size: 1.25rem;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.4rem;
+  border-radius: 6px;
+}
+
+.item-title {
+  display: block;
+  color: var(--text-main);
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 0.15rem;
+}
+
+.item-desc {
+  display: block;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  line-height: 1.4;
+}
+
+/* Premium Button Action */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.btn-cta {
+  background: var(--gradient-primary);
+  color: #000;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  letter-spacing: 0.3px;
+  transition: var(--transition-smooth);
+  box-shadow: 0 4px 15px rgba(79, 172, 254, 0.3);
+}
+
+.btn-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 242, 254, 0.5);
+}
+
+.mobile-action {
+  display: none;
+}
+
+/* Responsive Hamburger Toggle */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.hamburger .bar {
+  width: 100%;
+  height: 2px;
+  background-color: var(--text-main);
+  border-radius: 2px;
+  transition: var(--transition-smooth);
+}
+
+/* Mobile Adaptive Engine (Max-width 768px Ruleset) */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .header-actions .btn-cta {
+    display: none;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 360px;
+    height: 100vh;
+    background: rgba(7, 9, 19, 0.98);
+    backdrop-filter: var(--glass-blur);
+    border-left: 1px solid var(--glass-border);
+    padding: 6rem 2rem 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: var(--transition-smooth);
+  }
+
+  .nav-menu.active {
+    right: 0;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+    width: 100%;
+  }
+
+  .nav-item {
+    width: 100%;
+  }
+
+  .nav-link {
+    font-size: 1.2rem;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  /* Mobile Dropdown Refactor */
+  .dropdown-matrix {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+    width: 100%;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0.5rem 0 0 1rem;
+    display: none;
+    /* Managed smoothly by existing JavaScript toggle */
+  }
+
+  .nav-item.mobile-dropdown-active .dropdown-matrix {
+    display: block;
+  }
+
+  .dropdown-item {
+    padding: 0.5rem 0;
+  }
+
+  .dropdown-item:hover {
+    background: transparent;
+    padding-left: 0;
+    border-left: none;
+  }
+
+  .mobile-action {
+    display: block;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .mobile-action .btn-cta {
+    display: block;
+    text-align: center;
+    width: 100%;
+  }
+
+  /* Hamburger Cross Morph Animation */
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   IMAGE-MODELED PREMIUM FOOTER MATRIX
+   ========================================================================== */
+
+.stack-footer {
+  position: relative;
+  background-color: var(--bg-dark);
+  /* Uses your locked deep background */
+  padding: 6rem 0 0 0;
+  width: 100%;
+  border-top: 1px solid var(--glass-border);
+}
+
+.footer-matrix-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 2rem 5rem 2rem;
+  display: grid;
+  /* Recreates the perfect 5-column grid proportions seen in your image */
+  grid-template-columns: 1.3fr 0.9fr 1.1fr 1.1fr 1.3fr;
+  gap: 2.5rem;
+}
+
+/* --- Column 1: Brand Column & Social Nodes --- */
+.footer-brand-title {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--text-main);
+  text-decoration: none;
+  letter-spacing: -0.5px;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+
+.footer-brand-title span {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.brand-pitch-text {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  max-width: 280px;
+}
+
+.social-circle-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.social-circle-link {
+  width: 36px;
+  height: 36px;
+  background: rgba(79, 172, 254, 0.1);
+  /* Soft background blue tint */
+  border: 1px solid rgba(79, 172, 254, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-cyan);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: var(--transition-smooth);
+}
+
+.social-circle-link:hover {
+  background: var(--gradient-primary);
+  color: #030712;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 242, 254, 0.3);
+}
+
+/* --- Global Column Headers (With custom clean underlines from your image) --- */
+.col-heading-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 1.75rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+  display: inline-block;
+}
+
+/* Recreating the stylish left-aligned underline marker */
+.col-heading-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 35px;
+  height: 2px;
+  background: var(--accent-cyan);
+  box-shadow: 0 0 8px var(--accent-cyan);
+}
+
+/* --- Columns 2 & 3: Navigation Link Systems --- */
+.footer-nav-list-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.footer-nav-list-links a {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: var(--transition-smooth);
+  display: inline-block;
+}
+
+.footer-nav-list-links a:hover {
+  color: var(--text-main);
+  transform: translateX(4px);
+}
+
+/* --- Column 4: Contact Info Details Array --- */
+.footer-contact-data-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footer-contact-data-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.contact-vector-icon {
+  color: var(--accent-cyan);
+  font-size: 1rem;
+}
+
+.contact-string {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+/* --- Column 5: Image-Accurate Inline Newsletter Form --- */
+.newsletter-explanation-text {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+}
+
+.inline-subscription-box-form {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--glass-border);
+  border-radius: 6px;
+  overflow: hidden;
+  max-width: 320px;
+}
+
+.subscription-input-field {
+  flex-grow: 1;
+  background: transparent;
+  border: none;
+  padding: 0.75rem 1rem;
+  color: var(--text-main);
+  font-size: 0.9rem;
+  width: 70%;
+}
+
+.subscription-input-field:focus {
+  outline: none;
+}
+
+.subscription-input-field::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+/* The arrow action trigger matching the icon inside your image */
+.subscription-action-submit-btn {
+  background: var(--gradient-primary);
+  border: none;
+  height: 100%;
+  padding: 0.75rem 1.15rem;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.paper-plane-icon {
+  color: #030712;
+  font-size: 0.9rem;
+  font-weight: 700;
+  transition: var(--transition-smooth);
+}
+
+.subscription-action-submit-btn:hover .paper-plane-icon {
+  transform: scale(1.1) translateX(2px);
+}
+
+/* --- Baseline Attribution Copyright Strip --- */
+.footer-bottom-copyright-strip {
+  border-top: 1px solid var(--glass-border);
+  background: rgba(7, 9, 19, 0.5);
+  padding: 1.5rem 2rem;
+  text-align: center;
+}
+
+.copyright-baseline-string {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+/* ==========================================================================
+   RESPONSIVE ADAPTIVE ENGINE (768px BREAKPOINT)
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  .stack-footer {
+    padding: 4rem 0 0 0;
+  }
+
+  /* Compress the 5 columns down into a single-column block layout on devices */
+  .footer-matrix-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    padding: 0 1.5rem 4rem 1.5rem;
+  }
+
+  .brand-pitch-text {
+    max-width: 100%;
+  }
+
+  .inline-subscription-box-form {
+    max-width: 100%;
+    /* Make the newsletter box full width on mobile viewports */
+  }
+
+  .footer-bottom-copyright-strip {
+    padding: 1.5rem 1.5rem;
+  }
+}

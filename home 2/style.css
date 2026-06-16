@@ -1,0 +1,1871 @@
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   HOMEPAGE 2: PREMIUM HERO SECTION CORE STYLES
+   ========================================================================== */
+.hero-v2 {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 8rem 0 5rem 0;
+  background-color: var(--bg-dark);
+  z-index: 1;
+  overflow: hidden;
+}
+
+/* Luxury Environmental Glowing Background Meshes */
+.glow-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(140px);
+  opacity: 0.18;
+  pointer-events: none;
+  z-index: -1;
+}
+.glow-1 {
+  top: -10%;
+  right: 10%;
+  width: 500px;
+  height: 500px;
+  background: var(--accent-violet);
+}
+.glow-2 {
+  bottom: 5%;
+  left: -5%;
+  width: 600px;
+  height: 600px;
+  background: var(--accent-magenta);
+}
+
+/* Layout Grid Setup */
+.hero-v2-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+/* Tech Micro Badge */
+.tech-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(168, 85, 247, 0.08);
+  border: 1px solid rgba(168, 85, 247, 0.2);
+  padding: 0.4rem 1rem;
+  border-radius: 100px;
+  margin-bottom: 1.75rem;
+}
+.badge-dot {
+  width: 6px;
+  height: 6px;
+  background-color: var(--accent-magenta);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--accent-magenta);
+  animation: pulse-glow 2s infinite ease-in-out;
+}
+.badge-text {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #e2e8f0;
+}
+
+/* Premium Typography Accents */
+.hero-v2-title {
+  font-size: 4rem; /* Scaled larger specifically for hero layout v2 */
+  line-height: 1.1;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.03em;
+}
+.text-gradient {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hero-v2-desc {
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  line-height: var(--lh-body);
+  margin-bottom: 2.5rem;
+  max-width: 90%;
+}
+
+/* Call-to-actions positioning alignment */
+.hero-v2-actions {
+  display: flex;
+  gap: 1.25rem;
+  margin-bottom: 3.5rem;
+}
+
+/* Hero Micro Metrics System */
+.hero-v2-metrics {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding-top: 2rem;
+}
+.metric-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.metric-num {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text-main);
+  letter-spacing: -1px;
+}
+.metric-label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.metric-divider {
+  width: 1px;
+  height: 35px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* ==========================================================================
+   RIGHT GRAPHIC: CYBERNETIC GLASSMORPHIC DISPLAY PANEL
+   ========================================================================== */
+.hero-v2-visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.glass-dashboard-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+}
+
+/* Floating Structural Accents behind and in front of glass */
+.floating-accent {
+  position: absolute;
+  border-radius: var(--radius);
+  z-index: -1;
+  animation: floating-slow 6s infinite ease-in-out;
+}
+.element-1 {
+  width: 90px;
+  height: 90px;
+  background: var(--gradient-primary);
+  top: -20px;
+  right: -20px;
+  opacity: 0.7;
+  filter: blur(10px);
+}
+.element-2 {
+  width: 130px;
+  height: 80px;
+  background: rgba(38, 32, 59, 0.6);
+  border: 1px solid var(--glass-border);
+  bottom: -30px;
+  left: -40px;
+  backdrop-filter: var(--glass-blur);
+  box-shadow: var(--shadow-overlay);
+  animation-delay: -3s;
+}
+
+/* Core Heavy Glass Card Setup */
+.glass-card-main {
+  background: var(--bg-surface);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  padding: 1.75rem;
+  box-shadow: var(--shadow-overlay);
+  transition: var(--transition-smooth);
+}
+.glass-card-main:hover {
+  border-color: rgba(168, 85, 247, 0.25);
+  transform: scale(1.02);
+}
+
+/* Code UI styling */
+.glass-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  padding-bottom: 1rem;
+  margin-bottom: 1.25rem;
+}
+.window-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+.window-dot.red { background: #ef4444; }
+.window-dot.yellow { background: #f59e0b; }
+.window-dot.green { background: #10b981; }
+.window-title {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-family: monospace;
+  margin-left: 0.5rem;
+}
+.code-line {
+  font-family: monospace;
+  font-size: 0.85rem;
+  color: #cbd5e1;
+  margin-bottom: 0.6rem;
+}
+.code-accent { color: var(--accent-violet); }
+.code-success { color: #10b981; font-weight: 600; }
+
+.code-glow-bar {
+  height: 4px;
+  width: 70%;
+  background: var(--gradient-primary);
+  border-radius: 100px;
+  margin: 1.5rem 0;
+  box-shadow: 0 0 10px rgba(168, 85, 247, 0.5);
+}
+
+.glass-stats-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding-top: 1.25rem;
+}
+.mini-status small {
+  display: block;
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  letter-spacing: 0.5px;
+  margin-bottom: 0.25rem;
+}
+.mini-status strong {
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+/* ==========================================================================
+   PURE UTILITY ANIMATION DEFINITIONS
+   ========================================================================== */
+@keyframes pulse-glow {
+  0%, 100% { transform: scale(1); opacity: 0.6; }
+  50% { transform: scale(1.3); opacity: 1; }
+}
+
+@keyframes floating-slow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-12px) rotate(3deg); }
+}
+
+
+/* ==========================================================================
+   MOBILE TARGETS SPECIFICATIONS (768px PARADIGM BREAKPOINT)
+   ========================================================================== */
+@media (max-width: 768px) {
+  .btn-main, .btn-secondary {
+    padding: 1rem 2.2rem;
+    font-size: 0.95rem;
+    width: 100%; /* Stacks links beautifully for responsive hit targets */
+  }
+
+  .hero-v2 {
+    padding: 7rem 0 4rem 0;
+    min-height: auto;
+  }
+
+  .hero-v2-grid {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+    text-align: center;
+  }
+
+  .tech-badge {
+    margin: 0 auto 1.5rem auto;
+  }
+
+  .hero-v2-title {
+    font-size: 2.6rem; 
+  }
+
+  .hero-v2-desc {
+    font-size: 1rem;
+    max-width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .hero-v2-actions {
+    flex-direction: column; 
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .hero-v2-metrics {
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .hero-v2-visual {
+    width: 100%;
+    margin-top: 1rem;
+  }
+  
+  .glass-dashboard-wrapper {
+    max-width: 100%;
+    padding: 0 0.5rem;
+  }
+
+  .element-2 {
+    left: 10px;
+    bottom: -20px;
+  }
+}
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   HOMEPAGE 2: PREMIUM SERVICES / CAPABILITIES DESIGN STYLES
+   ========================================================================== */
+.services-v2 {
+  position: relative;
+  padding: 8rem 0;
+  background-color: var(--bg-dark);
+  z-index: 2;
+}
+
+/* Header Contextual Framing */
+.services-v2-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 5rem auto;
+}
+.services-v2-title {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin-bottom: 1.25rem;
+}
+.services-v2-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  line-height: var(--lh-body);
+}
+
+/* Service Grid Architecture Layout */
+.services-v2-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+/* Cybernetic Glassmorphic Service Card Framework */
+.service-card {
+  position: relative;
+  background: var(--bg-surface);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  padding: 3rem 2.25rem;
+  overflow: hidden;
+  transition: var(--transition-smooth);
+}
+
+/* Concealed Underlay Ambient Color Glow Layer */
+.card-glow-layer {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(600px circle at var(--x, 50%) var(--y, 50%), rgba(168, 85, 247, 0.06), transparent 40%);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+
+.service-icon-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--glass-border);
+  border-radius: 8px;
+  color: var(--accent-violet);
+  margin-bottom: 2rem;
+  transition: var(--transition-smooth);
+}
+.service-svg {
+  width: 24px;
+  height: 24px;
+}
+
+.service-card-title {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  letter-spacing: -0.01em;
+}
+.service-card-desc {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 2.25rem;
+}
+
+/* High-End Micro Action Targets Link */
+.service-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.arrow-svg {
+  width: 14px;
+  height: 14px;
+  transition: var(--transition-smooth);
+  color: var(--accent-violet);
+}
+
+/* Card Interaction Mechanics */
+.service-card:hover {
+  transform: translateY(-8px);
+  background: var(--bg-surface-hover);
+  border-color: rgba(168, 85, 247, 0.2);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 30px rgba(168, 85, 247, 0.03);
+}
+.service-card:hover .card-glow-layer {
+  opacity: 1;
+}
+.service-card:hover .service-icon-wrapper {
+  background: var(--gradient-primary);
+  color: #ffffff;
+  border-color: transparent;
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.4);
+}
+.service-card:hover .arrow-svg {
+  transform: translateX(6px);
+  color: var(--accent-magenta);
+}
+
+/* Featured / Active Accent Card Structural Variation Option */
+.service-card.active-accent {
+  border-color: rgba(244, 63, 94, 0.15);
+}
+.service-card.active-accent .service-icon-wrapper {
+  background: rgba(244, 63, 94, 0.08);
+  border-color: rgba(244, 63, 94, 0.2);
+  color: var(--accent-magenta);
+}
+
+
+/* ==========================================================================
+   MOBILE COMPONENT BREAKPOINTS SPECIFICATION (768px PARADIGM)
+   ========================================================================== */
+@media (max-width: 768px) {
+  .services-v2 {
+    padding: 5rem 0;
+  }
+  
+  .services-v2-header {
+    margin-bottom: 3.5rem;
+  }
+  
+  .services-v2-title {
+    font-size: 2.25rem;
+  }
+  
+  .services-v2-grid {
+    grid-template-columns: 1fr; /* Stacks all features cleanly */
+    gap: 1.5rem;
+  }
+  
+  .service-card {
+    padding: 2.5rem 1.75rem;
+  }
+}
+
+
+
+
+
+
+/* ==========================================================================
+   HOMEPAGE 2: PREMIUM ASYMMETRIC METRICS SECTION (CARD-LESS UI)
+   ========================================================================== */
+.metrics-v2 {
+  position: relative;
+  padding: 10rem 0;
+  background-color: var(--bg-dark);
+  z-index: 4;
+  overflow: hidden;
+}
+
+/* Premium micro-grid background matrix decoration */
+.metrics-grid-overlay {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.01) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.01) 1px, transparent 1px);
+  background-size: 60px 60px;
+  mask-image: radial-gradient(ellipse 60% 50% at 50% 50%, #000 70%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 60% 50% at 50% 50%, #000 70%, transparent 100%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Layout Split Grid Geometry */
+.metrics-v2-split {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 6rem;
+  align-items: center;
+}
+
+/* Left Content Area Formatting */
+.metrics-v2-context {
+  position: relative;
+}
+.metrics-v2-heading {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+.metrics-v2-body {
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 3rem;
+}
+.glow-text-link {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--accent-violet);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.glow-text-link::before {
+  content: '';
+  width: 12px;
+  height: 1px;
+  background: var(--accent-magenta);
+}
+
+/* Right Content Area: Pure Typographic Blocks */
+.metrics-v2-display {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  border-left: 1px solid rgba(255, 255, 255, 0.05);
+  padding-left: 4rem;
+}
+
+/* Pure Text Metric Interlocking Blocks */
+.stat-metric-block {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 2rem;
+  align-items: baseline;
+  transition: var(--transition-smooth);
+}
+
+.stat-huge-number {
+  font-size: 4.5rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #ffffff;
+  letter-spacing: -0.04em;
+  font-feature-settings: "tnum"; /* Stabilizes tabular data figures during load scaling */
+  transition: var(--transition-smooth);
+}
+.stat-suffix {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-left: 0.1rem;
+}
+
+.stat-meta-wrapper {
+  position: relative;
+}
+.stat-label-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.01em;
+  transition: var(--transition-smooth);
+}
+.stat-label-desc {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* Luxury Interactive Hover Cross-wiring effects (No box borders) */
+.stat-metric-block:hover {
+  transform: translateX(10px);
+}
+.stat-metric-block:hover .stat-huge-number {
+  transform: scale(1.05);
+  text-shadow: 0 0 30px rgba(168, 85, 247, 0.2);
+}
+.stat-metric-block:hover .stat-label-title {
+  color: var(--accent-magenta);
+}
+
+
+/* ==========================================================================
+   MOBILE ARCHITECTURE OVERRIDES (768px PARADIGM BREAKPOINT SPEC)
+   ========================================================================== */
+@media (max-width: 768px) {
+  .metrics-v2 {
+    padding: 6rem 0;
+  }
+
+  /* Flatten the main split layout completely */
+  .metrics-v2-split {
+    grid-template-columns: 1fr;
+    gap: 4.5rem;
+  }
+
+  .metrics-v2-context {
+    text-align: center;
+  }
+  .metrics-v2-heading {
+    font-size: 2.3rem;
+  }
+  .metrics-v2-body {
+    font-size: 1.05rem;
+    margin-bottom: 2rem;
+  }
+  .glow-text-link {
+    justify-content: center;
+  }
+
+  /* Strip down vertical borders on mobile views */
+  .metrics-v2-display {
+    border-left: none;
+    padding-left: 0;
+    gap: 3.5rem;
+  }
+
+  /* Transition stat grids to vertical stack alignment layouts */
+  .stat-metric-block {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    text-align: center;
+  }
+
+  .stat-huge-number {
+    font-size: 3.8rem;
+  }
+  .stat-suffix {
+    font-size: 1.75rem;
+  }
+
+  .stat-label-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .stat-label-desc {
+    font-size: 0.9rem;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .stat-metric-block:hover {
+    transform: translateY(-4px); /* Shift upward instead of right on small touch displays */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   HOMEPAGE 2: PREMIUM INTERACTIVE SHOWCASE LIST (CARD-LESS DESIGN SYSTEM)
+   ========================================================================== */
+.showcase-v2 {
+  position: relative;
+  padding: 10rem 0;
+  background-color: var(--bg-dark);
+  z-index: 5;
+}
+
+/* Master Grid Layout Split Configuration */
+.showcase-v2-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 7rem;
+  align-items: flex-start;
+}
+
+/* Left Column Styling Rules */
+.showcase-v2-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-top: 1rem;
+  margin-bottom: 4rem;
+}
+
+.showcase-interactive-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Custom Interactive Editorial Row Design */
+.showcase-item-row {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.25rem 0;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.row-index {
+  font-family: monospace;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  transition: var(--transition-smooth);
+}
+
+.row-heading {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.4);
+  margin-bottom: 0; /* Clear base h3 reset tracking values */
+  transition: var(--transition-smooth);
+}
+
+/* Luxury Interactive Linear Slide Track Indicator */
+.row-indicator-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.04);
+  transition: var(--transition-smooth);
+}
+
+/* Interactive Hover & Selected State Modifiers */
+.showcase-item-row:hover .row-heading,
+.showcase-item-row.active-row .row-heading {
+  color: #ffffff;
+  transform: translateX(10px);
+}
+
+.showcase-item-row:hover .row-index,
+.showcase-item-row.active-row .row-index {
+  color: var(--accent-violet);
+}
+
+.showcase-item-row:hover .row-indicator-line,
+.showcase-item-row.active-row .row-indicator-line {
+  background: var(--gradient-primary);
+  box-shadow: 0 1px 10px rgba(168, 85, 247, 0.5);
+}
+
+
+/* Right Column Layout Frame (Premium Telemetry Block Layout) */
+.showcase-v2-details {
+  position: relative;
+}
+
+.meta-details-frame {
+  background: rgba(15, 12, 27, 0.4);
+  border-left: 2px solid var(--accent-violet);
+  padding: 3.5rem 3rem;
+  transition: var(--transition-smooth);
+}
+
+.frame-diagnostic-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding-bottom: 1.25rem;
+  margin-bottom: 2.5rem;
+}
+
+.diagnostic-status-tag {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: var(--accent-magenta);
+}
+
+.diagnostic-timestamp {
+  font-family: monospace;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.frame-body-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 1.25rem;
+  line-height: 1.3;
+}
+
+.frame-body-desc {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 3.5rem;
+}
+
+/* Custom Telemetry Infrastructure Grid Specs */
+.frame-specs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 2rem;
+}
+
+.spec-metric {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.spec-metric small {
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  letter-spacing: 0.5px;
+}
+
+.spec-metric span {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+
+/* ==========================================================================
+   MOBILE TARGETS SPECIFICATIONS (768px PARADIGM BREAKPOINT OVERRIDE)
+   ========================================================================== */
+@media (max-width: 768px) {
+  .showcase-v2 {
+    padding: 6rem 0;
+  }
+
+  /* Structural collapse down to a single clean typographic sequence track */
+  .showcase-v2-grid {
+    grid-template-columns: 1fr;
+    gap: 4.5rem;
+  }
+
+  .showcase-v2-title {
+    font-size: 2.3rem;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .showcase-v2-nav {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .showcase-v2-nav .tech-badge {
+    margin: 0 auto 1.5rem auto; /* Target badge alignment layout specifically */
+  }
+
+  .row-heading {
+    font-size: 1.35rem;
+  }
+
+  .showcase-item-row:hover .row-heading,
+  .showcase-item-row.active-row .row-heading {
+    transform: translateX(6px); /* Diminish slide delta on small viewports */
+  }
+
+  /* Telemetry Frame UI Restructuring for Mobile Scale */
+  .meta-details-frame {
+    padding: 2.5rem 1.5rem;
+    border-left: none;
+    border-top: 2px solid var(--accent-violet); /* Transition anchor border orientation */
+    background: rgba(15, 12, 27, 0.2);
+  }
+
+  .frame-diagnostic-header {
+    margin-bottom: 1.75rem;
+  }
+
+  .frame-body-title {
+    font-size: 1.3rem;
+  }
+
+  .frame-body-desc {
+    font-size: 0.95rem;
+    margin-bottom: 2.5rem;
+  }
+
+  /* Flatten nested stats table list cleanly to fit narrow layout viewports */
+  .frame-specs-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding-top: 1.5rem;
+  }
+
+  .spec-metric {
+    gap: 0.25rem;
+  }
+
+  .spec-metric span {
+    font-size: 1.1rem;
+  }
+}
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   HOMEPAGE 2: PREMIUM IMMERSIVE RADIAL CONTEXTUAL HUB STYLE (NO BOXES/CARDS)
+   ========================================================================== */
+.hub-v2 {
+  position: relative;
+  padding: 10rem 0;
+  background-color: var(--bg-dark);
+  z-index: 6;
+  overflow: hidden;
+}
+
+.hub-v2-header {
+  text-align: center;
+  max-width: 750px;
+  margin: 0 auto 6rem auto;
+}
+.hub-v2-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+.hub-v2-desc {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  line-height: var(--lh-body);
+}
+
+/* Core Canvas Fluid Positioning Wrapper */
+.hub-interactive-canvas {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 500px;
+}
+
+/* ==========================================================================
+   CENTRAL CORE NUCLEUS SYSTEM
+   ========================================================================== */
+.hub-central-engine {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.core-sphere-nucleus {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle at 30% 30%, rgba(38, 32, 59, 0.95) 0%, #050409 100%);
+  border: 2px solid rgba(168, 85, 247, 0.4);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 40px rgba(168, 85, 247, 0.25), inset 0 0 20px rgba(168, 85, 247, 0.2);
+  z-index: 3;
+}
+.nucleus-label {
+  font-family: monospace;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  color: var(--accent-magenta);
+  font-weight: 700;
+}
+.nucleus-status {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-top: 0.25rem;
+}
+
+/* Breathing Layer Waves Rings */
+.core-breathing-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px dashed rgba(168, 85, 247, 0.15);
+  pointer-events: none;
+  animation: rotate-core 30s linear infinite;
+}
+.ring-outer {
+  width: 220px;
+  height: 220px;
+  border: 1px solid rgba(244, 63, 94, 0.08);
+  animation: rotate-core-reverse 45s linear infinite;
+}
+.ring-mid {
+  width: 170px;
+  height: 170px;
+  border-color: rgba(168, 85, 247, 0.2);
+}
+
+@keyframes rotate-core {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+@keyframes rotate-core-reverse {
+  0% { transform: rotate(360deg); }
+  100% { transform: rotate(0deg); }
+}
+
+/* ==========================================================================
+   LATERAL TOPOLOGY BRANCHES
+   ========================================================================== */
+.hub-branch {
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+  width: 40%;
+}
+
+.hub-node-item {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  position: relative;
+}
+
+/* Typography Node Elements */
+.node-meta-text {
+  flex: 1;
+  transition: var(--transition-smooth);
+}
+.node-meta-text h4 {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+  transition: var(--transition-smooth);
+}
+.node-meta-text p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+.branch-left .node-meta-text { text-align: right; }
+.branch-right .node-meta-text { text-align: left; }
+
+/* Structural Geometric Vectors (Asymmetric Lines replacing boxes) */
+.node-geometric-connector {
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+}
+.connector-line {
+  height: 1px;
+  width: 80px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.02) 0%, rgba(255, 255, 255, 0.15) 100%);
+  transition: var(--transition-smooth);
+}
+.connector-dot {
+  width: 6px;
+  height: 6px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transition: var(--transition-smooth);
+}
+
+.branch-right .connector-line {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.02) 100%);
+}
+
+/* ==========================================================================
+   DYNAMIC LIGHT FLOW INTERACTIONS
+   ========================================================================== */
+.hub-node-item:hover .node-meta-text h4 {
+  color: var(--accent-violet);
+  transform: translateY(-2px);
+}
+.hub-node-item:hover .connector-dot {
+  background-color: var(--accent-magenta);
+  box-shadow: 0 0 12px var(--accent-magenta);
+  transform: scale(1.5);
+}
+.hub-node-item:hover .connector-line {
+  background: var(--gradient-primary);
+}
+
+
+/* ==========================================================================
+   768PX ADAPTIVE BREAKPOINT SPECIFICATION (MOBILE ORIENTATION RESET)
+   ========================================================================== */
+@media (max-width: 768px) {
+  .hub-v2 {
+    padding: 6rem 0;
+  }
+  
+  .hub-v2-header {
+    margin-bottom: 4rem;
+  }
+  
+  .hub-v2-title {
+    font-size: 2.3rem;
+  }
+  
+  .hub-v2-desc {
+    font-size: 1rem;
+  }
+
+  /* Transition landscape canvas layout to vertical pipeline tracking orientation */
+  .hub-interactive-canvas {
+    flex-direction: column;
+    gap: 3.5rem;
+    min-height: auto;
+  }
+
+  /* Re-route matrix stacking constraints */
+  .hub-branch {
+    width: 100%;
+    gap: 3.5rem;
+  }
+  
+  /* Elevate Core position to top baseline context */
+  .hub-central-engine {
+    order: -1; 
+    width: 140px;
+    height: 140px;
+  }
+  .core-sphere-nucleus {
+    width: 100px;
+    height: 100px;
+  }
+  .ring-outer, .ring-mid {
+    display: none; /* Reduce visual noise for mobile vertical scrolling stability */
+  }
+
+  .hub-node-item {
+    flex-direction: column;
+    text-align: center !important;
+    gap: 1rem;
+  }
+
+  .branch-left .node-meta-text,
+  .branch-right .node-meta-text {
+    text-align: center;
+  }
+
+  /* Convert horizontal pipeline tracking connectors to elegant vertical status dividers */
+  .node-geometric-connector {
+    flex-direction: column;
+    order: -1; /* Place indicator markers directly above titles */
+  }
+  
+  .connector-line {
+    width: 1px;
+    height: 30px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.02) 0%, rgba(255,255,255,0.15) 100%);
+  }
+
+  .branch-right .connector-line {
+    background: linear-gradient(180deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.02) 100%);
+  }
+
+  .hub-node-item:hover .node-meta-text h4 {
+    transform: none; /* Suppress multi-axis micro shifts on touchscreen touchpoints */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   HOMEPAGE 2: PREMIUM EDITORIAL TESTIMONIAL DESIGN SYSTEM (CARD-LESS)
+   ========================================================================== */
+.testimonials-v2 {
+  position: relative;
+  padding: 10rem 0;
+  background-color: var(--bg-dark);
+  z-index: 7;
+}
+
+/* Left Column Elements Layout */
+.testimonials-v2-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-top: 1rem;
+  margin-bottom: 4rem;
+}
+
+/* Custom Telemetry Slider Progress Bar */
+.testimonial-tracker {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 200px;
+}
+.tracker-numbers {
+  font-family: monospace;
+  font-size: 0.95rem;
+  font-weight: 600;
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+}
+.tracker-active {
+  color: var(--text-main);
+}
+.tracker-divider {
+  color: rgba(255, 255, 255, 0.15);
+}
+.tracker-total {
+  color: var(--text-muted);
+}
+.tracker-progress-bar {
+  width: 100%;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 100px;
+  overflow: hidden;
+}
+.tracker-progress-fill {
+  width: 33.33%; /* Represents current slider index 1/3 */
+  height: 100%;
+  background: var(--gradient-primary);
+  box-shadow: 0 0 10px rgba(168, 85, 247, 0.6);
+}
+
+/* Right Column Typographic Architecture Layout */
+.editorial-quote-wrapper {
+  position: relative;
+  padding-left: 1rem;
+}
+
+.editorial-quote-mark {
+  position: absolute;
+  top: -4.5rem;
+  left: -2.5rem;
+  font-size: 11rem;
+  font-family: serif; /* Classic editorial flair overlay */
+  font-weight: 700;
+  color: transparent;
+  background: linear-gradient(180deg, rgba(168, 85, 247, 0.15) 0%, transparent 100%);
+  -webkit-background-clip: text;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.testimonial-statement {
+  font-size: 1.65rem;
+  font-weight: 400;
+  color: #f1f5f9;
+  line-height: 1.6;
+  letter-spacing: -0.01em;
+  margin-bottom: 3rem;
+}
+
+/* Minimal Separation Vector Tracing Line */
+.quote-divider-line {
+  width: 60px;
+  height: 1px;
+  background: var(--gradient-primary);
+  margin-bottom: 2.5rem;
+}
+
+/* Attributions Metadata Grid Styling */
+.client-meta-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.client-name {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+  margin-bottom: 0;
+}
+.client-role-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.client-title {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+.client-meta-dot {
+  width: 4px;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+}
+.client-company {
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+
+/* ==========================================================================
+   768PX ADAPTIVE BREAKPOINT SPECIFICATION (MOBILE VIEW OPTIMIZATION)
+   ========================================================================== */
+@media (max-width: 768px) {
+  .testimonials-v2 {
+    padding: 6rem 0;
+  }
+
+  /* Core layout grid matching the responsive asymmetry across blocks */
+  .testimonials-v2-left {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .testimonials-v2-left .tech-badge {
+    margin: 0 auto 1.5rem auto;
+  }
+
+  .testimonials-v2-title {
+    font-size: 2.3rem;
+    margin-bottom: 2.5rem;
+  }
+
+  /* Re-align index elements dynamically to center baseline */
+  .testimonial-tracker {
+    margin: 0 auto 4rem auto;
+    width: 100%;
+    align-items: center;
+  }
+
+  /* Quote Structural Adjustments for smaller touch displays */
+  .editorial-quote-wrapper {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .editorial-quote-mark {
+    top: -4rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 8rem;
+  }
+
+  .testimonial-statement {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
+
+  .quote-divider-line {
+    margin: 0 auto 2rem auto; /* Centralize tracking lines safely */
+  }
+
+  /* Attribution list structure modifications */
+  .client-role-row {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .client-meta-dot {
+    display: none; /* Hide spatial dots on stacked layout elements */
+  }
+
+  .client-name {
+    font-size: 1.2rem;
+  }
+  
+  .client-title, 
+  .client-company {
+    font-size: 0.85rem;
+  }
+}
+
+/* Custom Engine State Modifiers for Rotation Cross-fades */
+.editorial-quote-wrapper {
+  transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* JavaScript toggles this to create a seamless breathing fade effect */
+.tm-fade-out {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+/* Micro override to make sure tracking fill behaves elegantly */
+#tm-progress-fill {
+  transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   HOMEPAGE 2: PREMIUM DISCLOSURE STACK FAQ STYLE (CARD-LESS DESIGN SYSTEM)
+   ========================================================================== */
+.faq-v2 {
+  position: relative;
+  padding: 10rem 0;
+  background-color: var(--bg-dark);
+  z-index: 8;
+}
+
+/* Left Column Styling Layout Rules */
+.faq-v2-left {
+  position: sticky;
+  top: 10rem; /* Stays fixed elegantly while scanning the questions */
+}
+.faq-v2-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+.faq-v2-desc {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  line-height: var(--lh-body);
+  max-width: 90%;
+}
+
+/* Right Column: Interaction Disclosures Stack */
+.disclosure-stack {
+  display: flex;
+  flex-direction: column;
+}
+
+.disclosure-row {
+  position: relative;
+  padding: 2.25rem 0;
+}
+
+/* Row Triggers Header Areas */
+.disclosure-trigger {
+  display: grid;
+  grid-template-columns: 50px 1fr 30px;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.disclosure-index {
+  font-family: monospace;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--accent-magenta);
+}
+
+.disclosure-question {
+  font-size: 1.45rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 0; /* Clears baseline H3 spacing resets */
+  padding-right: 1.5rem;
+  transition: var(--transition-smooth);
+}
+
+/* Minimal Vector Accent Cross-Plus Icon toggler */
+.disclosure-icon {
+  position: relative;
+  width: 14px;
+  height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon-line {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.4);
+  transition: var(--transition-smooth);
+}
+.icon-line.horizontal {
+  width: 100%;
+  height: 2px;
+}
+.icon-line.vertical {
+  width: 2px;
+  height: 100%;
+}
+
+/* Track Line Divider Footprint */
+.disclosure-bottom-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.05);
+  transition: var(--transition-smooth);
+}
+
+/* Hidden Collapsible Body Engine Target area */
+.disclosure-target {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.disclosure-inner-body {
+  padding: 1.5rem 0 0 50px; /* Indents copy text cleanly in-line with questions */
+}
+.disclosure-inner-body p {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
+/* ==========================================================================
+   DYNAMIC INTERACTION MATRIX STATES
+   ========================================================================== */
+.disclosure-row:hover .disclosure-question,
+.disclosure-row.item-expanded .disclosure-question {
+  color: #ffffff;
+}
+
+/* Light path animation across dividers */
+.disclosure-row:hover .disclosure-bottom-line,
+.disclosure-row.item-expanded .disclosure-bottom-line {
+  background: var(--gradient-primary);
+  box-shadow: 0 1px 10px rgba(168, 85, 247, 0.3);
+}
+
+/* Morph core vector cross sign into dynamic active line dash on open */
+.disclosure-row.item-expanded .icon-line.vertical {
+  transform: rotate(90deg);
+  opacity: 0;
+}
+.disclosure-row.item-expanded .icon-line {
+  background-color: var(--accent-violet);
+}
+
+
+/* ==========================================================================
+   768PX ADAPTIVE BREAKPOINT SPECIFICATION (FAQ MOBILE RE-ARCHITECT)
+   ========================================================================== */
+@media (max-width: 768px) {
+  .faq-v2 {
+    padding: 6rem 0;
+  }
+
+  /* Clear split layouts completely to enforce natural single tracking column stack */
+  .faq-v2-left {
+    position: relative;
+    top: 0;
+    text-align: center;
+    margin-bottom: 3.5rem;
+  }
+  .faq-v2-left .tech-badge {
+    margin: 0 auto 1.5rem auto;
+  }
+  
+  .faq-v2-title {
+    font-size: 2.3rem;
+  }
+  .faq-v2-desc {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+
+  /* Dynamic hit target expanding for touch inputs */
+  .disclosure-row {
+    padding: 1.75rem 0;
+  }
+
+  /* Structural adjustment to collapse index numbers gracefully */
+  .disclosure-trigger {
+    grid-template-columns: 1fr 20px;
+    gap: 1rem;
+  }
+  .disclosure-index {
+    display: none; /* Safely remove index code to gain reading layout width */
+  }
+
+  .disclosure-question {
+    font-size: 1.2rem;
+    line-height: 1.4;
+    padding-right: 0;
+  }
+
+  .disclosure-inner-body {
+    padding: 1rem 0 0 0; /* Remove padding indents to occupy full readable margins */
+  }
+  .disclosure-inner-body p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   HOMEPAGE 2: PREMIUM KINETIC CTA SYSTEM (CARD-LESS ENGINE)
+   ========================================================================= */
+.cta-v2 {
+  position: relative;
+  padding: 12rem 0;
+  background-color: var(--bg-dark);
+  z-index: 9;
+  overflow: hidden;
+}
+
+/* Luxury ambient environment peripheral color glow spotter */
+.cta-mesh-glow {
+  position: absolute;
+  bottom: -20%;
+  right: -10%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.07) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Container Wrapper Alignment Parameters */
+.cta-v2-container {
+  display: flex;
+  justify-content: flex-start; /* Asymmetric default alignment left on desktop screens */
+}
+
+.cta-v2-wrapper {
+  max-width: 850px;
+  text-align: left;
+}
+
+.cta-v2-headline {
+  font-size: 4.2rem; 
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.cta-v2-summary {
+  font-size: 1.25rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 4rem;
+  max-width: 85%;
+}
+
+/* Actions Row Matrix Alignment Layer */
+.cta-v2-actions-row {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.cta-actions-separator {
+  font-family: monospace;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.2);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Premium Inline Link Subsystem */
+.inline-telemetry-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #ffffff;
+  position: relative;
+  padding: 0.5rem 0;
+}
+.inline-telemetry-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 1px;
+  background-color: var(--accent-violet);
+  transition: var(--transition-smooth);
+}
+
+.cta-arrow-svg {
+  width: 16px;
+  height: 16px;
+  color: var(--accent-violet);
+  transition: var(--transition-smooth);
+}
+
+/* Interaction Hover States */
+.inline-telemetry-link:hover::after {
+  width: 100%;
+  background-color: var(--accent-magenta);
+}
+.inline-telemetry-link:hover .cta-arrow-svg {
+  transform: translateX(6px);
+  color: var(--accent-magenta);
+}
+
+/* Structural Bottom Border Line Boundary */
+.cta-bottom-tracer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  /* FIXED: Fixed syntax percent rendering bug error right here smoothly */
+  background: linear-gradient(90deg, 
+    rgba(255, 255, 255, 0) 0%, 
+    rgba(255, 255, 255, 0.04) 50%, 
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+
+/* ==========================================================================
+   768PX ADAPTIVE BREAKPOINT SPECIFICATION (CTA MOBILE RE-ARCHITECT)
+   ========================================================================== */
+@media (max-width: 768px) {
+  .cta-v2 {
+    padding: 7rem 0;
+  }
+
+  /* FIXED: Force parent layout container layer elements alignment to center */
+  .cta-v2-container {
+    justify-content: center;
+  }
+
+  .cta-v2-wrapper {
+    text-align: center; /* Enforces text rendering flow alignment center */
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cta-v2-wrapper .tech-badge {
+    margin: 0 auto;
+  }
+
+  .cta-v2-headline {
+    font-size: 2.5rem; 
+    margin-top: 1.25rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+  }
+
+  .cta-v2-summary {
+    font-size: 1.05rem;
+    max-width: 100%;
+    margin-bottom: 3rem;
+  }
+
+  /* Transition raw landscape rows into deep vertical touch target pipelines */
+  .cta-v2-actions-row {
+    flex-direction: column;
+    gap: 1.25rem;
+    width: 100%;
+  }
+
+  .cta-actions-separator {
+    font-size: 0.75rem;
+    margin: 0.25rem 0;
+  }
+
+  .inline-telemetry-link {
+    justify-content: center;
+    width: 100%;
+    padding: 0.75rem 0; 
+  }
+  
+  .inline-telemetry-link::after {
+    left: 50%;
+    transform: translateX(-50%); 
+  }
+}

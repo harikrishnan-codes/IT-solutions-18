@@ -1,0 +1,1606 @@
+/* ==========================================================================
+   ACHIEVEMENTS HERO SECTION STYLES
+   ========================================================================== */
+
+.achieve-hero-section {
+    position: relative;
+    padding: 10rem 0 5rem 0;
+    background-color: var(--bg-dark);
+    overflow: hidden;
+}
+
+.achieve-ambient-glow {
+    position: absolute;
+    top: -10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 700px;
+    height: 400px;
+    background: var(--gradient-glow);
+    filter: blur(140px);
+    opacity: 0.18;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.quantum-counter-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 5rem;
+    position: relative;
+    z-index: 5;
+}
+
+/* --- TELEMETRY VALUE COUNTER NODES --- */
+.counter-node {
+    position: relative;
+    background: var(--bg-surface);
+    /* Premium warm plum velvet base layout */
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius);
+    padding: 3rem 2.25rem;
+    text-align: center;
+    transition: var(--transition-smooth);
+}
+
+.node-glow-track {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: transparent;
+    transition: var(--transition-smooth);
+}
+
+.featured-counter {
+    background: rgba(38, 32, 59, 0.45);
+    border-color: rgba(168, 85, 247, 0.25);
+}
+
+.featured-counter .node-glow-track {
+    background: var(--gradient-primary);
+}
+
+.counter-label {
+    font-family: monospace;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    color: var(--text-muted);
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.counter-value {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: var(--text-main);
+    line-height: 1;
+    letter-spacing: -0.03em;
+    margin-bottom: 1rem;
+}
+
+.counter-value small {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    margin-left: 0.25rem;
+    font-weight: 500;
+}
+
+.counter-meta-status {
+    font-family: monospace;
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    opacity: 0.8;
+}
+
+.text-green {
+    color: #10b981;
+}
+
+.text-violet {
+    color: var(--accent-violet);
+}
+
+/* Interactive Hover Reactions */
+.counter-node:hover {
+    transform: translateY(-6px);
+    border-color: var(--accent-violet);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.6), 0 0 20px rgba(168, 85, 247, 0.1);
+}
+
+.counter-node:hover .node-glow-track {
+    background: var(--gradient-primary);
+}
+
+/* ==========================================================================
+   CHRONOLOGICAL MASTER TIMELINE MODULE 
+   ========================================================================== */
+
+.achieve-timeline-section {
+    position: relative;
+    padding: 5rem 0 10rem 0;
+    background-color: var(--bg-dark);
+}
+
+.timeline-matrix-flow {
+    position: relative;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+/* Absolute Spatial Center Rail Spine Line */
+.timeline-spine-rail {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,
+            var(--glass-border) 0%,
+            rgba(168, 85, 247, 0.2) 20%,
+            rgba(244, 63, 94, 0.2) 80%,
+            var(--glass-border) 100%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* --- TIMELINE ENTRY LEVERAGE BOXES --- */
+.timeline-flow-card {
+    position: relative;
+    width: 50%;
+    z-index: 5;
+}
+
+.left-node {
+    padding-right: 4.5rem;
+    align-self: flex-start;
+}
+
+.right-node {
+    padding-left: 4.5rem;
+    align-self: flex-end;
+}
+
+/* Structural Timeline Dot Indicators */
+.timeline-bullet-nexus {
+    position: absolute;
+    top: 2.25rem;
+    width: 12px;
+    height: 12px;
+    background-color: var(--bg-dark);
+    border: 2px solid var(--glass-border);
+    border-radius: 50%;
+    z-index: 10;
+    transition: var(--transition-smooth);
+}
+
+.left-node .timeline-bullet-nexus {
+    right: -6px;
+}
+
+.right-node .timeline-bullet-nexus {
+    left: -6px;
+}
+
+/* Glass Panel Implementations */
+.achieve-glass-panel {
+    background: var(--bg-surface);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border: 1px solid var(--glass-border);
+    border-radius: calc(var(--radius) * 1.5);
+    padding: 2.5rem;
+    transition: var(--transition-smooth);
+}
+
+.achieve-date {
+    font-family: monospace;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--accent-magenta);
+    display: block;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+}
+
+.achieve-glass-panel h3 {
+    font-size: 1.4rem;
+    color: var(--text-main);
+    font-weight: 700;
+    line-height: var(--lh-heading);
+    margin-bottom: 1rem;
+}
+
+.achieve-glass-panel p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: var(--lh-body);
+    margin-bottom: 2rem;
+}
+
+.achieve-badge-row {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.tech-tag {
+    font-family: monospace;
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--glass-border);
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+}
+
+/* Chrono Cards Interaction Physics */
+.timeline-flow-card:hover .achieve-glass-panel {
+    border-color: rgba(168, 85, 247, 0.3);
+    background: var(--bg-surface-hover);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    transform: translateY(-3px);
+}
+
+.timeline-flow-card:hover .timeline-bullet-nexus {
+    border-color: var(--accent-violet);
+    background-color: var(--accent-violet);
+    box-shadow: 0 0 12px var(--accent-violet);
+}
+
+/* ==========================================================================
+   768PX RESPONSIVE BREAKPOINT PARADIGM (MOBILE TIMELINE FLATTEN ENGINE)
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    .achieve-hero-section {
+        padding: 6rem 0 3rem 0;
+    }
+
+    .achieve-timeline-section {
+        padding: 3rem 0 6rem 0;
+    }
+
+    /* Flatten top summary counters into a single responsive grid column */
+    .quantum-counter-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin-top: 3.5rem;
+    }
+
+    .counter-node {
+        padding: 2.25rem 1.5rem;
+    }
+
+    .counter-value {
+        font-size: 2.75rem;
+    }
+
+    /* Shifting spine rail tracks smoothly over to the absolute left margin rules */
+    .timeline-spine-rail {
+        left: 16px;
+        transform: none;
+    }
+
+    .timeline-matrix-flow {
+        gap: 2.5rem;
+    }
+
+    /* Compresses asynchronous layout rows into a unified vertical stream layout */
+    .timeline-flow-card {
+        width: 100%;
+        padding-left: 2.5rem !important;
+        padding-right: 0 !important;
+        align-self: flex-start !important;
+    }
+
+    /* Binds bullet point markers directly onto the modified left-side rail tracks */
+    .timeline-bullet-nexus {
+        left: 11px !important;
+        right: auto !important;
+        top: 2rem;
+    }
+
+    .achieve-glass-panel {
+        padding: 1.75rem 1.25rem;
+        border-radius: var(--radius);
+    }
+
+    .achieve-glass-panel h3 {
+        font-size: 1.2rem;
+    }
+
+    .achieve-glass-panel p {
+        font-size: var(--fs-p-sm);
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   REGULATORY CLEARANCE MATRIX CORE ARCHITECTURE
+   ========================================================================== */
+
+.clearance-matrix-section {
+    position: relative;
+    padding: 8rem 0;
+    background-color: var(--bg-dark);
+    border-top: 1px solid var(--glass-border);
+    overflow: hidden;
+}
+
+.clearance-ambient-glow {
+    position: absolute;
+    bottom: -20%;
+    right: -10%;
+    width: 500px;
+    height: 500px;
+    background: var(--gradient-glow);
+    filter: blur(140px);
+    opacity: 0.12;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.clearance-split-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+    position: relative;
+    z-index: 5;
+}
+
+/* ==========================================================================
+   LEFT PROPERTY: COMPLIANCE TEXT & BADGE GRID
+   ========================================================================== */
+
+.clearance-main-title {
+    font-size: 2.75rem;
+    font-weight: 700;
+    line-height: var(--lh-heading);
+    letter-spacing: -0.03em;
+    color: var(--text-main);
+    margin-bottom: 1.5rem;
+}
+
+.clearance-main-desc {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    line-height: var(--lh-body);
+    margin-bottom: 3rem;
+}
+
+.credential-mini-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+/* Minimalist Horizontal Certificate Containers */
+.cert-node-box {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    background: var(--bg-surface);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius);
+    padding: 1.25rem 1.75rem;
+    transition: var(--transition-smooth);
+}
+
+.cert-icon {
+    width: 42px;
+    height: 42px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--glass-border);
+    border-radius: calc(var(--radius) - 2px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-violet);
+    font-size: 1.1rem;
+    transition: var(--transition-smooth);
+}
+
+.cert-meta h4 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--text-main);
+    margin: 0 0 0.15rem 0;
+}
+
+.cert-meta span {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    display: block;
+}
+
+/* Interactive Hover Mechanics */
+.cert-node-box:hover {
+    transform: translateX(6px);
+    border-color: rgba(168, 85, 247, 0.25);
+    background: var(--bg-surface-hover);
+}
+
+.cert-node-box:hover .cert-icon {
+    background: var(--gradient-primary);
+    color: #ffffff;
+    border-color: transparent;
+}
+
+/* ==========================================================================
+   RIGHT PROPERTY: LIVE CRYPTOGRAPHIC AUDIT CONSOLE
+   ========================================================================== */
+
+.security-console-box {
+    position: relative;
+    background: var(--bg-surface);
+    /* Luxury warm plum velvet underlay */
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border: 1px solid var(--glass-border);
+    border-radius: calc(var(--radius) * 1.5);
+    box-shadow: var(--shadow-overlay);
+    padding: 2.5rem;
+    overflow: hidden;
+}
+
+.console-rail-glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--gradient-primary);
+}
+
+.console-terminal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    padding-bottom: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.terminal-tag {
+    font-family: monospace;
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+    color: var(--text-main);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.console-timestamp {
+    font-family: monospace;
+    font-size: 0.7rem;
+    color: var(--text-muted);
+}
+
+.audit-log-lines {
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.02);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.log-entry {
+    display: flex;
+    gap: 1rem;
+    font-family: monospace;
+    font-size: 0.8rem;
+    line-height: 1.4;
+}
+
+.log-status {
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.log-text {
+    color: var(--text-muted);
+}
+
+.text-magenta {
+    color: var(--accent-magenta);
+}
+
+.text-violet {
+    color: var(--accent-violet);
+}
+
+.text-green {
+    color: #10b981;
+}
+
+.animate-flicker {
+    animation: logFlickerBlink 2s infinite alternate ease-in-out;
+}
+
+@keyframes logFlickerBlink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.console-audit-footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.04);
+    padding-top: 1.25rem;
+    font-family: monospace;
+    font-size: 0.65rem;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+    opacity: 0.4;
+    text-align: center;
+}
+
+/* ==========================================================================
+   768PX RESPONSIVE BREAKPOINT PARADIGM (MOBILE COMPRESSION ENGINE)
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    .clearance-matrix-section {
+        padding: 5rem 0;
+    }
+
+    /* Compresses asymmetric columns neatly into a continuous vertical hierarchy */
+    .clearance-split-grid {
+        grid-template-columns: 1fr;
+        gap: 3.5rem;
+    }
+
+    .clearance-credentials-block {
+        text-align: center;
+    }
+
+    .clearance-main-title {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+
+    .clearance-main-desc {
+        font-size: var(--fs-p-sm);
+        margin-bottom: 2.5rem;
+    }
+
+    .cert-node-box {
+        text-align: left;
+    }
+
+    .cert-node-box:hover {
+        transform: translateY(-2px);
+        /* Swaps horizontal tracking offset on mobile viewports */
+    }
+
+    .security-console-box {
+        padding: 1.75rem 1.25rem;
+        border-radius: var(--radius);
+    }
+
+    .console-terminal-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .audit-log-lines {
+        padding: 1rem;
+    }
+
+    .log-entry {
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   GLOBAL SCALE-OUT MAP CORE ARCHITECTURE
+   ========================================================================== */
+
+.global-map-section {
+    position: relative;
+    padding: 8rem 0;
+    background-color: var(--bg-dark);
+    border-top: 1px solid var(--glass-border);
+    overflow: hidden;
+}
+
+.map-vector-grid {
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.01) 1px, transparent 1px);
+    background-size: 24px 24px;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.map-split-grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 5rem;
+    align-items: center;
+    position: relative;
+    z-index: 5;
+}
+
+/* ==========================================================================
+   LEFT PROPERTY: COMPLIANCE TEXT & COORDINATE LIST STACK
+   ========================================================================== */
+
+.map-main-title {
+    font-size: 2.75rem;
+    font-weight: 700;
+    line-height: var(--lh-heading);
+    letter-spacing: -0.03em;
+    color: var(--text-main);
+    margin-bottom: 1.5rem;
+}
+
+.map-main-desc {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    line-height: var(--lh-body);
+    margin-bottom: 3rem;
+}
+
+.telemetry-coordinates-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 360px;
+}
+
+.coordinate-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.01);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius);
+    padding: 1rem 1.5rem;
+    font-size: 0.85rem;
+    transition: var(--transition-smooth);
+    cursor: pointer;
+}
+
+.coordinate-row .coord-id {
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+.coordinate-row .coord-status {
+    font-family: monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.5px;
+}
+
+.text-green {
+    color: #10b981;
+}
+
+/* Interactive Activation States */
+.coordinate-row:hover,
+.active-coord {
+    background: var(--bg-surface-hover);
+    /* Hot plum element highlight match block */
+    border-color: rgba(168, 85, 247, 0.3);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.active-coord .coord-id {
+    color: var(--accent-violet);
+    text-shadow: 0 0 8px rgba(168, 85, 247, 0.3);
+}
+
+/* ==========================================================================
+   RIGHT PROPERTY: GEOMETRIC ABSTRACT SATELLITE NETWORK GRAPH
+   ========================================================================== */
+
+.abstract-network-graph {
+    position: relative;
+    width: 100%;
+    height: 380px;
+    background: var(--bg-surface);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border: 1px solid var(--glass-border);
+    border-radius: calc(var(--radius) * 1.5);
+    box-shadow: var(--shadow-overlay);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.abstract-network-graph .console-rail-glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--gradient-primary);
+}
+
+/* Core Infrastructure Hub Central Anchor */
+.network-center-hub {
+    position: relative;
+    width: 12px;
+    height: 12px;
+    background-color: var(--text-main);
+    border-radius: 50%;
+    box-shadow: 0 0 15px var(--text-main);
+    z-index: 10;
+}
+
+.ping-wave {
+    position: absolute;
+    inset: -12px;
+    border: 1px solid rgba(248, 250, 252, 0.2);
+    border-radius: 50%;
+    animation: radarSignalPing 3s infinite linear;
+}
+
+@keyframes radarSignalPing {
+    0% {
+        transform: scale(0.4);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(3);
+        opacity: 0;
+    }
+}
+
+/* Absolute Ray Constellation Links Vector Channels */
+.constellation-vector {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    height: 1px;
+    transform-origin: left center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.satellite-node {
+    width: 6px;
+    height: 6px;
+    background-color: var(--accent-violet);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--accent-violet);
+    position: relative;
+    z-index: 5;
+}
+
+.node-magenta {
+    background-color: var(--accent-magenta);
+    box-shadow: 0 0 10px var(--accent-magenta);
+}
+
+.connection-laser-line {
+    position: absolute;
+    right: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--accent-violet), transparent);
+}
+
+.line-delayed {
+    background: linear-gradient(90deg, transparent, var(--accent-magenta), transparent);
+}
+
+/* Rotating Constellation Ray Path Loops */
+.vector-alpha {
+    transform: rotate(45deg);
+    animation: rotateOrbitLineAlpha 24s infinite linear;
+}
+
+.vector-beta {
+    transform: rotate(165deg);
+    width: 140px;
+    animation: rotateOrbitLineBeta 18s infinite linear;
+}
+
+.vector-gamma {
+    transform: rotate(290deg);
+    width: 220px;
+    animation: rotateOrbitLineGamma 30s infinite linear;
+}
+
+@keyframes rotateOrbitLineAlpha {
+    100% {
+        transform: rotate(405deg);
+    }
+}
+
+@keyframes rotateOrbitLineBeta {
+    100% {
+        transform: rotate(-195deg);
+    }
+}
+
+@keyframes rotateOrbitLineGamma {
+    100% {
+        transform: rotate(650deg);
+    }
+}
+
+.graph-watermark {
+    position: absolute;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    font-family: monospace;
+    font-size: 0.6rem;
+    letter-spacing: 1.5px;
+    color: var(--text-muted);
+    opacity: 0.25;
+}
+
+/* ==========================================================================
+   768PX RESPONSIVE BREAKPOINT PARADIGM (MOBILE COMPRESSION PARADIGM)
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    .global-map-section {
+        padding: 5rem 0;
+    }
+
+    /* Compress asymmetric dual layouts cleanly to a single core column stack */
+    .map-split-grid {
+        grid-template-columns: 1fr;
+        gap: 3.5rem;
+    }
+
+    .map-coordinates-block {
+        text-align: center;
+    }
+
+    .map-main-title {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+
+    .map-main-desc {
+        font-size: var(--fs-p-sm);
+        margin-bottom: 2.5rem;
+    }
+
+    .telemetry-coordinates-stack {
+        margin: 0 auto;
+        text-align: left;
+    }
+
+    .coordinate-row:hover {
+        transform: translateY(-2px);
+        /* Swaps out standard desktop translation paths */
+    }
+
+    .abstract-network-graph {
+        height: 280px;
+        border-radius: var(--radius);
+    }
+
+    /* Reduces rotating ray footprints so mobile layouts retain clear framing bounds */
+    .vector-alpha {
+        width: 130px;
+    }
+
+    .vector-beta {
+        width: 90px;
+    }
+
+    .vector-gamma {
+        width: 150px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   INTERACTIVE AUDIT LEDGER CORE LAYOUT ARCHITECTURE
+   ========================================================================== */
+
+.audit-ledger-section {
+  position: relative;
+  padding: 8rem 0;
+  background-color: var(--bg-dark);
+  border-top: 1px solid var(--glass-border);
+  overflow: hidden;
+}
+
+.audit-matrix-wireframe {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.01) 1px, transparent 1px);
+  background-size: 100% 40px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.audit-split-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 5rem;
+  align-items: center;
+  position: relative;
+  z-index: 5;
+}
+
+/* ==========================================================================
+   LEFT PROPERTY: INTERACTIVE CHRONO AUDIT FEED ROWS
+   ========================================================================== */
+
+.audit-main-title {
+  font-size: 2.75rem;
+  font-weight: 700;
+  line-height: var(--lh-heading);
+  letter-spacing: -0.03em;
+  color: var(--text-main);
+  margin-bottom: 1.5rem;
+}
+
+.audit-main-desc {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  line-height: var(--lh-body);
+  margin-bottom: 3.5rem;
+}
+
+.ledger-feed-stack {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* Structural Vertical Connecting Link Line */
+.ledger-feed-stack::before {
+  content: '';
+  position: absolute;
+  top: 1.5rem;
+  left: 5px;
+  width: 1px;
+  height: calc(100% - 3rem);
+  background-color: var(--glass-border);
+}
+
+.ledger-feed-row {
+  display: flex;
+  gap: 1.75rem;
+  padding: 1.5rem 0;
+  position: relative;
+  cursor: pointer;
+}
+
+.feed-marker-rail {
+  width: 12px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.feed-bullet {
+  position: absolute;
+  top: 0.35rem;
+  width: 10px;
+  height: 10px;
+  background-color: var(--bg-dark);
+  border: 2px solid var(--glass-border);
+  border-radius: 50%;
+  z-index: 5;
+  transition: var(--transition-smooth);
+}
+
+.timestamp {
+  font-family: monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.5px;
+  color: var(--accent-magenta);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.feed-body h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-main);
+  margin: 0 0 0.35rem 0;
+  transition: var(--transition-smooth);
+}
+
+.feed-body p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* --- Interactive Activation Hover States --- */
+.ledger-feed-row:hover .feed-body h4, .active-feed-node .feed-body h4 {
+  color: var(--accent-violet);
+}
+
+.ledger-feed-row:hover .feed-bullet, .active-feed-node .feed-bullet {
+  border-color: var(--accent-violet);
+  background-color: var(--accent-violet);
+  box-shadow: 0 0 10px var(--accent-violet);
+}
+
+/* ==========================================================================
+   RIGHT PROPERTY: GLASSMORPHIC DIAGNOSTIC TELEMETRY CARD
+   ========================================================================== */
+
+.telemetry-dashboard-panel {
+  position: relative;
+  width: 100%;
+  background: var(--bg-surface); /* Luxury warm plum velvet system layout underlay */
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: calc(var(--radius) * 1.5);
+  box-shadow: var(--shadow-overlay);
+  padding: 2.5rem;
+  overflow: hidden;
+}
+
+.panel-glow-rail {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--gradient-primary);
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  padding-bottom: 1.25rem;
+  margin-bottom: 2.25rem;
+}
+
+.panel-title-text {
+  font-family: monospace;
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.text-magenta { color: var(--accent-magenta); }
+
+.panel-status-badge {
+  font-family: monospace;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #10b981;
+}
+
+.dashboard-gauges-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  margin-bottom: 2rem;
+}
+
+.gauge-node {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.gauge-meta {
+  display: flex;
+  justify-content: space-between;
+  font-family: monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.5px;
+}
+
+.gauge-meta span { color: var(--text-muted); }
+.gauge-meta strong { color: var(--text-main); }
+
+/* Automated Structural Fill System Channels */
+.gauge-track-rail {
+  width: 100%;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.02);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.gauge-fill {
+  height: 100%;
+  border-radius: var(--radius);
+  background: var(--gradient-primary);
+  width: 0;
+  animation: deployMeterTracks 2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.fill-94  { animation-delay: 0.1s; --target-fill: 94.2%; }
+.fill-100 { animation-delay: 0.2s; --target-fill: 100%; }
+.fill-88  { animation-delay: 0.3s; --target-fill: 88.7%; }
+
+@keyframes deployMeterTracks {
+  to { width: var(--target-fill); }
+}
+
+.panel-meta-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+  padding-top: 1.25rem;
+  font-family: monospace;
+  font-size: 0.65rem;
+  letter-spacing: 1px;
+  color: var(--text-muted);
+  opacity: 0.4;
+  text-align: center;
+}
+
+/* ==========================================================================
+   768PX RESPONSIVE BREAKPOINT PARADIGM (MOBILE COMPRESSION ENGINE)
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  .audit-ledger-section {
+    padding: 5rem 0;
+  }
+
+  /* Compress asymmetric multi-columns completely into a single vertical sequence */
+  .audit-split-grid {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+
+  .audit-logs-column {
+    text-align: center;
+  }
+
+  .audit-main-title {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  .audit-main-desc {
+    font-size: var(--fs-p-sm);
+    margin-bottom: 2.5rem;
+  }
+
+  .ledger-feed-stack {
+    text-align: left;
+    padding: 0 0.25rem;
+  }
+
+  .ledger-feed-row {
+    padding: 1.25rem 0;
+  }
+
+  .telemetry-dashboard-panel {
+    padding: 1.75rem 1.25rem;
+    border-radius: var(--radius);
+  }
+
+  .panel-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 1.75rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   INFINITE VALIDATION & CTA CORE ARCHITECTURE
+   ========================================================================== */
+
+.achieve-gateway-section {
+  position: relative;
+  padding: 8rem 0 10rem 0;
+  background-color: var(--bg-dark);
+  border-top: 1px solid var(--glass-border);
+  overflow: hidden;
+}
+
+.gateway-glow-lens {
+  position: absolute;
+  bottom: -15%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 500px;
+  background: var(--gradient-glow);
+  filter: blur(140px);
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ==========================================================================
+   IMMERSIVE INFINITE STREAM INGESTION TICKER RUNTIME
+   ========================================================================== */
+
+.marquee-telemetry-conduit {
+  position: relative;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.02);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+  padding: 1.5rem 0;
+  margin-bottom: 6rem;
+  overflow: hidden;
+  z-index: 2;
+  /* Soft fading linear mask layers to smooth out boundaries */
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 15%, #000 85%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, #000 15%, #000 85%, transparent 100%);
+}
+
+.marquee-track-rail {
+  display: flex;
+  white-space: nowrap;
+  gap: 4rem;
+  width: max-content;
+}
+
+.ticker-node {
+  font-family: monospace;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.text-violet { color: var(--accent-violet); }
+.text-magenta { color: var(--accent-magenta); }
+.text-green { color: #10b981; }
+
+/* Continuous Animation Timing Properties */
+.animate-slide-left {
+  animation: streamMarqueeLeft 25s linear infinite;
+}
+
+@keyframes streamMarqueeLeft {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ==========================================================================
+   GLASSMORPHIC COMMAND CONSOLE SYSTEM CARD
+   ========================================================================== */
+
+.container-gateway-offset {
+  position: relative;
+  z-index: 5;
+}
+
+.achieve-terminal-card {
+  position: relative;
+  max-width: 920px;
+  margin: 0 auto;
+  background: var(--bg-surface); /* Premium warm plum velvet base layout */
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: calc(var(--radius) * 2);
+  box-shadow: var(--shadow-overlay);
+  padding: 4.5rem 4rem;
+  overflow: hidden;
+  text-align: center;
+}
+
+.card-rail-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--gradient-primary);
+}
+
+.terminal-frame-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  padding-bottom: 1.25rem;
+  margin-bottom: 3.5rem;
+}
+
+.sys-pulse-block {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.pulse-bead {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+.active-ping-amber {
+  background-color: #f59e0b;
+  box-shadow: 0 0 10px #f59e0b;
+}
+
+.frame-label, .frame-id {
+  font-family: monospace;
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+  color: var(--text-muted);
+}
+
+/* Main Core Text Settings */
+.terminal-main-title {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  color: var(--text-main);
+  margin-bottom: 1.5rem;
+}
+
+.terminal-main-desc {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  line-height: var(--lh-body);
+  max-width: 620px;
+  margin: 0 auto 3.5rem auto;
+}
+
+/* Button Structural Flex Stack Anchor Rows */
+.terminal-actions-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+.icon-slide { transition: transform 0.3s ease; }
+.btn-main:hover .icon-slide { transform: translateX(4px); }
+
+/* Technical Audit Reference Lines */
+.terminal-spec-footer {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+  padding-top: 1.75rem;
+  font-family: monospace;
+  font-size: 0.65rem;
+  color: var(--text-muted);
+}
+
+.spec-footer-metric { display: flex; gap: 0.5rem; }
+.spec-footer-metric .lbl { opacity: 0.3; }
+.spec-footer-metric .val { color: var(--text-main); font-weight: 600; }
+
+/* ==========================================================================
+   768PX RESPONSIVE BREAKPOINT PARADIGM (MOBILE COMPRESSION RE-ENGINE)
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  .achieve-gateway-section {
+    padding: 5rem 0 6rem 0;
+  }
+
+  .marquee-telemetry-conduit {
+    margin-bottom: 4rem;
+    padding: 1.25rem 0;
+  }
+
+  .marquee-track-rail {
+    gap: 2.5rem;
+  }
+
+  .ticker-node {
+    font-size: 0.75rem;
+  }
+
+  .achieve-terminal-card {
+    padding: 3rem 1.5rem;
+    border-radius: var(--radius);
+    margin: 0 0.5rem;
+  }
+
+  .terminal-frame-head {
+    margin-bottom: 2.5rem;
+  }
+
+  .frame-id {
+    display: none; /* Empties out structural clutter to keep clear spacing boundaries */
+  }
+
+  .terminal-main-title {
+    font-size: 1.85rem;
+    line-height: 1.25;
+  }
+
+  .terminal-main-desc {
+    font-size: var(--fs-p-sm);
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+  }
+
+  /* Collapses parallel horizontal action elements cleanly into block touch boxes */
+  .terminal-actions-group {
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  .terminal-actions-group .btn-main,
+  .terminal-actions-group .btn-secondary {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Flattens footer telemetry rows on smaller touch views */
+  .terminal-spec-footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.65rem;
+    padding-top: 1.5rem;
+  }
+}
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   ADVANCED TYPOGRAPHY PARADIGM: PARALLEL TEXT MODULES
+   ========================================================================= */
+
+/* --- Master Section Headlines (H2 Elements) --- */
+.clearance-main-title,
+.map-main-title,
+.audit-main-title {
+  font-size: 3.25rem;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: var(--text-main);
+  margin-bottom: 1.5rem;
+  text-transform: capitalize;
+  
+  /* High-end rendering fixes */
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Linear Text-Clip Micro Gradient Trace */
+.clearance-main-title .gradient-text,
+.map-main-title .gradient-text,
+.audit-main-title .gradient-text {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  position: relative;
+  
+  /* Creates a subtle holographic bloom effect behind the text */
+  filter: drop-shadow(0 2px 10px rgba(168, 85, 247, 0.2));
+}
+
+/* --- Master Section Subtitles / Descriptions (P Elements) --- */
+.clearance-main-desc,
+.map-main-desc,
+.audit-main-desc {
+  font-size: 1.15rem;
+  font-weight: 400;
+  line-height: var(--lh-body, 1.65);
+  letter-spacing: -0.01em;
+  color: var(--text-muted);
+  max-width: 540px;
+  margin-bottom: 3.5rem;
+  opacity: 0.85;
+}
+
+/* Subtle inline keyword tracking highlight */
+.clearance-main-desc strong,
+.map-main-desc strong,
+.audit-main-desc strong {
+  color: var(--text-main);
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   768PX RESPONSIVE BREAKPOINT PARADIGM (FLUID COMPRESSION RE-ENGINE)
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  /* Compresses section headline properties down onto tight mobile view grids */
+  .clearance-main-title,
+  .map-main-title,
+  .audit-main-title {
+    font-size: 2.25rem;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.25rem;
+    padding: 0 0.5rem;
+  }
+
+  /* Compresses description blocks down onto uniform touch scale sizes */
+  .clearance-main-desc,
+  .map-main-desc,
+  .audit-main-desc {
+    font-size: var(--fs-p-sm, 0.95rem);
+    line-height: 1.6;
+    max-width: 100%;
+    margin-bottom: 2.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 0.75rem;
+  }
+}

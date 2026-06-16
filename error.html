@@ -3,146 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>IT solutions</title>
+    <link rel="icon" href="./assets/bg remove.webp">
+
+    <link rel="stylesheet" href="error.css">
+    <link rel="stylesheet" href="./root.css">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-    <style>
-        :root {
-    --dark: rgb(15, 41, 35);
-    --light: rgb(138, 241, 53);
-    --white: rgb(245, 245, 245);
-}
+    <section class="error-section">
+  <div class="error-grid-matrix"></div>
+  <div class="error-ambient-glow"></div>
 
-.error-page {
-    background-color: var(--dark);
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-family: 'Inter', sans-serif;
-    position: relative;
-    overflow: hidden;
-}
-
-/* Background Scanline Effect */
-.error-page::after {
-    content: " ";
-    position: absolute;
-    top: 0; left: 0; bottom: 0; right: 0;
-    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%), 
-                linear-gradient(90deg, rgba(255, 0, 0, 0.02), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.02));
-    background-size: 100% 3px, 3px 100%;
-    pointer-events: none;
-    z-index: 2;
-}
-
-.error-code {
-    font-size: 12rem;
-    font-weight: 900;
-    color: var(--white);
-    position: relative;
-    margin-bottom: 0;
-    letter-spacing: -5px;
-    text-shadow: 4px 4px 0px rgba(138, 241, 53, 0.3);
-}
-
-.status-bar {
-    background: rgba(138, 241, 53, 0.1);
-    color: var(--light);
-    display: inline-block;
-    padding: 5px 15px;
-    border-radius: 4px;
-    font-family: monospace;
-    font-weight: 700;
-    margin-bottom: 30px;
-    border: 1px solid var(--light);
-}
-
-h2 {
-    color: var(--white);
-    font-size: 2.5rem;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-}
-
-.highlight {
-    color: var(--light);
-    text-shadow: 0 0 20px rgba(138, 241, 53, 0.4);
-}
-
-p {
-    color: rgba(245, 245, 245, 0.5);
-    max-width: 450px;
-    margin: 0 auto 40px;
-    line-height: 1.6;
-}
-
-.error-actions {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-}
-
-.home-btn {
-    background: var(--light);
-    color: var(--dark);
-    padding: 15px 35px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 800;
-    text-transform: uppercase;
-    transition: 0.3s;
-}
-
-.home-btn:hover {
-    box-shadow: 0 0 30px rgba(138, 241, 53, 0.5);
-    transform: translateY(-3px);
-}
-
-.back-btn {
-    background: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    color: var(--white);
-    padding: 15px 35px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: 600;
-    transition: 0.3s;
-}
-
-.back-btn:hover {
-    border-color: var(--light);
-    color: var(--light);
-}
-
-/* --- Media Query for 768px --- */
-@media (max-width: 768px) {
-    .error-code { font-size: 7rem; }
-    .error-actions { flex-direction: column; align-items: center; }
-    .home-btn, .back-btn { width: 100%; max-width: 300px; }
-}
-    </style>
-
-
-
-
-
-    <section class="error-page">
-    <div class="container">
-        <div class="glitch-box">
-            <h1 class="error-code" data-text="404">404</h1>
-            <div class="status-bar">
-                <span class="status-text">NODE_NOT_FOUND</span>
-            </div>
-            <h2>System <span class="highlight">Glitch</span></h2>
-            <p>The resource you are looking for has been moved to a different directory or deleted from our servers.</p>
-            
-            <div class="error-actions">
-                <a href="home2.html" class="home-btn">Return to Root</a>
-            </div>
+  <div class="error-container">
+    <div class="error-frame-wrapper perspective-wrapper" data-aos="zoom-in" data-aos-duration="1200">
+      <div class="error-terminal-card isometric-card">
+        
+        <div class="terminal-chrome-header">
+          <div class="chrome-dots-group">
+            <span class="chrome-dot dot-red"></span>
+            <span class="chrome-dot dot-yellow"></span>
+            <span class="chrome-dot dot-green"></span>
+          </div>
+          <span class="chrome-terminal-title">ERR_STATUS // CRITICAL_DISCONNECT</span>
         </div>
+
+        <div class="error-content-body">
+          <div class="huge-error-code-badge">
+            <h1 class="error-digit text-gradient">404</h1>
+          </div>
+
+          <h2 class="error-main-title">
+            Route Matrix <span class="text-cyan">Not Found</span>
+          </h2>
+          
+          <p class="error-supporting-text">
+            The system core could not resolve the requested directory path. The network pointer may have been de-allocated, or the endpoint partition does not exist in our mainframe.
+          </p>
+
+          <div class="diagnostic-box">
+            <div class="diagnostic-line">
+              <span class="diag-tag">[SYS_STATUS]:</span>
+              <span class="diag-value text-red">DISCONNECTED_BY_HOST</span>
+            </div>
+            <div class="diagnostic-line">
+              <span class="diag-tag">[RESOLVER]:</span>
+              <span class="diag-value monospace-font">0x7FFF_E281_A904</span>
+            </div>
+          </div>
+
+          <div class="error-action-row">
+            <a href="index.html" class="btn-main error-home-btn">
+              <span class="action-symbol">⚡</span> Re-Initialize Core Connection
+            </a>
+          </div>
+        </div>
+
+      </div>
     </div>
+  </div>
 </section>
+
+
+<script src="script.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <script>
+        AOS.init({
+            duration: 900,
+            easing: 'ease-in-out',
+            once: true,
+        });
+
+        // data-aos="fade-up"
+        // fade-up, fade-down, fade-left, fade-right, zoom-in,	slide-up, flip-left	
+
+    </script>
+
+
 </body>
 </html>

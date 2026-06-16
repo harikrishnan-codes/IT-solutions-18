@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IT solutions</title>
+  <link rel="icon" href="./assets/bg remove.webp">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="log.css">
+  <link rel="stylesheet" href="./root.css">
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+
+
+<section class="auth-gateway-section">
+  <div class="auth-glow-orb-1"></div>
+  <div class="auth-glow-orb-2"></div>
+
+  <div class="container auth-flex-viewport">
+    <div class="auth-glass-card-box">
+      <div class="auth-accent-tracer"></div>
+      <div class="auth-card-shimmer"></div>
+
+      <div id="login-panel" class="auth-form-segment active-auth-panel">
+        <div class="auth-header-block">
+          <h2 class="auth-panel-title">Initialize System Session</h2>
+          <p class="auth-panel-subtitle">// Enter secure terminal credentials to gain root access</p>
+        </div>
+
+        <form class="auth-core-form" onsubmit="handleAuthRedirection(event)">
+          <div class="form-input-group">
+            <label class="portal-input-label">Console Identity Route (Email)</label>
+            <input type="email" class="portal-input-field" placeholder="operator@domain.com" required>
+          </div>
+
+          <div class="form-input-group">
+            <div class="label-row-split">
+              <label class="portal-input-label">Access Passphrase</label>
+              <button type="button" class="auth-inline-switch" onclick="switchAuthTab('forgot-panel', 'login-panel')">Forgot Passphrase?</button>
+            </div>
+            <input type="password" class="portal-input-field" placeholder="••••••••••••" required>
+          </div>
+
+          <button type="submit" class="btn-main auth-submit-trigger">
+            <span>Authenticate Session</span>
+            <span class="btn-arrow">→</span>
+          </button>
+        </form>
+
+        <div class="auth-footer-routing-note">
+          <span class="meta-note-string">New Operator Identity?</span>
+          <button class="auth-inline-switch main-switch" onclick="switchAuthTab('signup-panel')">Register Core Certificate</button>
+        </div>
+      </div>
+
+      <div id="signup-panel" class="auth-form-segment">
+        <div class="auth-header-block">
+          <h2 class="auth-panel-title">Register Core Certificate</h2>
+          <p class="auth-panel-subtitle">// Provision new cryptographic operator parameters</p>
+        </div>
+
+        <form class="auth-core-form" onsubmit="handleAuthRedirection(event)">
+          <div class="form-input-group">
+            <label class="portal-input-label">Identity Designation (Full Name)</label>
+            <input type="text" class="portal-input-field" placeholder="e.g., Alex Vance" required>
+          </div>
+
+          <div class="form-input-group">
+            <label class="portal-input-label">Target Secure Email Destination</label>
+            <input type="email" class="portal-input-field" placeholder="operator@domain.com" required>
+          </div>
+
+          <div class="form-input-group">
+            <div class="label-row-split">
+              <label class="portal-input-label">Generate Access Passphrase</label>
+              <button type="button" class="auth-inline-switch" onclick="switchAuthTab('forgot-panel', 'signup-panel')">Forgot Passphrase?</button>
+            </div>
+            <input type="password" class="portal-input-field" placeholder="Minimum 12 characters" required>
+          </div>
+
+          <div class="form-input-group">
+            <label class="portal-input-label">Confirm Infrastructure Passphrase</label>
+            <input type="password" class="portal-input-field" placeholder="••••••••••••" required>
+          </div>
+
+          <button type="submit" class="btn-main auth-submit-trigger">
+            <span>Provision Credentials</span>
+            <span class="btn-arrow">→</span>
+          </button>
+        </form>
+
+        <div class="auth-footer-routing-note">
+          <span class="meta-note-string">Existing Session Access?</span>
+          <button class="auth-inline-switch main-switch" onclick="switchAuthTab('login-panel')">Return to Terminal Login</button>
+        </div>
+      </div>
+
+      <div id="forgot-panel" class="auth-form-segment" data-origin="login-panel">
+        <div class="auth-header-block">
+          <h2 class="auth-panel-title">Passphrase Recovery Vector</h2>
+          <p class="auth-panel-subtitle">// Dispatch an encrypted emergency token re-route signal</p>
+        </div>
+
+        <form class="auth-core-form" onsubmit="handleAuthRedirection(event)">
+          <div class="form-input-group">
+            <label class="portal-input-label">Registered Secure Email Route</label>
+            <input type="email" class="portal-input-field" placeholder="name@company.com" required>
+          </div>
+
+          <div class="form-input-group">
+            <label class="portal-input-label">Verification Authorization Level</label>
+            <div class="portal-input-field mock-disabled-input">Level 1 Token Dispatch System [Auto]</div>
+          </div>
+
+          <button type="submit" class="btn-main auth-submit-trigger">
+            <span>Transmit Recovery Signal</span>
+            <span class="btn-arrow">→</span>
+          </button>
+        </form>
+
+        <div class="auth-footer-routing-note">
+          <button type="button" class="auth-inline-switch main-switch" onclick="returnFromRecovery()">← Back to Previous Terminal</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+    <script src="script.js"></script>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+  <script>
+    AOS.init({
+      duration: 900,
+      easing: 'ease-in-out',
+      once: true,
+    });
+
+    // data-aos="fade-up"
+    // fade-up, fade-down, fade-left, fade-right, zoom-in,	slide-up, flip-left	
+
+  </script>
+
+  <script>
+
+/**
+ * Interactive Authentication Panel Router
+ */
+function switchAuthTab(targetPanelId, originPanelId) {
+  const segments = document.querySelectorAll('.auth-form-segment');
+  const recoveryPanel = document.getElementById('forgot-panel');
+
+  // If entering forgot-panel, save where the operator came from
+  if (targetPanelId === 'forgot-panel' && originPanelId) {
+    recoveryPanel.setAttribute('data-origin', originPanelId);
+  }
+
+  segments.forEach(segment => {
+    segment.classList.remove('active-auth-panel');
+    
+    if (segment.id === targetPanelId) {
+      setTimeout(() => {
+        segment.classList.add('active-auth-panel');
+      }, 50);
+    }
+  });
+}
+
+/**
+ * Return User safely to the origin screen layout
+ */
+function returnFromRecovery() {
+  const recoveryPanel = document.getElementById('forgot-panel');
+  const recordedOrigin = recoveryPanel.getAttribute('data-origin') || 'login-panel';
+  
+  switchAuthTab(recordedOrigin);
+}
+
+/**
+ * Intentional Redirection straight to your existing 404 page error vector
+ */
+function handleAuthRedirection(event) {
+  event.preventDefault();
+  window.location.href = "error.html";
+}
+
+  </script>
+    
+</body>
+</html>
+
+
+

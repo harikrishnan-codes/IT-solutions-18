@@ -1,242 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <title>IT Solutions</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IT solutions</title>
+  <link rel="icon" href="./assets/bg remove.webp">
 
-    <link rel="icon" href="./bg remove.webp">
-    <link rel="stylesheet" href="about.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./about.css">
+  <link rel="stylesheet" href="./root.css">
 
-    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
-
 <body>
 
+    
+  <header class="site-header">
+    <div class="header-container">
+      <!-- Brand Logo -->
+      <a href="./index.html" class="logo">
+        <img src="./assets/navy.webp" alt="IT Solutions Logo" class="logo-image" width="150" height="50">
+      </a>
 
-    <!-- LOADER -->
-    <!-- <div class="loader-wrapper" id="loader">
-        <div class="loader"></div>
-    </div> -->
-
-
-
-
-    <section class="hero-section">
-
-        <!-- HEADER -->
-        <header class="header">
-            <a class="logo" href="#"><img src="./orange.webp" alt="" width="160px"></a>
-
-            <nav class="nav">
-                <ul class="nav-links">
-                    <li><a href="./index.html">Home</a></li>
-                    <li><a href="./about.html">About</a></li>
-                    <li><a href="./service.html">Services</a></li>
-                    <li><a href="./contact.html">Contact</a></li>
-                    <li><a href="./dashboard.html">Dashboard</a></li>
-
-                    <div class="right-mobile">
-                        <a class="talk" href="./contact.html">Let's talk</a>
-                        <a class="talk" href="./signup.html">LogIn</a>
-                    </div>
-                </ul>
-            </nav>
-
-            <div class="right">
-                <a class="talk" href="./contact.html">Let's talk</a>
-                <a class="talk" href="./signup.html">LogIn</a>
+      <!-- Desktop Navigation -->
+      <nav class="nav-menu" id="navMenu">
+        <ul class="nav-list">
+          <li class="nav-item has-dropdown">
+            <a href="index.html" class="nav-link">Home <span class="dropdown-icon"></span></a>
+            <!-- Rich Dropdown Matrix -->
+            <div class="dropdown-matrix">
+              <div class="dropdown-grid">
+                <a href="./home 2/index.html" class="dropdown-item">
+                  <div class="item-info">
+                    <span class="item-title">Home Page 2</span>
+                  </div>
+                </a>
+              </div>
             </div>
+          </li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="service.html" class="nav-link">Services</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-item"><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+        </ul>
 
-            <!-- Hamburger -->
-            <div class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </header>
+        <!-- Mobile Action Button -->
+        <div class="mobile-action">
+          <a href="log.html" class="btn-cta">Log In</a>
+        </div>
+      </nav>
 
-        <div class="sec-hero-container" data-aos="fade-up">
-            <h1>About</h1>
-            <div class="breadcrumb">
-                <a href="index.html">Home</a>
-                <span class="material-icons">double_arrow</span>
-                <a href="about.html" class="active">About</a>
+      <!-- Header Actions (Desktop) -->
+      <div class="header-actions">
+        <a href="log.html" class="btn-cta">Log In</a>
+
+        <!-- Hamburger Toggle -->
+        <button class="hamburger" id="hamburgerBtn" aria-label="Toggle Navigation">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+
+
+
+
+
+
+
+
+
+<main class="about-page-wrapper">
+  <div class="about-glow-top"></div>
+  <div class="about-glow-bottom"></div>
+
+  <section class="about-hero-section">
+    <div class="about-container">
+      <div class="about-grid-split">
+        
+        <div class="about-content-block" data-aos="fade-right" data-aos-duration="1200">
+          <div class="tech-terminal-badge">
+            <span class="badge-accent-dot"></span> SYSTEM_IDENTITY // OVERVIEW
+          </div>
+          <h1 class="about-main-title">
+            Architecting Resilient <br>
+            <span class="text-gradient">Digital Foundations</span>
+          </h1>
+          <p class="about-supporting-text">
+            Founded by a collective of infrastructure engineers and enterprise architects, Nexus specializes in provisioning elite cloud scaling matrices, zero-trust perimeter firewalls, and custom localized AI automation layers for world-scale operations.
+          </p>
+          
+          <div class="about-mini-telemetry">
+            <div class="telemetry-node">
+              <span class="telemetry-value text-gradient">2026</span>
+              <span class="telemetry-label">Mainframe Est.</span>
             </div>
+            <div class="telemetry-node">
+              <span class="telemetry-value text-gradient">99.99%</span>
+              <span class="telemetry-label">SLA Stability</span>
+            </div>
+          </div>
         </div>
 
-    </section>
-
-
-
-
-
-
-
-
-
-
-
-    <section class="about-section" data-aos="fade-down"
->
-        <div class="about-container">
-
-            <!-- Left Image -->
-            <div class="about-image">
-                <img src="./meeting.webp" alt="About Image">
+        <div class="about-visual-block perspective-wrapper" data-aos="zoom-in-left" data-aos-delay="200" data-aos-duration="1200">
+          <div class="about-glass-terminal isometric-card">
+            <div class="terminal-chrome-header">
+              <div class="chrome-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <span class="chrome-title">CORE_ENGINE_SPECS // RUNNING</span>
             </div>
-
-            <!-- Right Content -->
-            <div class="about-content">
-
-                <h5 class="about-subtitle">IT Support For Business</h5>
-
-                <h2>
-                    Preparing For Your Success
-                    <span>Trusted Source</span>
-                    In IT Services.
-                </h2>
-
-                <p>
-                    We provide innovative and reliable IT solutions that help
-                    businesses grow, adapt, and stay ahead in a competitive market.
-                </p>
-
-                <ul class="about-list">
-                    <li>Professional IT Consulting</li>
-                    <li>Cloud & Data Security</li>
-                    <li>Business Growth Solutions</li>
-                    <li>24/7 Technical Support</li>
-                </ul>
-
-                <a href="./404.html" class="about-btn">View Details</a>
-
+            <div class="terminal-body-content">
+              <div class="blueprint-line-row">
+                <span class="blueprint-tag">NET_MASK:</span>
+                <span class="blueprint-val value-cyan">255.255.255.0</span>
+              </div>
+              <div class="blueprint-line-row">
+                <span class="blueprint-tag">CLUSTER_ID:</span>
+                <span class="blueprint-val">0x882_NX_GLOBAL</span>
+              </div>
+              <div class="blueprint-line-row">
+                <span class="blueprint-tag">SECURITY_LEVEL:</span>
+                <span class="blueprint-val value-blue">MAXIMUM_ISOLATION</span>
+              </div>
+              <div class="terminal-animated-bar-chart">
+                <div class="chart-track"><div class="chart-fill fill-85"></div></div>
+                <div class="chart-track"><div class="chart-fill fill-100"></div></div>
+              </div>
             </div>
-
+          </div>
         </div>
-    </section>
 
+      </div>
+    </div>
+  </section>
 
+  <section class="about-timeline-section">
+    <div class="about-container">
+      
+      <div class="section-header" data-aos="fade-up" data-aos-duration="1000">
+        <span class="section-subtitle">// THE CHRONO PATHWAY</span>
+        <h2 class="section-title">Evolution Infrastructure</h2>
+      </div>
 
+      <div class="chrono-timeline-matrix">
+        <div class="timeline-center-rail"></div>
 
-
-
-
-
-
-
-
-    <section class="team-section">
-        <div class="container" data-aos="fade-left">
-
-            <p class="team-subtitle">Team Members</p>
-            <h2 class="team-title">
-                This Is Why Industry Our Team Is So Famous!
-            </h2>
-
-            <div class="team-container">
-
-                <!-- Member 1 -->
-                <div class="team-card">
-                    <div class="team-img">
-                        <img src="./f1-testi.webp" alt="Team Member">
-                    </div>
-                    <div class="team-info">
-                        <h4>Julia Siger</h4>
-                        <p>Web Designer</p>
-                    </div>
-                </div>
-
-                <!-- Member 2 -->
-                <div class="team-card">
-                    <div class="team-img">
-                        <img src="./m2-testi.webp" alt="Team Member">
-                    </div>
-                    <div class="team-info">
-                        <h4>Claire Divas</h4>
-                        <p>Web Designer</p>
-                    </div>
-                </div>
-
-                <!-- Member 3 -->
-                <div class="team-card">
-                    <div class="team-img">
-                        <img src="./f3-testi.webp" alt="Team Member">
-                    </div>
-                    <div class="team-info">
-                        <h4>Makhaia Antitni</h4>
-                        <p>Developer</p>
-                    </div>
-                </div>
-
-                <!-- Member 4 -->
-                <div class="team-card">
-                    <div class="team-img">
-                        <img src="./m3-testi.webp" alt="Team Member">
-                    </div>
-                    <div class="team-info">
-                        <h4>Harry Steve</h4>
-                        <p>Web Designer</p>
-                    </div>
-                </div>
-
-            </div>
+        <div class="timeline-item item-left" data-aos="fade-right" data-aos-duration="1000">
+          <div class="timeline-node-dot"></div>
+          <div class="timeline-glass-panel">
+            <span class="timeline-year-tag">PHASE_01</span>
+            <h3 class="timeline-panel-title">Ecosystem Genesis</h3>
+            <p class="timeline-panel-desc">
+              Assembled our centralized core engineering group to architect modular cluster scheduling modules and secure digital enterprise perimeters.
+            </p>
+          </div>
         </div>
-    </section>
 
-
-
-
-
-
-
-
-
-
-
-
-    <section class="about-modern" data-aos="fade-right">
-        <div class="about-modern-container">
-
-            <!-- Image Side -->
-            <div class="about-modern-image">
-                <div class="image-bg"></div>
-                <img src="./team.webp" alt="About Image">
-            </div>
-
-            <!-- Content Side -->
-            <div class="about-modern-content">
-
-                <span class="about-tag">ABOUT OUR COMPANY</span>
-
-                <h2>
-                    Delivering <span>Smart IT Solutions</span>
-                    For Growing Businesses
-                </h2>
-
-                <p>
-                    We specialize in building innovative, secure and scalable
-                    digital infrastructures that empower companies to operate
-                    efficiently and compete confidently in today’s market.
-                </p>
-
-                <div class="about-features">
-                    <div class="feature-item">24/7 Technical Support</div>
-                    <div class="feature-item">Cloud & Data Security</div>
-                    <div class="feature-item">Business IT Consulting</div>
-                    <div class="feature-item">Advanced Infrastructure</div>
-                </div>
-
-                <a href="./404.html" class="about-modern-btn">Explore More</a>
-
-            </div>
-
+        <div class="timeline-item item-right" data-aos="fade-left" data-aos-duration="1000">
+          <div class="timeline-node-dot"></div>
+          <div class="timeline-glass-panel">
+            <span class="timeline-year-tag">PHASE_02</span>
+            <h3 class="timeline-panel-title">Zero-Trust Expansion</h3>
+            <p class="timeline-panel-desc">
+              Deployed elite cryptographic perimeter authentication nodes globally, scaling connection handling speeds to safeguard over 40M active endpoints.
+            </p>
+          </div>
         </div>
-    </section>
+
+      </div>
+    </div>
+  </section>
+</main>
 
 
 
@@ -247,296 +190,508 @@
 
 
 
+<section class="team-matrix-section">
+  <div class="team-mesh-pattern"></div>
+  <div class="team-ambient-glow"></div>
 
+  <div class="team-container">
+    <div class="section-header" data-aos="fade-up" data-aos-duration="1000">
+      <span class="section-subtitle">// OPERATIONAL COMMAND LAYER</span>
+      <h2 class="section-title">Core System Architects</h2>
+      <p class="section-desc">
+        Meet the specialized deployment engineers, security directors, and platform technicians piloting our global corporate framework.
+      </p>
+    </div>
 
-    <section class="about-centered" data-aos="zoom-in">
-        <div class="about-centered-container">
-
-            <div class="about-header">
-                <span class="about-mini-title">WHO WE ARE</span>
-                <h2>
-                    Empowering Businesses With
-                    <span>Innovative IT Solutions</span>
-                </h2>
-                <p>
-                    We help companies transform digitally through secure,
-                    scalable and performance-driven IT services designed
-                    for modern business growth.
-                </p>
-            </div>
-
-            <div class="about-card-wrapper">
-
-                <div class="about-card">
-                    <div class="about-icon">01</div>
-                    <h3>Strategic Planning</h3>
-                    <p>We analyze your business and create a customized IT roadmap.</p>
-                </div>
-
-                <div class="about-card">
-                    <div class="about-icon">02</div>
-                    <h3>Secure Infrastructure</h3>
-                    <p>Advanced data protection and secure cloud integrations.</p>
-                </div>
-
-                <div class="about-card">
-                    <div class="about-icon">03</div>
-                    <h3>Continuous Support</h3>
-                    <p>Reliable 24/7 monitoring and technical assistance.</p>
-                </div>
-
-            </div>
-
+    <div class="team-blueprint-grid">
+      
+      <div class="team-node-card" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1200">
+        <div class="node-header-chrome">
+          <span class="node-registry">// ARCH_NODE_01</span>
+          <span class="node-clearance">CLEARANCE: LEVEL_5</span>
         </div>
-    </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <section class="faq-section" data-aos="fade-up">
-        <div class="container">
-
-            <p class="faq-subtitle">FAQ</p>
-            <h2 class="faq-title">Frequently Asked Questions</h2>
-
-            <div class="faq-container">
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        What services do you provide?
-                    </div>
-                    <div class="faq-answer">
-                        We provide web development, cloud services,
-                        IT management and data center solutions.
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        How long does a project take?
-                    </div>
-                    <div class="faq-answer">
-                        Project duration depends on requirements.
-                        Typically it ranges from 2 to 8 weeks.
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        Do you provide support after delivery?
-                    </div>
-                    <div class="faq-answer">
-                        Yes, we provide post-delivery support and maintenance services.
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        What technologies do you use?
-                    </div>
-                    <div class="faq-answer">
-                        We use modern technologies like React,
-                        Node.js, Cloud infrastructure and more.
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        What technologies do you use?
-                    </div>
-                    <div class="faq-answer">
-                        I mainly use HTML, CSS, JavaScript and React.
-                        I also work with modern UI frameworks and APIs.
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        Do you provide responsive design?
-                    </div>
-                    <div class="faq-answer">
-                        Yes, all websites are fully responsive
-                        and optimized for mobile, tablet, and desktop.
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        Can you redesign my existing website?
-                    </div>
-                    <div class="faq-answer">
-                        Yes, I can improve design, performance,
-                        and user experience of your existing website.
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        Do you provide maintenance support?
-                    </div>
-                    <div class="faq-answer">
-                        Yes, I offer post-launch support,
-                        bug fixes, and future updates if required.
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        How can I contact you for a project?
-                    </div>
-                    <div class="faq-answer">
-                        You can contact me through the contact form
-                        or email mentioned on the website.
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        What is the cost of a website project?
-                    </div>
-                    <div class="faq-answer">
-                        The cost depends on project requirements,
-                        features, and complexity. After discussing
-                        your needs, I will provide a clear quotation.
-                    </div>
-                </div>
-
-            </div>
-
+        
+        <div class="profile-frame-box">
+          <div class="frame-inner-glow">
+            <div class="profile-avatar-fallback">E.V</div>
+          </div>
+          <div class="crosshair-bracket top-left"></div>
+          <div class="crosshair-bracket bottom-right"></div>
         </div>
-    </section>
 
-
-
-
-
-
-
-
-
-    <section class="cta-section" data-aos="fade-down">
-        <div class="cta-container">
-
-            <div class="cta-content">
-                <h5 class="cta-top-text">LET'S BUILD YOUR DIGITAL FUTURE</h5>
-
-                <h2>
-                    Transform Your Business With
-                    <span>Smart IT Solutions</span>
-                </h2>
-
-                <p>
-                    We deliver secure, scalable and high-performance IT services
-                    that help companies innovate, grow faster, and stay ahead
-                    in the competitive digital world.
-                </p>
+        <div class="node-info-block">
+          <h3 class="architect-name">Ethan Vance</h3>
+          <p class="architect-role">Chief Infrastructure Officer</p>
+          
+          <div class="capability-matrix-readout">
+            <div class="capability-row">
+              <span class="cap-lbl">Cloud Engineering</span>
+              <span class="cap-val text-gradient">98%</span>
             </div>
-
-            <div class="cta-btn">
-                <a href="./404.html" class="cta-button">Get Started Now</a>
+            <div class="capability-row">
+              <span class="cap-lbl">Cluster Scheduling</span>
+              <span class="cap-val text-gradient">94%</span>
             </div>
-
+          </div>
         </div>
-    </section>
 
+        <div class="node-footer-terminal">
+          <span class="terminal-sig">SIG // ethan.v@nexus.it</span>
+        </div>
+      </div>
 
+      <div class="team-node-card" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1200">
+        <div class="node-header-chrome">
+          <span class="node-registry">// ARCH_NODE_02</span>
+          <span class="node-clearance">CLEARANCE: LEVEL_5</span>
+        </div>
+        
+        <div class="profile-frame-box">
+          <div class="frame-inner-glow">
+            <div class="profile-avatar-fallback text-blue">H.R</div>
+          </div>
+          <div class="crosshair-bracket top-left"></div>
+          <div class="crosshair-bracket bottom-right"></div>
+        </div>
 
-
-
-
-
-
-
-
-
-
-    <footer class="footer">
-        <div class="footer-container">
-
-            <div class="footer-col">
-                <a href="#"><img src="./orange.webp" alt="" width="150px"></a>
-                <p>
-                    We provide modern IT solutions including cloud services,
-                    web development, and infrastructure management.
-                </p>
+        <div class="node-info-block">
+          <h3 class="architect-name">Helena Rostova</h3>
+          <p class="architect-role">Director of Cryptographic Perimeter</p>
+          
+          <div class="capability-matrix-readout">
+            <div class="capability-row">
+              <span class="cap-lbl">Zero-Trust Vaults</span>
+              <span class="cap-val text-gradient">99%</span>
             </div>
-
-            <div class="footer-col">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="./index.html">Home</a></li>
-                    <li><a href="./about.html">About Us</a></li>
-                    <li><a href="./service.html">Services</a></li>
-                    <li><a href="./dashboard.html">Dashboard</a></li>
-                    <li><a href="./contact.html">Contact</a></li>
-                </ul>
+            <div class="capability-row">
+              <span class="cap-lbl">Threat Interception</span>
+              <span class="cap-val text-gradient">96%</span>
             </div>
+          </div>
+        </div>
 
-            <div class="footer-col">
-                <h4>Our Services</h4>
-                <ul>
-                    <li><a href="./404.html">Data Center</a></li>
-                    <li><a href="./404.html">Cloud Service</a></li>
-                    <li><a href="./404.html">Web Development</a></li>
-                    <li><a href="./404.html">IT Management</a></li>
-                </ul>
+        <div class="node-footer-terminal">
+          <span class="terminal-sig">SIG // helena.r@nexus.it</span>
+        </div>
+      </div>
+
+      <div class="team-node-card" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1200">
+        <div class="node-header-chrome">
+          <span class="node-registry">// ARCH_NODE_03</span>
+          <span class="node-clearance">CLEARANCE: LEVEL_4</span>
+        </div>
+        
+        <div class="profile-frame-box">
+          <div class="frame-inner-glow">
+            <div class="profile-avatar-fallback">M.S</div>
+          </div>
+          <div class="crosshair-bracket top-left"></div>
+          <div class="crosshair-bracket bottom-right"></div>
+        </div>
+
+        <div class="node-info-block">
+          <h3 class="architect-name">Marcus Sterling</h3>
+          <p class="architect-role">Lead Automation Architect</p>
+          
+          <div class="capability-matrix-readout">
+            <div class="capability-row">
+              <span class="cap-lbl">Vector LLM Modeling</span>
+              <span class="cap-val text-gradient">95%</span>
             </div>
-
-            <div class="footer-col">
-                <h4>Legal Links</h4>
-                <ul>
-                    <li><a href="./404.html">Privacy Policy</a></li>
-                    <li><a href="./404.html">Terms & Conditions</a></li>
-                    <li><a href="./404.html">Disclaimer</a></li>
-                    <li><a href="./404.html">Cookie Policy</a></li>
-                </ul>
+            <div class="capability-row">
+              <span class="cap-lbl">Microservice APIs</span>
+              <span class="cap-val text-gradient">92%</span>
             </div>
+          </div>
+        </div>
 
-            <div class="footer-col">
-                <h4>Contact Info</h4>
-                <p>Email: info@itsolutions.com</p>
-                <p>Phone: +91 98765 43210</p>
-                <p>Location: Chennai, India</p>
+        <div class="node-footer-terminal">
+          <span class="terminal-sig">SIG // marcus.s@nexus.it</span>
+        </div>
+      </div>
 
-                <!-- Social Icons -->
-                <div class="social-icons">
-                    <a href="./404.html"><i class="fab fa-facebook-f"></i></a>
-                    <a href="./404.html"><i class="fab fa-instagram"></i></a>
-                    <a href="./404.html"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="./404.html"><i class="fab fa-twitter"></i></a>
-                </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+<section class="workflow-section">
+  <div class="workflow-matrix-mesh"></div>
+  <div class="workflow-glow-ambient"></div>
+
+  <div class="workflow-container">
+    
+    <div class="section-header" data-aos="fade-up" data-aos-duration="1000">
+      <span class="section-subtitle">// DEPLOYMENT LIFECYCLE</span>
+      <h2 class="section-title">The Engineering Pipeline</h2>
+      <p class="section-desc">
+        A structured overview of how we audit, configure, and isolate your infrastructure arrays from initial handshake to deployment.
+      </p>
+    </div>
+
+    <div class="workflow-step-matrix">
+      
+      <div class="workflow-node-box" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1200">
+        <div class="node-numeric-tag">01//</div>
+        <div class="node-internal-body">
+          <span class="node-system-status">STAGE_ALPHA</span>
+          <h3 class="node-title-string">Architecture Audit</h3>
+          <p class="node-description-text">
+            We run automated code scripts to trace latency leaks and look for firewall layout weaknesses across your existing cloud platforms.
+          </p>
+        </div>
+        <div class="node-processing-bar"><div class="bar-fill-progress fill-35"></div></div>
+      </div>
+
+      <div class="workflow-node-box" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1200">
+        <div class="node-numeric-tag">02//</div>
+        <div class="node-internal-body">
+          <span class="node-system-status">STAGE_BETA</span>
+          <h3 class="node-title-string">Cluster Configuration</h3>
+          <p class="node-description-text">
+            Our engineers build clean Kubernetes nodes, secure zero-trust identity vaults, and map out your custom data pipelines.
+          </p>
+        </div>
+        <div class="node-processing-bar"><div class="bar-fill-progress fill-70"></div></div>
+      </div>
+
+      <div class="workflow-node-box" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1200">
+        <div class="node-numeric-tag">03//</div>
+        <div class="node-internal-body">
+          <span class="node-system-status">STAGE_OMEGA</span>
+          <h3 class="node-title-string">Production Mainframe</h3>
+          <p class="node-description-text">
+            We seamlessly switch traffic over to the optimized framework with absolutely zero operational server downtime.
+          </p>
+        </div>
+        <div class="node-processing-bar"><div class="bar-fill-progress fill-100"></div></div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+<section class="quantum-telemetry-section">
+  <div class="telemetry-grid-overlay"></div>
+  
+  <div class="telemetry-container">
+    <div class="section-header" data-aos="fade-up" data-aos-duration="1000">
+      <span class="section-subtitle">// GLOBAL PERFORMANCE DEPLOYMENT</span>
+      <h2 class="section-title">Network Core Distribution</h2>
+    </div>
+
+    <div class="telemetry-console-board" data-aos="zoom-in" data-aos-duration="1200">
+      
+      <div class="telemetry-visual-pane">
+        <div class="quantum-ripple-core">
+          <div class="ripple-wave wave-1"></div>
+          <div class="ripple-wave wave-2"></div>
+          <div class="ripple-wave wave-3"></div>
+          <div class="center-glowing-node"></div>
+        </div>
+      </div>
+
+      <div class="telemetry-data-pane">
+        <div class="pane-terminal-top">
+          <span class="terminal-tag">PERFORMANCE_MONITOR</span>
+          <span class="terminal-tag text-cyan">STATUS: NOMINAL</span>
+        </div>
+
+        <h3 class="data-pane-title">Data Core Diagnostics</h3>
+        
+        <div class="diagnostic-metrics-stack">
+          
+          <div class="metric-progress-item">
+            <div class="metric-meta-line">
+              <span class="metric-name">DATA_MATRIX_SPEED</span>
+              <span class="metric-value text-cyan">2.05 Mbs</span>
             </div>
+            <div class="metric-progress-track">
+              <div class="metric-progress-fill fill-cyan" style="width: 82%;"></div>
+            </div>
+          </div>
+
+          <div class="metric-progress-item">
+            <div class="metric-meta-line">
+              <span class="metric-name">PERFORMANCE_STABILITY</span>
+              <span class="metric-value text-blue">3.23%</span>
+            </div>
+            <div class="metric-progress-track">
+              <div class="metric-progress-fill fill-blue" style="width: 64%;"></div>
+            </div>
+          </div>
+
+          <div class="metric-progress-item">
+            <div class="metric-meta-line">
+              <span class="metric-name">STORAGE_ALLOCATION</span>
+              <span class="metric-value">3.80%</span>
+            </div>
+            <div class="metric-progress-track">
+              <div class="metric-progress-fill fill-muted" style="width: 38%;"></div>
+            </div>
+          </div>
 
         </div>
 
-        <div class="footer-bottom">
-            <p>© 2026 IT Solutions. All Rights Reserved.</p>
+        <div class="telemetry-data-footer">
+          <div class="footer-data-pill"><strong>55%</strong> <span>CACHE_HIT</span></div>
+          <div class="footer-data-pill"><strong>12%</strong> <span>SYS_IDLE</span></div>
         </div>
-    </footer>
+      </div>
+
+    </div>
+  </div>
+</section>
 
 
 
-    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            duration: 900,
-            easing: 'ease-in-out',
-            once: true,   // animation runs only once
-        });
-    </script>
 
 
 
-    <script src="about.js"></script>
+
+
+
+<section class="mainframe-map-section">
+  <div class="matrix-grid-underlay"></div>
+  <div class="map-ambient-glow"></div>
+
+  <div class="map-matrix-container">
+    <div class="map-interface-wrapper" data-aos="fade-up" data-aos-duration="1200">
+      
+      <div class="map-control-panel">
+        <div class="panel-terminal-header">
+          <span class="header-tag">// ROUTING_MAP_ACTIVE</span>
+          <span class="system-status-pulse"><span class="pulse-core"></span> ONLINE</span>
+        </div>
+
+        <h3 class="panel-main-title">Global Packet Dispersal</h3>
+        <p class="panel-supporting-desc">
+          Real-time packet routing paths tracking edge server calculations across decentralized infrastructure datacenters.
+        </p>
+
+        <div class="map-spec-readout-rows">
+          <div class="spec-readout-item">
+            <span class="spec-tag">PRIMARY_BACKBONE:</span>
+            <span class="spec-value value-cyan">FIBER_MATRIX_10G</span>
+          </div>
+          <div class="spec-readout-item">
+            <span class="spec-tag">ACTIVE_ENDPOINTS:</span>
+            <span class="spec-value value-blue">42,881 NODES</span>
+          </div>
+          <div class="spec-readout-item">
+            <span class="spec-tag">ENCRYPTION_LAYER:</span>
+            <span class="spec-value">AES_256_GCM</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="map-projection-pane">
+        <div class="dot-matrix-map-canvas">
+          <div class="server-coordinate coord-ny">
+            <span class="coord-ping"></span>
+            <div class="coord-tooltip">NODE_US_EAST</div>
+          </div>
+          <div class="server-coordinate coord-lon">
+            <span class="coord-ping ping-blue"></span>
+            <div class="coord-tooltip">NODE_EU_WEST</div>
+          </div>
+          <div class="server-coordinate coord-tok">
+            <span class="coord-ping"></span>
+            <div class="coord-tooltip">NODE_AS_EAST</div>
+          </div>
+          
+          <svg class="vector-routing-lines" viewBox="0 0 800 400">
+            <path class="animated-dash-path path-1" d="M 180,160 Q 320,100 460,150" />
+            <path class="animated-dash-path path-2" d="M 460,150 Q 580,110 680,180" />
+          </svg>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+<section class="about-cta-section">
+  <div class="cta-glow-orb-1"></div>
+  <div class="cta-glow-orb-2"></div>
+
+  <div class="container cta-matrix-grid">
+    <div class="cta-content-block">
+      <span class="cta-preheading">Ready to Scale?</span>
+      <h2 class="cta-heading">Architecting the Next Era of Digital Infrastructure</h2>
+      <p class="cta-description">
+        Whether you are optimization-focused or scaling for global deployments, our modular frameworks deliver military-grade performance. Let’s construct your solution today.
+      </p>
+      
+      <div class="cta-action-row">
+        <a href="#contact" class="btn-main">
+          <span>Initialize Project</span>
+          <span class="btn-arrow">→</span>
+        </a>
+        <a href="#solutions" class="btn-secondary">
+          <span>Explore Architecture</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="cta-metrics-glassway">
+      <div class="metric-glass-card">
+        <div class="metric-accent-line"></div>
+        <div class="metric-value" data-value="99.9">99.9%</div>
+        <div class="metric-label">Uptime SLA Ensured</div>
+      </div>
+      
+      <div class="metric-glass-card">
+        <div class="metric-accent-line"></div>
+        <div class="metric-value" data-value="25">25ms</div>
+        <div class="metric-label">Global Edge Latency</div>
+      </div>
+      
+      <div class="metric-glass-card">
+        <div class="metric-accent-line"></div>
+        <div class="metric-value" data-value="140">140+</div>
+        <div class="metric-label">Enterprise Deployments</div>
+      </div>
+      
+      <div class="metric-glass-card">
+        <div class="metric-accent-line"></div>
+        <div class="metric-value" data-value="24">24/7</div>
+        <div class="metric-label">Node Monitoring</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+  <footer class="stack-footer">
+    <div class="footer-matrix-container">
+
+      <div class="footer-col brand-summary-col">
+        <a href="index.html" class="footer-brand-title">
+          <img src="./assets/navy.webp" alt="StacklyHomes Logo" class="footer-logo-icon" width="150px" height="50px">
+        </a>
+        <p class="brand-pitch-text">
+          We provide premium enterprise IT solutions with trusted architecture matrices and modern scalable networks
+          worldwide.
+        </p>
+        <div class="social-circle-row">
+          <a href="./error.html" class="social-circle-link" aria-label="Facebook">f</a>
+          <a href="./error.html" class="social-circle-link" aria-label="Instagram">I</a>
+          <a href="./error.html" class="social-circle-link" aria-label="Twitter">𝕏</a>
+          <a href="./error.html" class="social-circle-link" aria-label="LinkedIn">in</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="col-heading-title">Quick Links</h4>
+        <ul class="footer-nav-list-links">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./service.html">Services</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+          <li><a href="./dashboard.html">Dashboard</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="col-heading-title">Our Services</h4>
+        <ul class="footer-nav-list-links">
+          <li><a href="./error.html">Cloud Infrastructure</a></li>
+          <li><a href="./error.html">Cyber Security Shield</a></li>
+          <li><a href="./error.html">Data Telemetry Ops</a></li>
+          <li><a href="./error.html">Enterprise AI Layers</a></li>
+          <li><a href="./error.html">Cluster Management</a></li>
+          <li><a href="./error.html">Legal Documentation</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="col-heading-title">Contact Info</h4>
+        <ul class="footer-contact-data-list">
+          <li>
+            <span class="contact-vector-icon">📍</span>
+            <span class="contact-string">New York, USA</span>
+          </li>
+          <li>
+            <span class="contact-vector-icon">📞</span>
+            <span class="contact-string">+1 234 567 890</span>
+          </li>
+          <li>
+            <span class="contact-vector-icon">✉️</span>
+            <span class="contact-string">info@stacklyhomes.com</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-col newsletter-action-col">
+        <h4 class="col-heading-title">Newsletter</h4>
+        <p class="newsletter-explanation-text">
+          Subscribe for latest system architecture and property matrix updates.
+        </p>
+        <form class="inline-subscription-box-form" action="./error.html" method="GET">
+          <input type="email" placeholder="Your Email" required class="subscription-input-field">
+          <button type="submit" class="subscription-action-submit-btn" aria-label="Submit Mail">
+            <span class="paper-plane-icon">➔</span>
+          </button>
+        </form>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom-copyright-strip">
+      <div class="strip-container">
+        <p class="copyright-baseline-string">&copy; 2026 StacklyHomes. All Architecture Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+
+
+    <script src="script.js"></script>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+  <script>
+    AOS.init({
+      duration: 900,
+      easing: 'ease-in-out',
+      once: true,
+    });
+
+    // data-aos="fade-up"
+    // fade-up, fade-down, fade-left, fade-right, zoom-in,	slide-up, flip-left	
+
+  </script>
+    
 </body>
-
 </html>

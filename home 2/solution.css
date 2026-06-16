@@ -1,0 +1,1729 @@
+/* ==========================================================================
+   IT SOLUTIONS HERO: KINETIC DESIGN ENGINE
+   ========================================================================== */
+
+.it-hero-section {
+  position: relative;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  background: var(--bg-dark);
+  overflow: hidden;
+  padding: 8rem 0;
+}
+
+/* Cinematic Backdrop with slow zoom effect */
+.hero-backdrop-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 70% 30%, rgba(168, 85, 247, 0.15), transparent 60%);
+  animation: backdropPulse 10s infinite alternate ease-in-out;
+}
+
+.hero-overlay-grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+.hero-container {
+  display: grid;
+  grid-template-columns: 1fr 0.8fr;
+  gap: 4rem;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+/* Typography Aesthetics */
+.hero-main-title {
+  font-size: 4rem;
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--text-main);
+  margin-bottom: 1.5rem;
+}
+
+.gradient-text {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-description {
+  font-size: 1.25rem;
+  color: var(--text-muted);
+  max-width: 500px;
+  margin-bottom: 3rem;
+  line-height: 1.6;
+}
+
+/* Telemetry Panel Design */
+.hero-telemetry-panel {
+  background: var(--bg-surface);
+  backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  padding: 2rem;
+  border-radius: var(--radius);
+}
+
+.metric-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+  font-family: monospace;
+}
+
+.bar-fill {
+  height: 4px;
+  width: 85%;
+  background: var(--accent-violet);
+  box-shadow: 0 0 10px var(--accent-violet);
+  animation: loadBar 2s infinite;
+}
+
+/* ==========================================================================
+   768PX RESPONSIVE PARADIGM
+   ========================================================================== */
+@media (max-width: 768px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  .hero-main-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-description {
+    margin: 0 auto 2rem auto;
+  }
+  
+  .hero-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+@keyframes backdropPulse {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.1); }
+}
+
+@keyframes loadBar {
+  0%, 100% { width: 85%; }
+  50% { width: 95%; }
+}
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   THREAT ISOLATION MATRIX CORE STYLES
+   ========================================================================== */
+
+.threat-isolation-section {
+  position: relative;
+  padding: 8rem 0;
+  background-color: var(--bg-dark);
+  border-top: 1px solid var(--glass-border);
+  overflow: hidden;
+}
+
+.threat-split-layout {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+/* ==========================================================================
+   LEFT PROPERTY: GLASSMORPHIC TACTICAL DEFENSE CONSOLE
+   ========================================================================== */
+
+.tactical-defense-console {
+  position: relative;
+  width: 100%;
+  background: var(--bg-surface); /* Luxury warm plum velvet underlay matrix */
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: calc(var(--radius) * 1.5);
+  box-shadow: var(--shadow-overlay);
+  padding: 2.5rem;
+  overflow: hidden;
+}
+
+.console-glow-rail {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--gradient-primary);
+}
+
+.console-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  padding-bottom: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.terminal-tag {
+  font-family: monospace;
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.pulse-beacon {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+.beacon-rose {
+  background-color: var(--accent-magenta);
+  box-shadow: 0 0 10px var(--accent-magenta);
+}
+
+.console-id {
+  font-family: monospace;
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+/* Simulated Radar Vector Map Box */
+.radar-telemetry-box {
+  position: relative;
+  height: 220px;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.02);
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.radar-grid-lines {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(circle, transparent 30%, rgba(255,255,255,0.01) 31%, rgba(255,255,255,0.01) 32%, transparent 33%),
+                    radial-gradient(circle, transparent 60%, rgba(255,255,255,0.01) 61%, rgba(255,255,255,0.01) 62%, transparent 63%);
+}
+
+.radar-sweep-line {
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(from 0deg, rgba(168, 85, 247, 0.08) 0deg, transparent 90deg);
+  transform-origin: center center;
+  animation: radarSweeperRotation 4s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes radarSweeperRotation {
+  100% { transform: rotate(360deg); }
+}
+
+/* Abstract Target Elements */
+.radar-target {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background-color: var(--accent-magenta);
+  border-radius: 50%;
+}
+.target-1 { top: 30%; left: 40%; }
+.target-2 { bottom: 25%; right: 35%; }
+
+.target-ping {
+  position: absolute;
+  inset: -6px;
+  border: 1px solid var(--accent-magenta);
+  border-radius: 50%;
+  animation: pingTargetAnimation 2s infinite ease-out;
+}
+
+@keyframes pingTargetAnimation {
+  0% { transform: scale(0.5); opacity: 1; }
+  100% { transform: scale(2.5); opacity: 0; }
+}
+
+.center-nexus {
+  width: 8px;
+  height: 8px;
+  background-color: var(--accent-violet);
+  border-radius: 50%;
+  box-shadow: 0 0 12px var(--accent-violet);
+}
+
+.console-metadata-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+  padding-top: 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  font-family: monospace;
+  font-size: 0.65rem;
+  color: var(--text-muted);
+}
+
+.meta-row { display: flex; gap: 0.5rem; }
+.meta-row .lbl { opacity: 0.3; }
+.meta-row .val { color: var(--text-main); }
+.text-magenta { color: var(--accent-magenta) !important; }
+
+/* ==========================================================================
+   RIGHT PROPERTY: TYPOGRAPHIC COPY & VERIFICATION STACK
+   ========================================================================== */
+
+.threat-main-title {
+  font-size: 2.75rem;
+  font-weight: 700;
+  line-height: var(--lh-heading);
+  letter-spacing: -0.03em;
+  color: var(--text-main);
+  margin-bottom: 1.5rem;
+}
+
+.threat-main-desc {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  line-height: var(--lh-body);
+  margin-bottom: 3rem;
+}
+
+/* Linear Timeline Stack Rows */
+.verification-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.stack-row-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+}
+
+.item-accent-marker {
+  width: 12px;
+  height: 12px;
+  border: 2px solid var(--accent-violet);
+  border-radius: 50%;
+  margin-top: 0.25rem;
+  flex-shrink: 0;
+  box-shadow: 0 0 8px rgba(168, 85, 247, 0.3);
+  background-color: var(--bg-dark);
+}
+
+.item-body h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-main);
+  margin: 0 0 0.35rem 0;
+}
+
+.item-body p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ==========================================================================
+   768PX RESPONSIVE BREAKPOINT PARADIGM (MOBILE COMPRESSION ENGINE)
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  .threat-isolation-section {
+    padding: 5rem 0;
+  }
+
+  /* Flattens asymmetric columns cleanly into a continuous vertical flow hierarchy */
+  .threat-split-layout {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+
+  /* Shifts console component sequence beneath text copy for logical mobile flow */
+  .threat-visual-block {
+    order: 2;
+  }
+
+  .threat-content-block {
+    order: 1;
+    text-align: center;
+  }
+
+  .threat-main-title {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  .threat-main-desc {
+    font-size: var(--fs-p-sm);
+    margin-bottom: 2.5rem;
+  }
+
+  .stack-row-item {
+    text-align: left;
+  }
+
+  .tactical-defense-console {
+    padding: 1.75rem 1.25rem;
+    border-radius: var(--radius);
+  }
+
+  .radar-telemetry-box {
+    height: 180px;
+  }
+}
+
+
+
+
+
+
+
+/* ==========================================================================
+   CASE STUDY DATA LEDGER CORE ARCHITECTURE
+   ========================================================================== */
+
+.case-ledger-section {
+  position: relative;
+  padding: 8rem 0;
+  background-color: var(--bg-dark);
+  border-top: 1px solid var(--glass-border);
+}
+
+.ledger-split-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+/* ==========================================================================
+   LEFT PROPERTY: NARRATIVE COPY & VALUE NODES
+   ========================================================================== */
+
+.ledger-main-title {
+  font-size: 2.75rem;
+  font-weight: 700;
+  line-height: var(--lh-heading);
+  letter-spacing: -0.03em;
+  color: var(--text-main);
+  margin-bottom: 1.5rem;
+}
+
+.ledger-main-desc {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  line-height: var(--lh-body);
+  margin-bottom: 3rem;
+}
+
+.impact-stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+  padding-top: 2rem;
+}
+
+.stat-node {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-muted);
+}
+
+/* ==========================================================================
+   RIGHT PROPERTY: TELEMETRY PERFORMANCE COMMAND DECK
+   ========================================================================== */
+
+.telemetry-performance-box {
+  position: relative;
+  background: var(--bg-surface); /* Luxury warm plum velvet matrix underlay */
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: calc(var(--radius) * 1.5);
+  box-shadow: var(--shadow-overlay);
+  padding: 2.5rem;
+  overflow: hidden;
+}
+
+.box-glow-border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--gradient-primary);
+}
+
+.terminal-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  padding-bottom: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.terminal-directory {
+  font-family: monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.5px;
+  color: var(--text-muted);
+}
+
+.terminal-timestamp {
+  font-family: monospace;
+  font-size: 0.7rem;
+  color: var(--accent-magenta);
+}
+
+.telemetry-rows-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.telemetry-data-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.row-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.param-name {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.param-status {
+  font-family: monospace;
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+}
+
+.text-green { color: #10b981; }
+
+/* Micro Progress Rail Animations */
+.progress-rail {
+  width: 100%;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.03);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  border-radius: var(--radius);
+  background: var(--gradient-primary);
+  width: 0;
+  animation: loadLedgerTracks 2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.fill-95 { animation-delay: 0.1s; --target-width: 95%; }
+.fill-80 { animation-delay: 0.2s; --target-width: 80%; }
+.fill-100 { animation-delay: 0.3s; --target-width: 100%; }
+
+@keyframes loadLedgerTracks {
+  to { width: var(--target-width); }
+}
+
+.terminal-ledger-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+  padding-top: 1.25rem;
+  font-family: monospace;
+  font-size: 0.65rem;
+  letter-spacing: 1px;
+  color: var(--text-muted);
+  opacity: 0.4;
+  text-align: center;
+}
+
+/* ==========================================================================
+   768PX RESPONSIVE BREAKPOINT PARADIGM (MOBILE FLATTEN CODE)
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  .case-ledger-section {
+    padding: 5rem 0;
+  }
+
+  .ledger-split-grid {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+  }
+
+  .ledger-narrative-block {
+    text-align: center;
+  }
+
+  .ledger-main-title {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  .ledger-main-desc {
+    font-size: var(--fs-p-sm);
+    margin-bottom: 2.5rem;
+  }
+
+  .impact-stats-grid {
+    gap: 1.5rem;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
+
+  .telemetry-performance-box {
+    padding: 1.75rem 1.25rem;
+    border-radius: var(--radius);
+  }
+
+  .terminal-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   VOID-TECH HORIZON SLIDER SYSTEM
+   ========================================================================== */
+
+.horizon-slider-section {
+  position: relative;
+  padding: 10rem 0;
+  background-color: var(--bg-dark);
+  border-top: 1px solid var(--glass-border);
+  overflow: hidden;
+}
+
+.horizon-flare {
+  position: absolute;
+  top: 50%;
+  right: -20%;
+  transform: translateY(-50%);
+  width: 550px;
+  height: 550px;
+  background: var(--gradient-glow);
+  filter: blur(150px);
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.horizon-split-layout {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 6rem;
+  align-items: center;
+  position: relative;
+  z-index: 5;
+}
+
+/* ==========================================================================
+   LEFT COMPONENT: BLUEPRINT TYPOGRAPHIC INDEX
+   ========================================================================== */
+
+.index-numeric {
+  font-family: monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--accent-magenta);
+  letter-spacing: 2px;
+  display: block;
+  margin-bottom: 1.5rem;
+}
+
+.blueprint-main-title {
+  font-size: 2.75rem;
+  font-weight: 700;
+  line-height: var(--lh-heading);
+  letter-spacing: -0.03em;
+  color: var(--text-main);
+  margin-bottom: 1.5rem;
+}
+
+.blueprint-main-desc {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  line-height: var(--lh-body);
+  margin-bottom: 3.5rem;
+}
+
+/* Linear Tracking Navigation Rail */
+.blueprint-selector-rail {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 320px;
+}
+
+.selector-item {
+  position: relative;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.selector-item .lbl {
+  font-family: monospace;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  letter-spacing: 1px;
+}
+
+/* Active Highlight Line Transitions */
+.active-item .lbl {
+  color: var(--text-main);
+}
+
+.active-tracer {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 40px;
+  height: 1px;
+  background-color: var(--accent-violet);
+  box-shadow: 0 0 8px var(--accent-violet);
+  transition: var(--transition-smooth);
+}
+
+.selector-item:hover .lbl {
+  color: var(--text-main);
+}
+
+/* ==========================================================================
+   RIGHT COMPONENT: IMMERSIVE INFINITE PARAMETER STREAM
+   ========================================================================== */
+
+.parameter-stream-block {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.stream-scroller-wrapper {
+  display: flex;
+  gap: 1.5rem;
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  /* Top and Bottom clipping masks for seamless fade transitions */
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 15%, #000 85%, transparent 100%);
+  mask-image: linear-gradient(to bottom, transparent 0%, #000 15%, #000 85%, transparent 100%);
+}
+
+.stream-column-track {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 50%;
+}
+
+/* Continuous Animation Timing Configurations */
+.animation-up {
+  animation: scrollStreamUp 18s linear infinite;
+}
+
+.animation-down {
+  animation: scrollStreamDown 18s linear infinite;
+}
+
+/* Typography Telemetry Nodes */
+.parameter-data-node {
+  background: var(--bg-surface);
+  backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  padding: 1.75rem;
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: var(--transition-smooth);
+}
+
+.parameter-data-node:hover {
+  border-color: var(--accent-violet);
+  background: var(--bg-surface-hover);
+  transform: scale(1.02);
+}
+
+.parameter-data-node span {
+  font-family: monospace;
+  font-size: 0.65rem;
+  letter-spacing: 1px;
+  color: var(--text-muted);
+}
+
+.parameter-data-node strong {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-main);
+  letter-spacing: -0.01em;
+}
+
+/* Infinite Scrolling Loop Coordinates */
+@keyframes scrollStreamUp {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-50%); }
+}
+
+@keyframes scrollStreamDown {
+  0% { transform: translateY(-50%); }
+  100% { transform: translateY(0); }
+}
+
+/* ==========================================================================
+   768PX RESPONSIVE BREAKPOINT PARADIGM (MOBILE PARALLEL COMPRESSION)
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  .horizon-slider-section {
+    padding: 6rem 0;
+  }
+
+  .horizon-split-layout {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+
+  .blueprint-index-block {
+    text-align: center;
+  }
+
+  .blueprint-main-title {
+    font-size: 2rem;
+  }
+
+  .blueprint-main-desc {
+    font-size: var(--fs-p-sm);
+    margin-bottom: 2.5rem;
+  }
+
+  .blueprint-selector-rail {
+    margin: 0 auto;
+    align-items: center;
+  }
+
+  /* Changes scrolling alignment from vertical columns to horizontal lanes */
+  .stream-scroller-wrapper {
+    height: 140px;
+    flex-direction: column;
+    max-width: 100%;
+    gap: 1rem;
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 15%, #000 85%, transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0%, #000 15%, #000 85%, transparent 100%);
+  }
+
+  .stream-column-track {
+    flex-direction: row;
+    width: auto;
+    height: 50%;
+  }
+
+  .parameter-data-node {
+    padding: 1rem 1.5rem;
+    min-width: 160px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .parameter-data-node strong {
+    font-size: 1.1rem;
+  }
+
+  .animation-up {
+    animation: scrollStreamLeft 12s linear infinite;
+  }
+
+  .animation-down {
+    animation: scrollStreamRight 12s linear infinite;
+  }
+}
+
+@keyframes scrollStreamLeft {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes scrollStreamRight {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   INTERACTIVE OPERATIONAL WORKFLOW MATRIX CORE LAYOUT
+   ========================================================================== */
+
+.ops-matrix-section {
+  position: relative;
+  padding: 8rem 0;
+  background-color: var(--bg-dark);
+  border-top: 1px solid var(--glass-border);
+  overflow: hidden;
+}
+
+/* Atmospheric Layer Fluid Light Leaks */
+.ops-ambient-glow {
+  position: absolute;
+  top: 40%;
+  right: -10%;
+  width: 500px;
+  height: 500px;
+  background: var(--gradient-glow);
+  filter: blur(140px);
+  opacity: 0.12;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.ops-matrix-grid {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 5rem;
+  align-items: center;
+  position: relative;
+  z-index: 5;
+}
+
+/* ==========================================================================
+   LEFT PROPERTY: INTERACTIVE ROADMAP NAVIGATION LIST
+   ========================================================================== */
+
+.ops-matrix-title {
+  font-size: 2.75rem;
+  line-height: var(--lh-heading);
+  letter-spacing: -0.03em;
+  color: var(--text-main);
+  margin-bottom: 3rem;
+}
+
+.ops-step-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: relative;
+}
+
+/* Structural Step Node Configurations */
+.ops-step-node {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.25rem 1.5rem;
+  background: rgba(255, 255, 255, 0.01);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.step-indicator {
+  width: 36px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--glass-border);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: var(--transition-smooth);
+}
+
+.step-indicator span {
+  font-family: monospace;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+.step-meta h4 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-main);
+  margin: 0 0 0.2rem 0;
+  transition: var(--transition-smooth);
+}
+
+.step-meta p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* --- Interactive Active State Triggers --- */
+.ops-step-node:hover, .active-step {
+  background: var(--bg-surface-hover); /* Plum block highlight match */
+  border-color: rgba(168, 85, 247, 0.3);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.active-step .step-indicator {
+  background: var(--gradient-primary);
+  border-color: transparent;
+  box-shadow: 0 0 12px rgba(168, 85, 247, 0.4);
+}
+
+.active-step .step-indicator span {
+  color: #ffffff;
+}
+
+.active-step .step-meta h4 {
+  color: var(--accent-violet);
+}
+
+/* ==========================================================================
+   RIGHT PROPERTY: PREMIUM GLASSMORPHIC DISPLAY TERMINAL 
+   ========================================================================== */
+
+.ops-terminal-display {
+  position: relative;
+  background: var(--bg-surface);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: calc(var(--radius) * 1.5);
+  box-shadow: var(--shadow-overlay);
+  padding: 3rem;
+  overflow: hidden;
+}
+
+.terminal-glow-rail {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--gradient-primary);
+}
+
+.display-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  padding-bottom: 1.5rem;
+  margin-bottom: 2.25rem;
+}
+
+.terminal-breadcrumbs {
+  font-family: monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.5px;
+  color: var(--text-muted);
+}
+
+.terminal-breadcrumbs .active-dir {
+  color: var(--accent-magenta);
+  font-weight: 600;
+}
+
+.badge-status {
+  font-family: monospace;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #10b981;
+  background: rgba(168, 85, 247, 0.04);
+  border: 1px solid rgba(168, 85, 247, 0.15);
+  padding: 0.35rem 0.75rem;
+  border-radius: 3px;
+}
+
+.display-content-body h3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.02em;
+}
+
+.display-content-body p {
+  font-size: var(--fs-p);
+  color: var(--text-muted);
+  line-height: var(--lh-body);
+  margin-bottom: 2.5rem;
+}
+
+/* Internal Specs Breakdown Module */
+.display-spec-box {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.02);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin-bottom: 2rem;
+}
+
+.spec-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+}
+
+.spec-row .lbl {
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.spec-row .val {
+  color: var(--text-main);
+  font-weight: 600;
+}
+
+.text-violet { color: var(--accent-violet); }
+.text-magenta { color: var(--accent-magenta); }
+
+.display-meta-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+  padding-top: 1.25rem;
+  font-family: monospace;
+  font-size: 0.65rem;
+  letter-spacing: 1px;
+  color: var(--text-muted);
+  opacity: 0.4;
+}
+
+/* ==========================================================================
+   768PX RESPONSIVE BREAKPOINT PARADIGM (MOBILE ROADMAP FLATTEN ENGINE)
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  .ops-matrix-section {
+    padding: 5rem 0;
+  }
+
+  /* Compresses side-by-side structures completely into a single vertical sequence */
+  .ops-matrix-grid {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+  }
+
+  .ops-navigation-column {
+    text-align: center;
+  }
+
+  .ops-matrix-title {
+    font-size: 2rem;
+    margin-bottom: 2.25rem;
+  }
+
+  .ops-step-list {
+    text-align: left;
+  }
+
+  .ops-step-node {
+    padding: 1rem 1.15rem;
+  }
+
+  .step-meta h4 {
+    font-size: 0.95rem;
+  }
+
+  .step-meta p {
+    font-size: 0.8rem;
+  }
+
+  .ops-terminal-display {
+    padding: 2rem 1.25rem;
+    border-radius: var(--radius);
+  }
+
+  .display-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .display-content-body h3 {
+    font-size: 1.3rem;
+  }
+
+  .display-content-body p {
+    font-size: var(--fs-p-sm);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
+
+  .spec-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.35rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   TECHNICAL FAQ MATRIX ENGINE STYLES
+   ========================================================================== */
+
+.tech-faq-section {
+  position: relative;
+  padding: 8rem 0;
+  background-color: var(--bg-dark);
+  overflow: hidden;
+}
+
+/* Atmospheric Layer Fluid Light Leaks Behind Lists */
+.faq-glow-node {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 600px;
+  background: var(--gradient-glow);
+  filter: blur(150px);
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ==========================================================================
+   CENTERED DESIGN SYSTEM SECTION HEADER
+   ========================================================================== */
+
+.section-head {
+  max-width: 720px;       /* Constrains length for premium, readable line lengths */
+  margin: 0 auto 4.5rem auto; /* Centers the block itself & offsets from section content */
+  text-align: center;     /* Centers all typography tracks internally */
+  display: flex;
+  flex-direction: column;
+  align-items: center;    /* Keeps structural child components centered */
+}
+
+/* Enforce block behaviors so margins calculate correctly */
+.section-head .mono-label {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1.25rem;
+}
+
+.section-head .section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: var(--lh-heading, 1.2);
+  letter-spacing: -0.02em;
+  color: var(--text-main);
+  margin-bottom: 1.25rem;
+}
+
+.section-head .section-title span {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.section-head .section-sub {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  line-height: var(--lh-body, 1.6);
+  max-width: 580px;      /* Ensures descriptions fold elegantly on widescreen grids */
+  margin: 0 auto;
+}
+
+/* ==========================================================================
+   768PX RESPONSIVE PARADIGM
+   ========================================================================== */
+@media (max-width: 768px) {
+  .section-head {
+    margin-bottom: 3rem; /* Tighter padding for mobile screens */
+    padding: 0 1rem;
+  }
+  
+  .section-head .section-title {
+    font-size: 2rem;     /* Fluid drop down matching your typographic scale */
+    line-height: 1.3;
+  }
+  
+  .section-head .section-sub {
+    font-size: var(--fs-p-sm, 0.875rem);
+    max-width: 100%;
+  }
+}
+
+.faq-matrix-stack {
+  max-width: 820px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  position: relative;
+  z-index: 5;
+}
+
+/* ==========================================================================
+   INTERACTIVE SELECTION NODES (PURE CSS ENGINE)
+   ========================================================================== */
+
+.faq-matrix-row {
+  position: relative;
+  background: var(--bg-surface); /* Luxury warm plum velvet undertone overlay layout */
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: var(--transition-smooth);
+}
+
+/* Hide raw check input mechanics cleanly out of bounds */
+.faq-accordion-toggle {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+.faq-row-trigger {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.75rem 2.25rem;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  z-index: 2;
+  transition: var(--transition-smooth);
+}
+
+.faq-row-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: var(--lh-heading);
+  color: var(--text-main);
+  padding-right: 2rem;
+}
+
+/* Custom Minimalist Linear Cross Vector */
+.faq-vector-cross {
+  position: relative;
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.faq-vector-cross::before,
+.faq-vector-cross .cross-rail {
+  content: '';
+  position: absolute;
+  background-color: var(--text-muted);
+  transition: var(--transition-smooth);
+}
+
+/* Horizontal cross bar tracking line */
+.faq-vector-cross::before {
+  width: 14px;
+  height: 2px;
+}
+
+/* Vertical cross bar tracking line */
+.faq-vector-cross .cross-rail {
+  width: 2px;
+  height: 14px;
+}
+
+/* ==========================================================================
+   INTERACTIVE TRAVEL FLUX AND ACTIVE TOGGLE LOGIC
+   ========================================================================== */
+
+.faq-matrix-row:hover {
+  background: var(--bg-surface-hover);
+  border-color: rgba(168, 85, 247, 0.25);
+}
+
+/* Checked transformation calculations on container elements */
+.faq-accordion-toggle:checked ~ .faq-matrix-row,
+.faq-matrix-row:has(.faq-accordion-toggle:checked) {
+  border-color: var(--accent-violet);
+  background: rgba(38, 32, 59, 0.4); /* Highlight plum baseline match block */
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4), 0 0 15px rgba(168, 85, 247, 0.1);
+}
+
+/* Rotate vector markers into a clean minus sign upon user click activation */
+.faq-accordion-toggle:checked + .faq-row-trigger .faq-vector-cross::before {
+  background-color: var(--accent-magenta);
+  transform: rotate(180deg);
+}
+
+.faq-accordion-toggle:checked + .faq-row-trigger .faq-vector-cross .cross-rail {
+  background-color: var(--accent-magenta);
+  transform: rotate(90deg);
+  opacity: 0; /* Clear out vertical segment perfectly to display clear minus */
+}
+
+/* Dynamic slide reveal compartment limits */
+.faq-expansion-panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.panel-content-inner {
+  padding: 0 2.25rem 2rem 2.25rem;
+  font-size: var(--fs-p);
+  line-height: var(--lh-body);
+  color: var(--text-muted);
+}
+
+/* Expand module panel using dynamic max height bounds */
+.faq-accordion-toggle:checked ~ .faq-expansion-panel {
+  max-height: 350px; /* Safe padding limit constraints for smooth travel movement */
+}
+
+/* ==========================================================================
+   768PX RESPONSIVE BREAKPOINT PARADIGM (MOBILE FAQ GRID RE-ARCHITECT)
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  .tech-faq-section {
+    padding: 5rem 0;
+  }
+
+  .faq-matrix-stack {
+    gap: 1rem;
+    padding: 0 0.5rem;
+  }
+
+  .faq-row-trigger {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .faq-row-title {
+    font-size: var(--fs-p); /* Compresses row copy metrics cleanly to text caps */
+    line-height: 1.4;
+  }
+
+  .panel-content-inner {
+    padding: 0 1.25rem 1.5rem 1.25rem;
+    font-size: var(--fs-p-sm); /* Standardizes text grids down to your 0.875rem body matrix scale */
+    line-height: 1.6;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   PREMIUM CYBERNETIC GATEWAY CALL-TO-ACTION LAYER
+   ========================================================================== */
+
+.gateway-cta-section {
+  position: relative;
+  padding: 10rem 0;
+  background-color: var(--bg-dark);
+  overflow: hidden;
+}
+
+/* Atmospheric Ambient Light Nodes behind Terminal Enclosure */
+.cta-ambient-glow {
+  position: absolute;
+  width: 550px;
+  height: 550px;
+  border-radius: 50%;
+  filter: blur(150px);
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.glow-left {
+  bottom: -15%;
+  left: 10%;
+  background: var(--accent-violet);
+}
+
+/* Linear Background Design Element Grid Lines */
+.gateway-matrix-rail {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, 
+    rgba(255, 255, 255, 0) 0%, 
+    rgba(255, 255, 255, 0.04) 50%, 
+    rgba(255, 255, 255, 0) 100%
+  );
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* ==========================================================================
+   CENTRALIZED GLASSMORPHIC GATEWAY COMMAND CARD
+   ========================================================================== */
+
+.gateway-terminal-card {
+  position: relative;
+  z-index: 5;
+  max-width: 960px;
+  margin: 0 auto;
+  background: var(--bg-surface); /* Luxury warm plum velvet layout undertone */
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: calc(var(--radius) * 2);
+  box-shadow: var(--shadow-overlay);
+  padding: 4.5rem 4rem;
+  overflow: hidden;
+  text-align: center;
+}
+
+/* Linear Top Border Rail Pulse */
+.gateway-terminal-card .card-glow-rail {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--gradient-primary);
+}
+
+/* Decor Layout Accents for Core Command Interface */
+.terminal-decorations {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  padding-bottom: 1.5rem;
+  margin-bottom: 3.5rem;
+}
+
+.terminal-dots {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.decor-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.status-pulse-amber {
+  background-color: #f59e0b;
+  box-shadow: 0 0 10px #f59e0b;
+}
+
+.decor-text, .terminal-id-tag {
+  font-family: monospace;
+  font-size: 0.7rem;
+  letter-spacing: 1.5px;
+  color: var(--text-muted);
+}
+
+/* Core Title Elements */
+.gateway-title {
+  font-size: 3.25rem;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: var(--text-main);
+  margin-bottom: 1.5rem;
+}
+
+.gradient-text {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 4px 15px rgba(168, 85, 247, 0.25));
+}
+
+.gateway-desc {
+  font-size: 1.1rem;
+  line-height: var(--lh-body);
+  color: var(--text-muted);
+  max-width: 640px;
+  margin: 0 auto 3.5rem auto;
+}
+
+/* Button Group Alignment Stack */
+.gateway-action-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 4.5rem;
+}
+
+.text-magenta { color: var(--accent-magenta); }
+.icon-slide { transition: transform 0.3s ease; }
+.btn-main:hover .icon-slide { transform: translateX(4px); }
+
+/* Bottom Operational Technical Spec Line */
+.gateway-meta-footer {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+  padding-top: 1.75rem;
+  font-family: monospace;
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+.meta-metric {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.meta-metric .lbl { opacity: 0.4; }
+.meta-metric .val { color: var(--text-main); }
+.text-green { color: #10b981 !important; font-weight: 600; }
+
+/* ==========================================================================
+   768PX RESPONSIVE BREAKPOINT PARADIGM (MOBILE COMPRESSION ENGINE)
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  .gateway-cta-section {
+    padding: 6rem 0;
+  }
+
+  .gateway-terminal-card {
+    padding: 3rem 1.5rem;
+    border-radius: var(--radius);
+    margin: 0 0.5rem;
+  }
+
+  .terminal-decorations {
+    margin-bottom: 2.5rem;
+  }
+
+  .terminal-id-tag {
+    display: none; /* Safely clears out clutter to prioritize room metrics */
+  }
+
+  .gateway-title {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  .gateway-desc {
+    font-size: var(--fs-p-sm);
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+  }
+
+  /* Compresses layered layout links completely into block action states */
+  .gateway-action-row {
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+    margin-bottom: 3.5rem;
+  }
+
+  .gateway-action-row .btn-main,
+  .gateway-action-row .btn-secondary {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Standardizes bottom system data arrays on touch displays */
+  .gateway-meta-footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    padding-top: 1.5rem;
+  }
+}
