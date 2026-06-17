@@ -1686,9 +1686,8 @@
 
 
 
-
 /* ==========================================================================
-   HOMEPAGE 2: PREMIUM KINETIC CTA SYSTEM (CARD-LESS ENGINE)
+   HOMEPAGE 2: PREMIUM KINETIC CTA SYSTEM (CARD-LESS ENGINE) - CENTER ALIGNED
    ========================================================================= */
 .cta-v2 {
   position: relative;
@@ -1713,12 +1712,15 @@
 /* Container Wrapper Alignment Parameters */
 .cta-v2-container {
   display: flex;
-  justify-content: flex-start; /* Asymmetric default alignment left on desktop screens */
+  justify-content: center; /* FIXED: Centered horizontal box alignment layout across desktop */
 }
 
 .cta-v2-wrapper {
   max-width: 850px;
-  text-align: left;
+  text-align: center; /* FIXED: Centered text alignment for headlines, copy, and badges */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* FIXED: Centers block level child nodes down the axis track */
 }
 
 .cta-v2-headline {
@@ -1735,14 +1737,16 @@
   color: var(--text-muted);
   line-height: 1.7;
   margin-bottom: 4rem;
-  max-width: 85%;
+  max-width: 85%; /* Symmetrically balanced description text paragraph box widths */
 }
 
 /* Actions Row Matrix Alignment Layer */
 .cta-v2-actions-row {
   display: flex;
   align-items: center;
+  justify-content: center; /* FIXED: Centers action button elements next to each other */
   gap: 2rem;
+  width: 100%;
 }
 
 .cta-actions-separator {
@@ -1799,14 +1803,12 @@
   left: 0;
   width: 100%;
   height: 1px;
-  /* FIXED: Fixed syntax percent rendering bug error right here smoothly */
   background: linear-gradient(90deg, 
     rgba(255, 255, 255, 0) 0%, 
     rgba(255, 255, 255, 0.04) 50%, 
     rgba(255, 255, 255, 0) 100%
   );
 }
-
 
 /* ==========================================================================
    768PX ADAPTIVE BREAKPOINT SPECIFICATION (CTA MOBILE RE-ARCHITECT)
@@ -1816,21 +1818,13 @@
     padding: 7rem 0;
   }
 
-  /* FIXED: Force parent layout container layer elements alignment to center */
   .cta-v2-container {
     justify-content: center;
   }
 
   .cta-v2-wrapper {
-    text-align: center; /* Enforces text rendering flow alignment center */
+    text-align: center;
     max-width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .cta-v2-wrapper .tech-badge {
-    margin: 0 auto;
   }
 
   .cta-v2-headline {
@@ -1846,7 +1840,6 @@
     margin-bottom: 3rem;
   }
 
-  /* Transition raw landscape rows into deep vertical touch target pipelines */
   .cta-v2-actions-row {
     flex-direction: column;
     gap: 1.25rem;
@@ -1864,6 +1857,7 @@
     padding: 0.75rem 0; 
   }
   
+  /* Center centers the hover slider underline element natively on phone viewports */
   .inline-telemetry-link::after {
     left: 50%;
     transform: translateX(-50%); 
