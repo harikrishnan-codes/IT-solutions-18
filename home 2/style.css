@@ -347,7 +347,7 @@
    ========================================================================== */
 .services-v2 {
   position: relative;
-  padding: 8rem 0;
+  padding: 5rem 0;
   background-color: var(--bg-dark);
   z-index: 2;
 }
@@ -519,7 +519,7 @@
    ========================================================================== */
 .metrics-v2 {
   position: relative;
-  padding: 10rem 0;
+  padding: 5rem 0;
   background-color: var(--bg-dark);
   z-index: 4;
   overflow: hidden;
@@ -725,7 +725,7 @@
    ========================================================================== */
 .showcase-v2 {
   position: relative;
-  padding: 10rem 0;
+  padding: 5rem 0;
   background-color: var(--bg-dark);
   z-index: 5;
 }
@@ -976,7 +976,7 @@
    ========================================================================== */
 .hub-v2 {
   position: relative;
-  padding: 10rem 0;
+  padding: 5rem 0;
   background-color: var(--bg-dark);
   z-index: 6;
   overflow: hidden;
@@ -985,7 +985,7 @@
 .hub-v2-header {
   text-align: center;
   max-width: 750px;
-  margin: 0 auto 6rem auto;
+  margin: 0 auto 3rem auto;
 }
 .hub-v2-title {
   font-size: 3.5rem;
@@ -1256,7 +1256,7 @@
    ========================================================================== */
 .testimonials-v2 {
   position: relative;
-  padding: 10rem 0;
+  padding: 5rem 0;
   background-color: var(--bg-dark);
   z-index: 7;
 }
@@ -1485,7 +1485,7 @@
    ========================================================================== */
 .faq-v2 {
   position: relative;
-  padding: 10rem 0;
+  padding: 5rem 0;
   background-color: var(--bg-dark);
   z-index: 8;
 }
@@ -1691,7 +1691,7 @@
    ========================================================================= */
 .cta-v2 {
   position: relative;
-  padding: 12rem 0;
+  padding: 6rem 0;
   background-color: var(--bg-dark);
   z-index: 9;
   overflow: hidden;

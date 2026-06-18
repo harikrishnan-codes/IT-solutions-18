@@ -479,7 +479,7 @@
 
 .telemetry-matrix-section {
   position: relative;
-  padding: 8rem 0;
+  padding: 5rem 0;
   background-color: var(--bg-dark);
   overflow: hidden;
 }
@@ -727,7 +727,7 @@
 
 .pricing-matrix-section {
   position: relative;
-  padding: 8rem 0;
+  padding: 5rem 0;
   background-color: var(--bg-dark);
   overflow: hidden;
 }
@@ -985,7 +985,7 @@
    VOID-TECH AESTHETIC ENGINE
    ========================================================================== */
 .void-sandbox {
-  padding: 8rem 0;
+  padding: 5rem 0;
   background: #020205; /* Absolute deep void background */
   position: relative;
 }
@@ -1359,7 +1359,7 @@
 
 .kinetic-workflow-section {
   position: relative;
-  padding: 10rem 0;
+  padding: 5rem 0;
   background-color: var(--bg-dark);
   overflow: hidden;
 }
@@ -1621,7 +1621,7 @@
 
 .testimonial-matrix-section {
   position: relative;
-  padding: 8rem 0;
+  padding: 5rem 0;
   background-color: var(--bg-dark);
   overflow: hidden;
 }
@@ -1838,7 +1838,7 @@
 
 .faq-matrix-section {
   position: relative;
-  padding: 8rem 0;
+  padding: 5rem 0;
   background-color: var(--bg-dark);
   overflow: hidden;
 }
@@ -2018,7 +2018,7 @@
 
 .gateway-cta-section {
   position: relative;
-  padding: 10rem 0;
+  padding: 5rem 0;
   background-color: var(--bg-dark);
   overflow: hidden;
 }

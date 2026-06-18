@@ -60,7 +60,7 @@ html {
 }
 
 body {
-    background-color: var(--secondary-color);
+    background-color: var(--bg-dark);
     /* Using your off-white for the body */
     color: var(--text-main);
     font-family: 'Inter', sans-serif;
@@ -82,7 +82,7 @@ h3,
 h4,
 h5,
 h6 {
-    color: var(--text-header);
+    color: var(--text-main);
     font-weight: 700;
     line-height: var(--lh-heading);
     letter-spacing: -0.02em;

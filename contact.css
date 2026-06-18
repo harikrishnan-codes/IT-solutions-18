@@ -5,7 +5,7 @@
 .contact-hero-section {
   position: relative;
   background-color: var(--bg-dark);
-  padding: 12rem 0 8rem 0; /* Spacing clears your fixed desktop header */
+  padding: 8rem 0 8rem 0; /* Spacing clears your fixed desktop header */
   width: 100%;
   overflow: hidden;
   border-bottom: 1px solid var(--glass-border);
@@ -331,7 +331,7 @@
 .office-hub-section {
   position: relative;
   background-color: var(--bg-dark);
-  padding: 8rem 0;
+  padding: 5rem 0;
   width: 100%;
   overflow: hidden;
   border-bottom: 1px solid var(--glass-border);
@@ -639,7 +639,7 @@
 .support-systems-section {
   position: relative;
   background-color: var(--bg-dark);
-  padding: 8rem 0;
+  padding: 5rem 0;
   width: 100%;
   overflow: hidden;
   border-bottom: 1px solid var(--glass-border);
@@ -852,7 +852,7 @@
 .contact-faq-section {
   position: relative;
   background-color: var(--bg-dark);
-  padding: 8rem 0;
+  padding: 5rem 0;
   width: 100%;
   overflow: hidden;
   border-bottom: 1px solid var(--glass-border);
@@ -1213,7 +1213,7 @@
 .contact-final-cta-section {
   position: relative;
   background-color: var(--bg-dark);
-  padding: 10rem 0;
+  padding: 5rem 0;
   width: 100%;
   overflow: hidden;
   border-bottom: 1px solid var(--glass-border);

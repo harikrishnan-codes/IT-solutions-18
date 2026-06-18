@@ -4,7 +4,7 @@
 
 .contact-hero-section {
   position: relative;
-  padding: 12rem 0 8rem 0;
+  padding: 8rem 0 8rem 0;
   background-color: var(--bg-dark);
   border-bottom: 1px solid var(--glass-border);
   overflow: hidden;
@@ -95,8 +95,13 @@
   font-weight: 600;
 }
 
-.text-violet { color: var(--accent-violet); }
-.text-magenta { color: var(--accent-magenta); }
+.text-violet {
+  color: var(--accent-violet);
+}
+
+.text-magenta {
+  color: var(--accent-magenta);
+}
 
 /* Reach Node Hover Glow Effect */
 .reach-node:hover {
@@ -112,7 +117,8 @@
 .comms-console-box {
   position: relative;
   width: 100%;
-  background: var(--bg-surface); /* Premium hot velvet plum matrix underlay layout */
+  background: var(--bg-surface);
+  /* Premium hot velvet plum matrix underlay layout */
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
   border: 1px solid var(--glass-border);
@@ -155,6 +161,7 @@
   height: 6px;
   border-radius: 50%;
 }
+
 .blink-green {
   background-color: #10b981;
   box-shadow: 0 0 10px #10b981;
@@ -162,8 +169,13 @@
 }
 
 @keyframes connectionPulseStatus {
-  0% { opacity: 0.3; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 0.3;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 .console-timestamp {
@@ -189,8 +201,8 @@
 .visual-grid-overlay {
   position: absolute;
   inset: 0;
-  background-image: linear-gradient(rgba(255,255,255,0.01) 1px, transparent 1px),
-                    linear-gradient(90deg, rgba(255,255,255,0.01) 1px, transparent 1px);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.01) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.01) 1px, transparent 1px);
   background-size: 20px 20px;
 }
 
@@ -213,8 +225,15 @@
 }
 
 @keyframes commsNetworkPing {
-  0% { transform: scale(0.5); opacity: 1; }
-  100% { transform: scale(4); opacity: 0; }
+  0% {
+    transform: scale(0.5);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(4);
+    opacity: 0;
+  }
 }
 
 /* Simulated Vector Laser Signal Channels */
@@ -224,8 +243,20 @@
   background: var(--gradient-primary);
   opacity: 0.3;
 }
-.path-alpha { width: 60%; top: 30%; left: -10%; transform: rotate(15deg); }
-.path-beta  { width: 50%; bottom: 25%; right: -5%; transform: rotate(-25deg); }
+
+.path-alpha {
+  width: 60%;
+  top: 30%;
+  left: -10%;
+  transform: rotate(15deg);
+}
+
+.path-beta {
+  width: 50%;
+  bottom: 25%;
+  right: -5%;
+  transform: rotate(-25deg);
+}
 
 .visual-watermark {
   position: absolute;
@@ -247,10 +278,23 @@
   color: var(--text-muted);
 }
 
-.console-comms-footer .footer-row { display: flex; gap: 0.5rem; }
-.console-comms-footer .lbl { opacity: 0.3; }
-.console-comms-footer .val { color: var(--text-main); }
-.text-green { color: #10b981 !important; font-weight: 600; }
+.console-comms-footer .footer-row {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.console-comms-footer .lbl {
+  opacity: 0.3;
+}
+
+.console-comms-footer .val {
+  color: var(--text-main);
+}
+
+.text-green {
+  color: #10b981 !important;
+  font-weight: 600;
+}
 
 /* ==========================================================================
    768PX RESPONSIVE BREAKPOINT PARADIGM (MOBILE COMPRESSION RE-ENGINE)
@@ -289,7 +333,8 @@
   }
 
   .reach-node:hover {
-    transform: translateY(-2px); /* Softens movement properties matching touch metrics */
+    transform: translateY(-2px);
+    /* Softens movement properties matching touch metrics */
   }
 
   .comms-console-box {
@@ -307,7 +352,7 @@
   .console-comms-visual {
     height: 160px;
   }
-  
+
   .console-comms-footer {
     flex-direction: column;
     align-items: center;
@@ -329,7 +374,7 @@
 
 .ingestion-form-section {
   position: relative;
-  padding: 6rem 0 10rem 0;
+  padding: 5rem 0 10rem 0;
   background-color: var(--bg-dark);
   overflow: hidden;
 }
@@ -462,8 +507,13 @@
   padding: 1.1rem 2.25rem;
 }
 
-.icon-pulse { transition: transform 0.3s ease; }
-.form-submit-trigger:hover .icon-pulse { transform: scale(1.1); }
+.icon-pulse {
+  transition: transform 0.3s ease;
+}
+
+.form-submit-trigger:hover .icon-pulse {
+  transform: scale(1.1);
+}
 
 /* ==========================================================================
    RIGHT PROPERTY: GLASSMORPHIC DIAGNOSTIC DATA WINDOW
@@ -471,7 +521,8 @@
 
 .diagnostic-readout-panel {
   position: relative;
-  background: var(--bg-surface); /* Premium hot velvet plum matrix overlay layout */
+  background: var(--bg-surface);
+  /* Premium hot velvet plum matrix overlay layout */
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
   border: 1px solid var(--glass-border);
@@ -550,10 +601,22 @@
   font-size: 0.85rem;
 }
 
-.value-row strong { color: var(--text-main); font-weight: 600; }
-.text-magenta { color: var(--accent-magenta); }
-.text-violet { color: var(--accent-violet); }
-.text-green { color: #10b981; }
+.value-row strong {
+  color: var(--text-main);
+  font-weight: 600;
+}
+
+.text-magenta {
+  color: var(--accent-magenta);
+}
+
+.text-violet {
+  color: var(--accent-violet);
+}
+
+.text-green {
+  color: #10b981;
+}
 
 .panel-meta-footer {
   border-top: 1px solid rgba(255, 255, 255, 0.04);
@@ -622,7 +685,7 @@
 
 .global-office-section {
   position: relative;
-  padding: 8rem 0;
+  padding: 5rem 0;
   background-color: var(--bg-dark);
   border-top: 1px solid var(--glass-border);
   overflow: hidden;
@@ -721,13 +784,16 @@
 }
 
 /* --- Interactive Activation Physics Triggers --- */
-.office-selector-card:hover, .active-office-node {
-  background: var(--bg-surface-hover); /* Premium plum alignment cluster match */
+.office-selector-card:hover,
+.active-office-node {
+  background: var(--bg-surface-hover);
+  /* Premium plum alignment cluster match */
   border-color: rgba(168, 85, 247, 0.3);
   transform: translateX(6px);
 }
 
-.office-selector-card:hover .node-accent-line, .active-office-node .node-accent-line {
+.office-selector-card:hover .node-accent-line,
+.active-office-node .node-accent-line {
   background-color: var(--accent-violet);
   box-shadow: 0 0 10px var(--accent-violet);
 }
@@ -780,14 +846,20 @@
   align-items: center;
   gap: 0.5rem;
 }
-.text-magenta { color: var(--accent-magenta); }
+
+.text-magenta {
+  color: var(--accent-magenta);
+}
 
 .status-indicator {
   font-family: monospace;
   font-size: 0.65rem;
   font-weight: 700;
 }
-.text-green { color: #10b981; }
+
+.text-green {
+  color: #10b981;
+}
 
 /* Asset-Free Abstract Vector Blueprint Coordinate Container */
 .abstract-blueprint-map {
@@ -806,8 +878,8 @@
 .blueprint-crosshairs {
   position: absolute;
   inset: 0;
-  background-image: linear-gradient(to right, rgba(255,255,255,0.01) 1px, transparent 1px),
-                    linear-gradient(to bottom, rgba(255,255,255,0.01) 1px, transparent 1px);
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.01) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.01) 1px, transparent 1px);
   background-position: center center;
 }
 
@@ -829,8 +901,15 @@
 }
 
 @keyframes dynamicRadarLoop {
-  0% { transform: scale(0.5); opacity: 1; }
-  100% { transform: scale(3.5); opacity: 0; }
+  0% {
+    transform: scale(0.5);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(3.5);
+    opacity: 0;
+  }
 }
 
 .blueprint-axes-labels {
@@ -861,8 +940,15 @@
   font-size: 0.75rem;
 }
 
-.spec-cell .lbl { color: var(--text-muted); opacity: 0.4; }
-.spec-cell .val { color: var(--text-main); font-weight: 500; }
+.spec-cell .lbl {
+  color: var(--text-muted);
+  opacity: 0.4;
+}
+
+.spec-cell .val {
+  color: var(--text-main);
+  font-weight: 500;
+}
 
 /* ==========================================================================
    768PX RESPONSIVE BREAKPOINT PARADIGM (MOBILE RECORD FLATTEN ENGINE)
@@ -900,9 +986,11 @@
   .office-selector-card {
     padding: 1.25rem 1.5rem;
   }
-  
-  .office-selector-card:hover, .active-office-node {
-    transform: translateY(-2px); /* Swaps out horizontal offset trajectory on mobile viewports */
+
+  .office-selector-card:hover,
+  .active-office-node {
+    transform: translateY(-2px);
+    /* Swaps out horizontal offset trajectory on mobile viewports */
   }
 
   .office-diagnostic-panel {
@@ -941,7 +1029,7 @@
 
 .contact-gateway-section {
   position: relative;
-  padding: 8rem 0 10rem 0;
+  padding: 5rem 0 5rem 0;
   background-color: var(--bg-dark);
   border-top: 1px solid var(--glass-border);
   overflow: hidden;
@@ -965,7 +1053,8 @@
   z-index: 5;
   max-width: 920px;
   margin: 0 auto;
-  background: var(--bg-surface); /* Premium warm plum velvet base layout */
+  background: var(--bg-surface);
+  /* Premium warm plum velvet base layout */
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
   border: 1px solid var(--glass-border);
@@ -1005,12 +1094,14 @@
   height: 6px;
   border-radius: 50%;
 }
+
 .status-ping-amber {
   background-color: #f59e0b;
   box-shadow: 0 0 10px #f59e0b;
 }
 
-.frame-label, .frame-id {
+.frame-label,
+.frame-id {
   font-family: monospace;
   font-size: 0.7rem;
   letter-spacing: 1px;
@@ -1050,9 +1141,17 @@
   margin-bottom: 4rem;
 }
 
-.text-magenta { color: var(--accent-magenta); }
-.icon-slide { transition: transform 0.3s ease; }
-.btn-main:hover .icon-slide { transform: translateX(4px); }
+.text-magenta {
+  color: var(--accent-magenta);
+}
+
+.icon-slide {
+  transition: transform 0.3s ease;
+}
+
+.btn-main:hover .icon-slide {
+  transform: translateX(4px);
+}
 
 /* Technical Reference Lines */
 .gateway-spec-footer {
@@ -1066,10 +1165,23 @@
   color: var(--text-muted);
 }
 
-.gateway-spec-footer .spec-footer-metric { display: flex; gap: 0.5rem; }
-.gateway-spec-footer .lbl { opacity: 0.3; }
-.gateway-spec-footer .val { color: var(--text-main); font-weight: 600; }
-.text-green { color: #10b981 !important; }
+.gateway-spec-footer .spec-footer-metric {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.gateway-spec-footer .lbl {
+  opacity: 0.3;
+}
+
+.gateway-spec-footer .val {
+  color: var(--text-main);
+  font-weight: 600;
+}
+
+.text-green {
+  color: #10b981 !important;
+}
 
 /* ==========================================================================
    768PX RESPONSIVE BREAKPOINT PARADIGM (MOBILE COMPRESSION RE-ENGINE)
@@ -1091,7 +1203,8 @@
   }
 
   .frame-id {
-    display: none; /* Empties out structural clutter to keep clean spacing boundaries */
+    display: none;
+    /* Empties out structural clutter to keep clean spacing boundaries */
   }
 
   .gateway-main-title {

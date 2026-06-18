@@ -5,7 +5,8 @@
 .services-hero-section {
   position: relative;
   background-color: var(--bg-dark);
-  padding: 12rem 0 8rem 0; /* Extra top padding to clear fixed site header navigation */
+  padding: 8rem 0 5rem 0;
+  /* FIXED: Reduced from 12rem/8rem to keep clean top spacing layout tracks */
   width: 100%;
   overflow: hidden;
   border-bottom: 1px solid var(--glass-border);
@@ -75,7 +76,8 @@
 }
 
 .hero-main-title {
-  font-size: calc(var(--fs-h1) * 1.35); /* Amplified beautifully for primary hero presence */
+  font-size: calc(var(--fs-h1) * 1.35);
+  /* Amplified beautifully for primary hero presence */
   color: var(--text-main);
   line-height: 1.1;
   letter-spacing: -0.03em;
@@ -106,6 +108,7 @@
 .hero-control-row .btn-arrow {
   transition: transform 0.3s var(--transition-smooth);
 }
+
 .hero-control-row .btn-main:hover .btn-arrow {
   transform: translateY(3px);
 }
@@ -161,7 +164,10 @@
   background: rgba(255, 255, 255, 0.2);
   border-radius: 50%;
 }
-.dot-node:nth-child(1) { background: var(--accent-cyan); }
+
+.dot-node:nth-child(1) {
+  background: var(--accent-cyan);
+}
 
 .panel-terminal-string {
   font-family: monospace;
@@ -181,8 +187,16 @@
 .code-line-trace {
   color: var(--text-muted);
 }
-.cyan-text { color: var(--accent-cyan); font-weight: 700; }
-.blue-text { color: var(--accent-blue); font-weight: 700; }
+
+.cyan-text {
+  color: var(--accent-cyan);
+  font-weight: 700;
+}
+
+.blue-text {
+  color: var(--accent-blue);
+  font-weight: 700;
+}
 
 /* Satellite Peripheral Elements Floating in Space Container */
 .canvas-node-satellite {
@@ -194,11 +208,13 @@
   border-radius: 50%;
   z-index: 4;
 }
+
 .sat-1 {
   top: 20%;
   left: 10%;
   animation: smoothFloat 4s ease-in-out infinite alternate;
 }
+
 .sat-2 {
   bottom: 25%;
   right: 8%;
@@ -221,88 +237,51 @@
    ANIMATION KEYFRAME PARADIGMS
    ========================================================================== */
 @keyframes techPulse {
-  0%, 100% { opacity: 0.4; transform: scale(1); }
-  50% { opacity: 1; transform: scale(1.2); box-shadow: 0 0 14px var(--accent-cyan); }
+
+  0%,
+  100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+    box-shadow: 0 0 14px var(--accent-cyan);
+  }
 }
 
 @keyframes smoothFloat {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-12px); }
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
 }
 
 @keyframes scanningPulse {
-  0% { transform: translateY(-100px); opacity: 0; }
-  10% { opacity: 0.3; }
-  90% { opacity: 0.3; }
-  100% { transform: translateY(400px); opacity: 0; }
-}
-
-
-/* ==========================================================================
-   MOBILE ADAPTIVE ENGINE (768px PRESET BREAKPOINT)
-   ========================================================================== */
-
-@media (max-width: 768px) {
-  .services-hero-section {
-    padding: 10rem 0 5rem 0; /* Adjusted parameters safely for phone top bounds navigation spacing */
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
   }
 
-  /* Transition dual matrix split into single vertical system stack track */
-  .hero-split-matrix {
-    grid-template-columns: 1fr;
-    gap: 4rem;
-    padding: 0 1.5rem;
+  10% {
+    opacity: 0.3;
   }
 
-  .hero-text-engine {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  90% {
+    opacity: 0.3;
   }
 
-  .hero-main-title {
-    font-size: var(--fs-h1);
-    max-width: 100%;
-  }
-
-  .hero-pitch-desc {
-    font-size: var(--fs-p-sm);
-    max-width: 100%;
-    margin-bottom: 2.5rem;
-  }
-
-  /* Structural adaptation for CTA buttons logic system */
-  .hero-control-row {
-    width: 100%;
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .hero-control-row .btn-main,
-  .hero-control-row .btn-secondary {
-    width: 100%; /* Accessible full touch matrix alignment width */
-    padding: 1rem 2rem;
-  }
-
-  /* Downscale structural canvas size parameters safely on tablet modules */
-  .cyber-canvas-frame {
-    max-width: 100%;
-    height: 320px;
-  }
-  
-  .canvas-glass-panel {
-    width: 260px;
+  100% {
+    transform: translateY(400px);
+    opacity: 0;
   }
 }
-
-
-
-
-
-
-
-
 
 /* ==========================================================================
    PREMIUM TECH SERVICES MATRIX MODULE
@@ -311,7 +290,8 @@
 .services-matrix-section {
   position: relative;
   background-color: var(--bg-dark);
-  padding: 8rem 0;
+  padding: 4rem 0;
+  /* FIXED: Squeezed from 8rem bounds to balance layout flows */
   width: 100%;
   overflow: hidden;
 }
@@ -333,7 +313,8 @@
 /* --- Section Top Header Formatting --- */
 .services-header-block {
   text-align: center;
-  margin-bottom: 5rem;
+  margin-bottom: 2.5rem;
+  /* FIXED: Shifted from 5rem to avoid empty height buffers */
   position: relative;
   z-index: 5;
 }
@@ -515,64 +496,10 @@
   border-color: rgba(79, 172, 254, 0.25);
   background: rgba(15, 22, 42, 0.8);
 }
+
 .active-accent-state::after {
   opacity: 0.4;
 }
-
-
-/* ==========================================================================
-   MOBILE ADAPTIVE ENGINE (768px PRESET BREAKPOINT)
-   ========================================================================== */
-
-@media (max-width: 768px) {
-  .services-matrix-section {
-    padding: 5rem 0;
-  }
-
-  .services-header-block {
-    margin-bottom: 3.5rem;
-    padding: 0 1.5rem;
-    text-align: left; /* Changes header reading axis to clean edge-left on mobile */
-  }
-
-  .services-main-title {
-    font-size: var(--fs-h2);
-  }
-
-  .services-subtitle {
-    font-size: var(--fs-p-sm);
-    margin: 0;
-    max-width: 100%;
-  }
-
-  /* Compress the 3 flat tracks into a single stacked system view layout */
-  .services-grid-matrix {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-    padding: 0 1.5rem;
-  }
-
-  .service-premium-card {
-    padding: 2.5rem 1.75rem;
-  }
-  
-  /* Disable rotation properties for touch vectors on mobile devices */
-  .service-premium-card:hover .service-icon-wrapper {
-    transform: none;
-  }
-  .service-premium-card:hover .tech-vector-glyph {
-    transform: none;
-  }
-}
-
-
-
-
-
-
-
-
-
 
 /* ==========================================================================
    PREMIUM PROCESS SPINE TIMELINE MODULE
@@ -581,7 +508,8 @@
 .process-spine-section {
   position: relative;
   background-color: var(--bg-dark);
-  padding: 8rem 0;
+  padding: 4rem 0;
+  /* FIXED: Scaled padding matrix parameters */
   width: 100%;
   overflow: hidden;
   border-bottom: 1px solid var(--glass-border);
@@ -603,7 +531,8 @@
 /* --- Section Title Grid Formatting --- */
 .process-title-block {
   text-align: center;
-  margin-bottom: 6rem;
+  margin-bottom: 3.5rem;
+  /* FIXED: Dropped down from 6rem to fix empty blocks */
   position: relative;
   z-index: 5;
 }
@@ -653,12 +582,11 @@
   top: 0;
   bottom: 0;
   width: 2px;
-  background: linear-gradient(to bottom, 
-    rgba(255, 255, 255, 0.03) 0%, 
-    rgba(255, 255, 255, 0.1) 15%, 
-    rgba(255, 255, 255, 0.1) 85%, 
-    rgba(255, 255, 255, 0.03) 100%
-  );
+  background: linear-gradient(to bottom,
+      rgba(255, 255, 255, 0.03) 0%,
+      rgba(255, 255, 255, 0.1) 15%,
+      rgba(255, 255, 255, 0.1) 85%,
+      rgba(255, 255, 255, 0.03) 100%);
   transform: translateX(-50%);
   z-index: 2;
 }
@@ -679,7 +607,7 @@
   position: relative;
   width: 100%;
   display: flex;
-  justify-content: flex-start; /* Default layout shifts card to the left panel side */
+  justify-content: flex-start;
   padding-right: 50%;
   z-index: 3;
 }
@@ -743,7 +671,6 @@
   overflow: hidden;
 }
 
-/* Flip card assignment layout slightly for items on the right path axis */
 .timeline-event-node.array-reverse-axis .event-glass-card {
   margin-left: auto;
 }
@@ -821,85 +748,28 @@
 }
 
 .timeline-event-node:hover .index-digit {
-  color: #030712; /* Extreme tone contrast flip against glowing background background */
+  color: #030712;
 }
 
-/* ==========================================================================
-   ANIMATION SCHEDULING KEYFRAMES
-   ========================================================================== */
 @keyframes spineScan {
-  0% { top: 0%; opacity: 0; }
-  5% { opacity: 1; }
-  95% { opacity: 1; }
-  100% { top: 100%; opacity: 0; }
-}
-
-/* ==========================================================================
-   MOBILE ADAPTIVE ENGINE (768px BREAKPOINT CONFIGURATION)
-   ========================================================================== */
-
-@media (max-width: 768px) {
-  .process-spine-section {
-    padding: 5rem 0;
+  0% {
+    top: 0%;
+    opacity: 0;
   }
 
-  .process-title-block {
-    margin-bottom: 4rem;
-    padding: 0 1.5rem;
-    text-align: left;
+  5% {
+    opacity: 1;
   }
 
-  .process-main-heading {
-    font-size: var(--fs-h2);
+  95% {
+    opacity: 1;
   }
 
-  .process-subheading {
-    font-size: var(--fs-p-sm);
-    margin: 0;
-  }
-
-  /* Shift the central line anchor safely over to the left margin wall boundary */
-  .vertical-data-spine {
-    left: 2rem;
-    transform: none;
-  }
-
-  .spine-scanning-bullet {
-    left: -1px;
-    height: 60px;
-  }
-
-  /* Structural override transforming layout nodes to a clean left-aligned list track */
-  .timeline-event-node,
-  .timeline-event-node.array-reverse-axis {
-    padding-right: 0;
-    padding-left: 4.5rem;
-    justify-content: flex-start;
-  }
-
-  /* Realignment coordinates for indicators on mobile screen tracks */
-  .event-index-cluster {
-    left: 2rem;
-    top: 2.25rem;
-  }
-
-  .event-glass-card,
-  .timeline-event-node.array-reverse-axis .event-glass-card {
-    width: 100%;
-    max-width: 100%;
-    margin: 0;
-    padding: 2rem 1.5rem;
+  100% {
+    top: 100%;
+    opacity: 0;
   }
 }
-
-
-
-
-
-
-
-
-
 
 /* ==========================================================================
    PREMIUM CAPABILITIES METRIC MATRIX MODULE
@@ -908,7 +778,8 @@
 .capabilities-interactive-section {
   position: relative;
   background-color: var(--bg-dark);
-  padding: 8rem 0;
+  padding: 4rem 0;
+  /* FIXED: Harmonized compression profiles */
   width: 100%;
   overflow: hidden;
   border-bottom: 1px solid var(--glass-border);
@@ -1013,56 +884,6 @@
   position: relative;
 }
 
-
-/* ==========================================================================
-   MOBILE ADAPTIVE ENGINE (768px PRESET BREAKPOINT CONFIGURATION)
-   ========================================================================== */
-
-@media (max-width: 768px) {
-  .capabilities-interactive-section {
-    padding: 5rem 0;
-  }
-
-  /* Transition the side-by-side grid tracks into a single vertical stream */
-  .capabilities-split-grid {
-    grid-template-columns: 1fr;
-    gap: 4rem;
-    padding: 0 1.5rem;
-  }
-
-  .capabilities-narrative-panel {
-    text-align: left;
-  }
-
-  .capability-main-title {
-    font-size: var(--fs-h2);
-  }
-
-  .capability-paragraph {
-    font-size: var(--fs-p-sm);
-    margin-bottom: 2.5rem;
-  }
-
-  /* Scale structural metric row fonts down slightly for small device layout screens */
-  .metric-row-title {
-    font-size: 0.9rem;
-  }
-  
-  .metric-row-value {
-    font-size: 0.8rem;
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
 /* ==========================================================================
    PREMIUM ENTERPRISE PRICING ARCHITECTURE MODULE
    ========================================================================== */
@@ -1070,7 +891,8 @@
 .pricing-matrix-section {
   position: relative;
   background-color: var(--bg-dark);
-  padding: 8rem 0;
+  padding: 4rem 0;
+  /* FIXED: Rebalanced padding parameters cleanly */
   width: 100%;
   overflow: hidden;
   border-bottom: 1px solid var(--glass-border);
@@ -1103,7 +925,8 @@
 /* --- Section Top Header Configuration --- */
 .pricing-header-block {
   text-align: center;
-  margin-bottom: 6rem;
+  margin-bottom: 3.5rem;
+  /* FIXED: Closed giant blank gap buffers down to 3.5rem */
   position: relative;
   z-index: 5;
 }
@@ -1165,7 +988,6 @@
   overflow: hidden;
 }
 
-/* Card Subtle Backlight Overlay Shimmer Frame */
 .tier-card-shimmer {
   position: absolute;
   inset: 0;
@@ -1174,7 +996,6 @@
   transition: var(--transition-smooth);
 }
 
-/* Minimal Top Edge Border Accent Trace */
 .tier-accent-wire {
   position: absolute;
   top: 0;
@@ -1185,7 +1006,6 @@
   transition: var(--transition-smooth);
 }
 
-/* --- Card Header Content Area --- */
 .tier-meta-label {
   display: block;
   font-family: monospace;
@@ -1237,10 +1057,9 @@
   color: var(--text-muted);
   line-height: var(--lh-body);
   margin-bottom: 2.5rem;
-  min-height: 4.5rem; /* Forces paragraph alignment box match across tiers */
+  min-height: 4.5rem;
 }
 
-/* --- Tech Capability Spec Feature List --- */
 .tier-spec-list {
   list-style: none;
   display: flex;
@@ -1266,10 +1085,10 @@
   font-size: 1rem;
 }
 
-/* Inactive feature formatting rules */
 .tier-spec-list li.spec-disabled {
   color: rgba(255, 255, 255, 0.25);
 }
+
 .tier-spec-list li.spec-disabled .spec-bullet {
   color: rgba(255, 255, 255, 0.15);
 }
@@ -1280,11 +1099,6 @@
   text-align: center;
 }
 
-/* ==========================================================================
-   INTERACTIVE STATES & TIER HIGHLIGHT ASSIGNMENTS
-   ========================================================================== */
-
-/* Standard Hover Behavior Rules */
 .pricing-premium-card:hover {
   transform: translateY(-6px);
   border-color: rgba(0, 242, 254, 0.2);
@@ -1300,7 +1114,7 @@
   background: rgba(15, 22, 42, 0.85);
   border-color: rgba(79, 172, 254, 0.3);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), 0 0 30px rgba(79, 172, 254, 0.03);
-  transform: scale(1.03); /* Pops center track card prominence slightly */
+  transform: scale(1.03);
 }
 
 .active-tier-highlight .tier-accent-wire {
@@ -1319,7 +1133,6 @@
   -webkit-text-fill-color: transparent;
 }
 
-/* Floating Structural Label Badge */
 .tier-badge-ribbon {
   position: absolute;
   top: 1.5rem;
@@ -1336,76 +1149,11 @@
   letter-spacing: 0.5px;
 }
 
-/* Keep structural scale properties uniform on highlighted hover track */
 .active-tier-highlight:hover {
   transform: scale(1.03) translateY(-6px);
   border-color: rgba(0, 242, 254, 0.4);
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.7), 0 0 40px rgba(0, 242, 254, 0.08);
 }
-
-
-/* ==========================================================================
-   MOBILE ADAPTIVE ENGINE (768px BREAKPOINT RULES)
-   ========================================================================== */
-
-@media (max-width: 768px) {
-  .pricing-matrix-section {
-    padding: 5rem 0;
-  }
-
-  .pricing-header-block {
-    margin-bottom: 4rem;
-    padding: 0 1.5rem;
-    text-align: left;
-  }
-
-  .pricing-main-title {
-    font-size: var(--fs-h2);
-  }
-
-  .pricing-subtitle {
-    font-size: var(--fs-p-sm);
-    margin: 0;
-    max-width: 100%;
-  }
-
-  /* Deconstruct 3-column rows back to single vertical track stacks */
-  .pricing-grid-matrix {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-    padding: 0 1.5rem;
-  }
-
-  /* Reset layout scale scaling effects safely on individual mobile viewport modules */
-  .active-tier-highlight {
-    transform: none;
-  }
-  .active-tier-highlight:hover {
-    transform: translateY(-4px);
-  }
-  
-  .pricing-premium-card {
-    padding: 3rem 2rem;
-  }
-
-  .tier-desc {
-    min-height: auto; /* Drops structural empty heights safely on single tracks */
-    margin-bottom: 2rem;
-  }
-  
-  .tier-spec-list {
-    margin-bottom: 2.5rem;
-  }
-}
-
-
-
-
-
-
-
-
-
 
 /* ==========================================================================
    PREMIUM ENTERPRISE ASSURANCE & FAQ MATRIX MODULE
@@ -1414,13 +1162,13 @@
 .assurance-faq-section {
   position: relative;
   background-color: var(--bg-dark);
-  padding: 8rem 0;
+  padding: 4rem 0;
+  /* FIXED: Harmonized vertical grid bounds */
   width: 100%;
   overflow: hidden;
   border-bottom: 1px solid var(--glass-border);
 }
 
-/* Ambient Deep Cybernetic Illumination Backdrops */
 .faq-ambient-glow-left {
   position: absolute;
   top: -20%;
@@ -1444,7 +1192,6 @@
   pointer-events: none;
 }
 
-/* Asymmetric Grid Matrix Engine Layout */
 .faq-asymmetric-matrix {
   display: grid;
   grid-template-columns: 0.9fr 1.1fr;
@@ -1484,7 +1231,6 @@
   margin-bottom: 3.5rem;
 }
 
-/* Premium Verification Cards Rows Grid */
 .compliance-badge-grid {
   display: flex;
   flex-direction: column;
@@ -1540,7 +1286,6 @@
   color: var(--text-muted);
 }
 
-/* Card Hover Interactions */
 .compliance-badge-card:hover {
   background: var(--bg-surface-hover);
   border-color: rgba(0, 242, 254, 0.15);
@@ -1562,7 +1307,6 @@
   gap: 1.25rem;
 }
 
-/* Base Glassmorphic Accordion Item Enclosure */
 .faq-accordion-node {
   position: relative;
   background: var(--bg-surface);
@@ -1574,7 +1318,6 @@
   transition: var(--transition-smooth);
 }
 
-/* Interactive Top Overlay Frame Line */
 .faq-accent-tracer {
   position: absolute;
   top: 0;
@@ -1585,7 +1328,6 @@
   transition: var(--transition-smooth);
 }
 
-/* Trigger Button Setup Reset */
 .faq-trigger-btn {
   width: 100%;
   background: transparent;
@@ -1617,7 +1359,6 @@
   transition: var(--transition-smooth);
 }
 
-/* High-End Tech Cross Symbol Icon Indicator */
 .faq-toggle-cross {
   position: relative;
   width: 14px;
@@ -1633,14 +1374,14 @@
   background-color: var(--text-muted);
   transition: var(--transition-smooth);
 }
-/* Horizontal Component Line */
+
 .faq-toggle-cross::before {
   top: 6px;
   left: 0;
   width: 14px;
   height: 2px;
 }
-/* Vertical Component Line */
+
 .faq-toggle-cross::after {
   top: 0;
   left: 6px;
@@ -1648,15 +1389,14 @@
   height: 14px;
 }
 
-/* --- Collapsible Content Viewport Box Architecture --- */
 .faq-collapsible-viewport {
-  max-height: 0; /* Managed automatically using JS toggles smoothly switching max-height properties */
+  max-height: 0;
   overflow: hidden;
   transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .faq-inner-body-content {
-  padding: 0 2.5rem 2.5rem 4.1rem; /* Perfectly aligns content text axis past the node number margin */
+  padding: 0 2.5rem 2.5rem 4.1rem;
 }
 
 .faq-inner-body-content p {
@@ -1666,7 +1406,6 @@
   margin-bottom: 1.5rem;
 }
 
-/* Static Terminal Status Boxes inside Accordions */
 .faq-terminal-metadata {
   background: rgba(3, 7, 18, 0.5);
   border: 1px solid rgba(255, 255, 255, 0.03);
@@ -1680,15 +1419,11 @@
   color: rgba(79, 172, 254, 0.8);
 }
 
-/* ==========================================================================
-   INTERACTIVE REFACTOR LAYERS (ACTIVE STATES RULES)
-   ========================================================================== */
-
-/* Standard Hover Behavior Overrides */
 .faq-accordion-node:hover {
   background: var(--bg-surface-hover);
   border-color: rgba(255, 255, 255, 0.12);
 }
+
 .faq-accordion-node:hover .faq-question-string {
   color: #ffffff;
 }
@@ -1711,69 +1446,18 @@
 }
 
 .active-faq-layer .faq-collapsible-viewport {
-  max-height: 300px; /* Base container safe height boundary threshold for opened content views */
+  max-height: 300px;
 }
 
-/* Transition the micro cross symbol into a flat horizontal minus icon marker */
 .active-faq-layer .faq-toggle-cross::before {
   background-color: var(--accent-cyan);
 }
+
 .active-faq-layer .faq-toggle-cross::after {
   transform: rotate(90deg);
   opacity: 0;
   background-color: var(--accent-cyan);
 }
-
-/* ==========================================================================
-   MOBILE ADAPTIVE ENGINE (768px BREAKPOINT CONFIGURATION)
-   ========================================================================== */
-
-@media (max-width: 768px) {
-  .assurance-faq-section {
-    padding: 5rem 0;
-  }
-
-  /* Compress the asymmetric columns down into a unified single track block */
-  .faq-asymmetric-matrix {
-    grid-template-columns: 1fr;
-    gap: 4rem;
-    padding: 0 1.5rem;
-  }
-
-  .faq-vault-title {
-    font-size: var(--fs-h2);
-  }
-
-  .faq-vault-desc {
-    font-size: var(--fs-p-sm);
-    margin-bottom: 2.5rem;
-  }
-
-  .compliance-badge-grid {
-    margin-bottom: 2.5rem;
-  }
-
-  /* Adjust accordion paddings safely for smaller device horizontal screens */
-  .faq-trigger-btn {
-    padding: 1.75rem 1.25rem;
-  }
-
-  .faq-inner-body-content {
-    padding: 0 1.25rem 1.75rem 1.25rem; /* Aligns block width flatly to save screen estate space */
-  }
-  
-  .faq-question-string {
-    font-size: var(--fs-p);
-  }
-}
-
-
-
-
-
-
-
-
 
 /* ==========================================================================
    PREMIUM FINAL CONVERSION CTA MODULE WITH TERMINAL CONTEXT
@@ -1782,7 +1466,8 @@
 .services-final-cta-section {
   position: relative;
   background-color: var(--bg-dark);
-  padding: 10rem 0;
+  padding: 5rem 0;
+  /* FIXED: Squeezed from heavy 10rem to maintain crisp spatial alignments */
   width: 100%;
   overflow: hidden;
   border-bottom: 1px solid var(--glass-border);
@@ -1874,7 +1559,6 @@
   gap: 1.5rem;
 }
 
-/* Arrow micro-interaction shift logic mapping */
 .final-cta-control-row .btn-main:hover .btn-arrow {
   transform: translateX(5px);
 }
@@ -1914,9 +1598,19 @@
   border-radius: 50%;
   opacity: 0.4;
 }
-.red-dot { background-color: #ef4444; opacity: 0.7; }
-.yellow-dot { background-color: #eab308; }
-.green-dot { background-color: #22c55e; }
+
+.red-dot {
+  background-color: #ef4444;
+  opacity: 0.7;
+}
+
+.yellow-dot {
+  background-color: #eab308;
+}
+
+.green-dot {
+  background-color: #22c55e;
+}
 
 .terminal-tab-string {
   font-family: monospace;
@@ -1965,25 +1659,40 @@
   animation: terminalCursor 1s infinite alternate;
 }
 
-/* Interactive subtle focus bounce configuration */
 .glass-terminal-enclosure:hover {
   transform: translateY(-4px) scale(1.01);
   border-color: rgba(0, 242, 254, 0.15);
   box-shadow: 0 20px 45px rgba(0, 0, 0, 0.6), 0 0 30px rgba(0, 242, 254, 0.02);
 }
 
-/* ==========================================================================
-   ANIMATION KEYFRAME BLUEPRINTS
-   ========================================================================== */
 @keyframes dynamicPing {
-  0% { transform: scale(0.95); opacity: 0.5; box-shadow: 0 0 0 0 rgba(0, 242, 254, 0.4); }
-  50% { transform: scale(1.1); opacity: 1; box-shadow: 0 0 0 8px rgba(0, 242, 254, 0); }
-  100% { transform: scale(0.95); opacity: 0.5; box-shadow: 0 0 0 0 rgba(0, 242, 254, 0); }
+  0% {
+    transform: scale(0.95);
+    opacity: 0.5;
+    box-shadow: 0 0 0 0 rgba(0, 242, 254, 0.4);
+  }
+
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+    box-shadow: 0 0 0 8px rgba(0, 242, 254, 0);
+  }
+
+  100% {
+    transform: scale(0.95);
+    opacity: 0.5;
+    box-shadow: 0 0 0 0 rgba(0, 242, 254, 0);
+  }
 }
 
 @keyframes terminalCursor {
-  0% { border-color: transparent; }
-  100% { border-color: var(--accent-cyan); }
+  0% {
+    border-color: transparent;
+  }
+
+  100% {
+    border-color: var(--accent-cyan);
+  }
 }
 
 /* ==========================================================================
@@ -1991,14 +1700,269 @@
    ========================================================================== */
 
 @media (max-width: 768px) {
-  .services-final-cta-section {
-    padding: 6rem 0;
+  .services-hero-section {
+    padding: 6rem 0 4rem 0;
+    /* FIXED: Unified mobile spacing limits */
   }
 
-  /* Deconstruct dual columns grid back to stacked system layouts block tracks */
+  .hero-split-matrix {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    padding: 0 1.5rem;
+  }
+
+  .hero-text-engine {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-main-title {
+    font-size: var(--fs-h2);
+    max-width: 100%;
+  }
+
+  .hero-pitch-desc {
+    font-size: var(--fs-p-sm);
+    max-width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .hero-control-row {
+    width: 100%;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .hero-control-row .btn-main,
+  .hero-control-row .btn-secondary {
+    width: 100%;
+    padding: 1rem 2rem;
+  }
+
+  .cyber-canvas-frame {
+    max-width: 100%;
+    height: 320px;
+  }
+
+  .canvas-glass-panel {
+    width: 260px;
+  }
+
+  /* --- Services Matrix Mobile Flattening --- */
+  .services-matrix-section {
+    padding: 4rem 0;
+  }
+
+  .services-header-block {
+    margin-bottom: 2rem;
+    padding: 0 1.5rem;
+    text-align: left;
+  }
+
+  .services-main-title {
+    font-size: var(--fs-h2);
+  }
+
+  .services-subtitle {
+    font-size: var(--fs-p-sm);
+    margin: 0;
+    max-width: 100%;
+  }
+
+  .services-grid-matrix {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0 1.5rem;
+  }
+
+  .service-premium-card {
+    padding: 2.5rem 1.75rem;
+  }
+
+  .service-premium-card:hover .service-icon-wrapper {
+    transform: none;
+  }
+
+  .service-premium-card:hover .tech-vector-glyph {
+    transform: none;
+  }
+
+  /* --- Process Spine Mobile Flattening --- */
+  .process-spine-section {
+    padding: 4rem 0;
+  }
+
+  .process-title-block {
+    margin-bottom: 2rem;
+    padding: 0 1.5rem;
+    text-align: left;
+  }
+
+  .process-main-heading {
+    font-size: var(--fs-h2);
+  }
+
+  .process-subheading {
+    font-size: var(--fs-p-sm);
+    margin: 0;
+  }
+
+  .vertical-data-spine {
+    left: 2rem;
+    transform: none;
+  }
+
+  .spine-scanning-bullet {
+    left: -1px;
+    height: 60px;
+  }
+
+  .timeline-event-node,
+  .timeline-event-node.array-reverse-axis {
+    padding-right: 0;
+    padding-left: 4.5rem;
+    justify-content: flex-start;
+  }
+
+  .event-index-cluster {
+    left: 2rem;
+    top: 2.25rem;
+  }
+
+  .event-glass-card,
+  .timeline-event-node.array-reverse-axis .event-glass-card {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 2rem 1.5rem;
+  }
+
+  /* --- Capabilities Mobile Flattening --- */
+  .capabilities-interactive-section {
+    padding: 4rem 0;
+  }
+
+  .capabilities-split-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    padding: 0 1.5rem;
+  }
+
+  .capabilities-narrative-panel {
+    text-align: left;
+  }
+
+  .capability-main-title {
+    font-size: var(--fs-h2);
+  }
+
+  .capability-paragraph {
+    font-size: var(--fs-p-sm);
+    margin-bottom: 2.5rem;
+  }
+
+  .metric-row-title {
+    font-size: 0.9rem;
+  }
+
+  .metric-row-value {
+    font-size: 0.8rem;
+  }
+
+  /* --- Pricing Architecture Mobile Flattening --- */
+  .pricing-matrix-section {
+    padding: 4rem 0;
+  }
+
+  .pricing-header-block {
+    margin-bottom: 2rem;
+    padding: 0 1.5rem;
+    text-align: left;
+  }
+
+  .pricing-main-title {
+    font-size: var(--fs-h2);
+  }
+
+  .pricing-subtitle {
+    font-size: var(--fs-p-sm);
+    margin: 0;
+    max-width: 100%;
+  }
+
+  .pricing-grid-matrix {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0 1.5rem;
+  }
+
+  .active-tier-highlight {
+    transform: none;
+  }
+
+  .active-tier-highlight:hover {
+    transform: translateY(-4px);
+  }
+
+  .pricing-premium-card {
+    padding: 3rem 2rem;
+  }
+
+  .tier-desc {
+    min-height: auto;
+    margin-bottom: 2rem;
+  }
+
+  .tier-spec-list {
+    margin-bottom: 2.5rem;
+  }
+
+  /* --- Assurance FAQ Mobile Flattening --- */
+  .assurance-faq-section {
+    padding: 4rem 0;
+  }
+
+  .faq-asymmetric-matrix {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    padding: 0 1.5rem;
+  }
+
+  .faq-vault-title {
+    font-size: var(--fs-h2);
+  }
+
+  .faq-vault-desc {
+    font-size: var(--fs-p-sm);
+    margin-bottom: 2.5rem;
+  }
+
+  .compliance-badge-grid {
+    margin-bottom: 2.5rem;
+  }
+
+  .faq-trigger-btn {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .faq-inner-body-content {
+    padding: 0 1.25rem 1.75rem 1.25rem;
+  }
+
+  .faq-question-string {
+    font-size: var(--fs-p);
+  }
+
+  /* --- Services Final CTA Mobile Flattening --- */
+  .services-final-cta-section {
+    padding: 4rem 0;
+  }
+
   .final-cta-split-matrix {
     grid-template-columns: 1fr;
-    gap: 4rem;
+    gap: 3rem;
     padding: 0 1.5rem;
   }
 
@@ -2020,7 +1984,6 @@
     margin-bottom: 2.5rem;
   }
 
-  /* Force action triggers execution rows to full horizontal width structures */
   .final-cta-control-row {
     width: 100%;
     flex-direction: column;
@@ -2029,15 +1992,14 @@
 
   .final-cta-control-row .btn-main,
   .final-cta-control-row .btn-secondary {
-    width: 100%; /* Premium standard accessibility touch parameters padding footprint */
+    width: 100%;
     padding: 1rem 2rem;
   }
 
-  /* Structural scaling safety margins configuration across mobile viewport shells */
   .glass-terminal-enclosure {
     max-width: 100%;
   }
-  
+
   .terminal-code-shell-body {
     padding: 1.25rem;
     font-size: 0.75rem;

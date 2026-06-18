@@ -1,9 +1,3 @@
-
-
-
-
-
-
 /* ==========================================================================
    PREMIUM HERO SECTION STYLES
    ========================================================================== */
@@ -284,13 +278,11 @@
     opacity: 0.6;
     box-shadow: 0 0 5px var(--accent-cyan);
   }
-
   50% {
     transform: scale(1.2);
     opacity: 1;
     box-shadow: 0 0 15px var(--accent-cyan);
   }
-
   100% {
     transform: scale(1);
     opacity: 0.6;
@@ -298,28 +290,16 @@
   }
 }
 
-/* Setup Staggered Entrance Flow via Delay Layers */
 .animate-fade-in {
   opacity: 0;
   transform: translateY(30px);
   animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-.hero-badge.animate-fade-in {
-  animation-delay: 0.2s;
-}
-
-.hero-title.animate-fade-in {
-  animation-delay: 0.4s;
-}
-
-.hero-description.animate-fade-in {
-  animation-delay: 0.6s;
-}
-
-.hero-actions.animate-fade-in {
-  animation-delay: 0.8s;
-}
+.hero-badge.animate-fade-in { animation-delay: 0.2s; }
+.hero-title.animate-fade-in { animation-delay: 0.4s; }
+.hero-description.animate-fade-in { animation-delay: 0.6s; }
+.hero-actions.animate-fade-in { animation-delay: 0.8s; }
 
 .animate-scale-up {
   opacity: 0;
@@ -342,27 +322,11 @@
   }
 }
 
-/* Trigger Data-Bar Visual Shifting Animations */
-.duration-1 {
-  animation: fillUp85 1.5s 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-}
+.duration-1 { animation: fillUp85 1.5s 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+.duration-2 { animation: fillUp100 1.5s 1.4s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
 
-.duration-2 {
-  animation: fillUp100 1.5s 1.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-}
-
-@keyframes fillUp85 {
-  to {
-    width: 85%;
-  }
-}
-
-@keyframes fillUp100 {
-  to {
-    width: 100%;
-  }
-}
-
+@keyframes fillUp85 { to { width: 85%; } }
+@keyframes fillUp100 { to { width: 100%; } }
 
 /* ==========================================================================
    RESPONSIVE ADAPTIVE ENGINE (768px BREAKPOINT)
@@ -371,20 +335,18 @@
 @media (max-width: 768px) {
   .hero-section {
     padding-top: 120px;
-    padding-bottom: 4rem;
+    padding-bottom: 3rem;
     min-height: auto;
   }
 
   .hero-container {
     grid-template-columns: 1fr;
-    /* Switch to single column stacked design */
-    gap: 3.5rem;
+    gap: 2.5rem;
     text-align: center;
   }
 
   .hero-content {
     align-items: center;
-    /* Center text components for mobile focus */
   }
 
   .hero-badge {
@@ -393,7 +355,6 @@
 
   .hero-title {
     font-size: 2.5rem;
-    /* Shrink heavy typography scales cleanly */
     line-height: 1.2;
     letter-spacing: -0.8px;
   }
@@ -405,7 +366,6 @@
 
   .hero-actions {
     flex-direction: column;
-    /* Stack primary and secondary button chains */
     width: 100%;
     gap: 1rem;
   }
@@ -413,30 +373,18 @@
   .btn-main,
   .btn-secondary {
     width: 100%;
-    /* Make buttons full-width block elements */
     padding: 0.95rem 2rem;
-    /* Increase mobile tap space */
   }
 
   .hero-visual {
     perspective: none;
-    /* Flatten heavy 3D elements for reliable responsive renders */
   }
 
   .glass-dashboard {
     transform: none !important;
-    /* Discard 3D perspective tilts for responsive views */
     max-width: 100%;
   }
 }
-
-
-
-
-
-
-
-
 
 /* ==========================================================================
    PREMIUM CORE SERVICES MATRIX STYLES
@@ -444,14 +392,13 @@
 
 .services-section {
   position: relative;
-  padding: 8rem 2rem;
+  padding: 4rem 2rem; /* FIXED: Reduced vertical gap */
   background-color: var(--bg-dark);
   width: 100%;
   overflow: hidden;
   border-top: 1px solid rgba(255, 255, 255, 0.03);
 }
 
-/* Structural Background Ambience */
 .services-glow-left {
   position: absolute;
   bottom: -10%;
@@ -485,7 +432,7 @@
 .section-header {
   text-align: center;
   max-width: 680px;
-  margin: 0 auto 5rem auto;
+  margin: 0 auto 2.5rem auto; /* FIXED: Reduced from 5rem to tighten spatial balance */
 }
 
 .section-subtitle {
@@ -525,7 +472,6 @@
   position: relative;
   border-radius: 12px;
   padding: 1px;
-  /* Required to build the custom neon edge frame */
   background: var(--glass-border);
   transition: var(--transition-smooth);
 }
@@ -542,20 +488,16 @@
   transition: var(--transition-smooth);
 }
 
-/* Custom Interactive Micro-Movements */
 .service-card:hover {
   transform: translateY(-8px);
   background: var(--gradient-primary);
-  /* Fills out the 1px container border with glowing cyan trace */
   box-shadow: 0 12px 30px rgba(0, 242, 254, 0.15);
 }
 
 .service-card:hover .card-inner {
   background: rgba(15, 22, 42, 0.85);
-  /* Darkens core area slightly on hover to boost text visibility */
 }
 
-/* Custom Vector Icon Containers */
 .service-icon-wrapper {
   width: 48px;
   height: 48px;
@@ -569,9 +511,7 @@
   transition: var(--transition-smooth);
 }
 
-.service-icon {
-  font-size: 1.5rem;
-}
+.service-icon { font-size: 1.5rem; }
 
 .service-card:hover .service-icon-wrapper {
   background: var(--gradient-primary);
@@ -581,10 +521,8 @@
 
 .service-card:hover .service-icon {
   filter: brightness(0) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
-  /* Flips the emoji color profile over solid light gradients */
 }
 
-/* Card Content Blocks */
 .service-card-title {
   font-size: 1.35rem;
   font-weight: 700;
@@ -599,10 +537,8 @@
   line-height: 1.6;
   margin-bottom: 1.5rem;
   flex-grow: 1;
-  /* Pushes the sub-feature list straight to the baseline */
 }
 
-/* Premium Sub-Feature Blocks */
 .service-features-list {
   list-style: none;
   display: flex;
@@ -633,7 +569,6 @@
    SCROLL REVEAL SCENERY ENGINES (ANIMATION CALLS)
    ========================================================================= */
 
-/* Entrance triggers on page mount or via simple intersection scripts */
 .animate-scroll-trigger {
   opacity: 0;
   transform: translateY(20px);
@@ -646,18 +581,9 @@
   animation: cleanReveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-/* Layout Core Stagger Delays mapping matrix */
-.service-card:nth-child(1) {
-  animation-delay: 0.2s;
-}
-
-.service-card:nth-child(2) {
-  animation-delay: 0.4s;
-}
-
-.service-card:nth-child(3) {
-  animation-delay: 0.6s;
-}
+.service-card:nth-child(1) { animation-delay: 0.2s; }
+.service-card:nth-child(2) { animation-delay: 0.4s; }
+.service-card:nth-child(3) { animation-delay: 0.6s; }
 
 @keyframes cleanReveal {
   to {
@@ -672,13 +598,12 @@
 
 @media (max-width: 768px) {
   .services-section {
-    padding: 5rem 1.5rem;
+    padding: 4rem 1.5rem;
   }
 
   .section-header {
-    margin-bottom: 3.5rem;
+    margin-bottom: 2rem;
     text-align: left;
-    /* Shift text layout alignment rules for organic readability on small layouts */
   }
 
   .section-title {
@@ -690,7 +615,6 @@
     font-size: 0.95rem;
   }
 
-  /* Flatten multi-column architectures into unified stack views */
   .services-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
@@ -698,23 +622,12 @@
 
   .card-inner {
     padding: 2rem 1.5rem;
-    /* Compress internal spaces cleanly to protect layout boundaries */
   }
 
   .service-card:hover {
     transform: translateY(-4px);
-    /* Tones down hover lift for finger taps */
   }
 }
-
-
-
-
-
-
-
-
-
 
 /* ==========================================================================
    PREMIUM PORTFOLIO / CASE STUDIES COMPONENT
@@ -722,7 +635,7 @@
 
 .portfolio-section {
   position: relative;
-  padding: 8rem 2rem;
+  padding: 4rem 2rem; /* FIXED: Standardized responsive padding tracking */
   background-color: var(--bg-dark);
   width: 100%;
   overflow: hidden;
@@ -749,7 +662,6 @@
   z-index: 10;
 }
 
-/* --- Case Studies Layout Array Grid --- */
 .portfolio-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -757,7 +669,6 @@
   width: 100%;
 }
 
-/* --- Cyber-Reflective Glass Card Structure --- */
 .project-glass-card {
   position: relative;
   background: linear-gradient(135deg, rgba(15, 22, 42, 0.4) 0%, rgba(7, 9, 19, 0.7) 100%);
@@ -766,37 +677,27 @@
   border: 1px solid var(--glass-border);
   border-radius: 16px;
   padding: 3rem;
-  box-shadow:
-    0 20px 40px rgba(0, 0, 0, 0.4),
-    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.08);
   transition: var(--transition-smooth);
   overflow: hidden;
   display: flex;
   flex-direction: column;
 }
 
-/* Linear reflection sheen mask across card */
 .project-glass-card::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(125deg,
-      transparent 30%,
-      rgba(0, 242, 254, 0.05) 45%,
-      rgba(79, 172, 254, 0.05) 55%,
-      transparent 70%);
+  background: linear-gradient(125deg, transparent 30%, rgba(0, 242, 254, 0.05) 45%, rgba(79, 172, 254, 0.05) 55%, transparent 70%);
   transform: translateX(-100%);
   transition: none;
   pointer-events: none;
 }
 
-/* Interactive Card Focus Mechanics */
 .project-glass-card:hover {
   transform: translateY(-6px);
   border-color: rgba(0, 242, 254, 0.25);
-  box-shadow:
-    0 30px 60px rgba(0, 0, 0, 0.6),
-    0 0 40px rgba(0, 242, 254, 0.08);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6), 0 0 40px rgba(0, 242, 254, 0.08);
 }
 
 .project-glass-card:hover::before {
@@ -804,7 +705,6 @@
   transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Meta Labels Line */
 .project-meta-top {
   display: flex;
   align-items: center;
@@ -829,7 +729,6 @@
   border: 1px solid var(--glass-border);
 }
 
-/* Content Typographies */
 .project-title {
   font-size: 1.75rem;
   font-weight: 700;
@@ -847,7 +746,6 @@
   flex-grow: 1;
 }
 
-/* Metrics Dashboard Integration Sub-Panel */
 .project-metrics {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -875,19 +773,13 @@
   color: var(--text-muted);
 }
 
-/* Action Button Adjustments */
 .project-action-btn {
   width: 100%;
   justify-content: center;
 }
 
-.action-arrow {
-  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.project-glass-card:hover .action-arrow {
-  transform: translateX(5px);
-}
+.action-arrow { transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1); }
+.project-glass-card:hover .action-arrow { transform: translateX(5px); }
 
 /* ==========================================================================
    RESPONSIVE ADAPTIVE ENGINE (768px BREAKPOINT)
@@ -895,10 +787,9 @@
 
 @media (max-width: 768px) {
   .portfolio-section {
-    padding: 5rem 1.5rem;
+    padding: 4rem 1.5rem;
   }
 
-  /* Transition double column rows into clean, scrollable vertical single blocks */
   .portfolio-grid {
     grid-template-columns: 1fr;
     gap: 1.75rem;
@@ -906,37 +797,19 @@
 
   .project-glass-card {
     padding: 2rem 1.5rem;
-    /* Re-balance edge padding spaces for tight display bounds */
   }
 
-  .project-title {
-    font-size: 1.4rem;
-  }
+  .project-title { font-size: 1.4rem; }
+  .project-summary { margin-bottom: 2rem; }
 
-  .project-summary {
-    margin-bottom: 2rem;
-  }
-
-  /* Structural adjustment for data counters on small viewports */
   .project-metrics {
     grid-template-columns: 1fr;
     gap: 1.25rem;
     padding: 1.25rem 0;
   }
 
-  .metric-val {
-    font-size: 1.6rem;
-  }
+  .metric-val { font-size: 1.6rem; }
 }
-
-
-
-
-
-
-
-
-
 
 /* ==========================================================================
    PREMIUM TECH STACK & SHOWCASE SECTION
@@ -944,7 +817,7 @@
 
 .tech-section {
   position: relative;
-  padding: 8rem 2rem;
+  padding: 4rem 2rem; /* FIXED: Consolidated grid space pads */
   background-color: var(--bg-dark);
   width: 100%;
   overflow: hidden;
@@ -954,8 +827,7 @@
 .tech-grid-matrix {
   position: absolute;
   inset: 0;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.005) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.005) 1px, transparent 1px);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.005) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.005) 1px, transparent 1px);
   background-size: 30px 30px;
   pointer-events: none;
 }
@@ -978,7 +850,6 @@
   z-index: 10;
 }
 
-/* --- High-End Workspace Framework Grid --- */
 .tech-hub {
   display: grid;
   grid-template-columns: 0.8fr 1.2fr;
@@ -992,7 +863,6 @@
   box-shadow: var(--shadow-overlay);
 }
 
-/* Left Column Nav Stack Styling */
 .tech-nav-panel {
   display: flex;
   flex-direction: column;
@@ -1034,9 +904,7 @@
   transition: var(--transition-smooth);
 }
 
-.tech-nav-btn.active .btn-index {
-  color: var(--accent-cyan);
-}
+.tech-nav-btn.active .btn-index { color: var(--accent-cyan); }
 
 .btn-meta {
   display: flex;
@@ -1057,11 +925,8 @@
   letter-spacing: 1px;
 }
 
-.tech-nav-btn.active .btn-status {
-  color: var(--accent-blue);
-}
+.tech-nav-btn.active .btn-status { color: var(--accent-blue); }
 
-/* Right Column Display Pane Styling */
 .tech-display-pane {
   background: rgba(7, 9, 19, 0.5);
   border: 1px solid var(--glass-border);
@@ -1084,12 +949,7 @@
   animation: tabFadeIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-@keyframes tabFadeIn {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+@keyframes tabFadeIn { to { opacity: 1; transform: translateY(0); } }
 
 .pane-header {
   display: flex;
@@ -1108,11 +968,7 @@
   letter-spacing: 1px;
 }
 
-.pane-version {
-  font-family: monospace;
-  font-size: 0.8rem;
-  color: var(--text-muted);
-}
+.pane-version { font-family: monospace; font-size: 0.8rem; color: var(--text-muted); }
 
 .pane-title {
   font-size: 1.85rem;
@@ -1130,7 +986,6 @@
   margin-bottom: 2.5rem;
 }
 
-/* Premium Technical Badge Layout Grid */
 .tech-badges-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1164,63 +1019,18 @@
    ========================================================================== */
 
 @media (max-width: 768px) {
-  .tech-section {
-    padding: 5rem 1.5rem;
-  }
-
-  /* Flatten Workspace Box Framework */
-  .tech-hub {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    padding: 1.5rem 1rem;
-  }
-
-  .tech-nav-panel {
-    gap: 0.75rem;
-  }
-
-  .tech-nav-btn {
-    padding: 1.25rem;
-  }
-
-  .tech-nav-btn:hover {
-    transform: none;
-    /* Turn off sideways micro-movements on mobile touch links */
-  }
-
-  .btn-title {
-    font-size: 1rem;
-  }
-
-  /* Display Pane Rescale */
-  .tech-display-pane {
-    padding: 2rem 1.25rem;
-    min-height: auto;
-  }
-
-  .pane-header {
-    margin-bottom: 1.5rem;
-  }
-
-  .pane-title {
-    font-size: 1.4rem;
-  }
-
-  .pane-desc {
-    font-size: 0.95rem;
-    margin-bottom: 2rem;
-  }
-
-  /* Drop Badge Clusters to Binary Stacks */
-  .tech-badges-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.75rem;
-  }
+  .tech-section { padding: 4rem 1.5rem; }
+  .tech-hub { grid-template-columns: 1fr; gap: 2rem; padding: 1.5rem 1rem; }
+  .tech-nav-panel { gap: 0.75rem; }
+  .tech-nav-btn { padding: 1.25rem; }
+  .tech-nav-btn:hover { transform: none; }
+  .btn-title { font-size: 1rem; }
+  .tech-display-pane { padding: 2rem 1.25rem; min-height: auto; }
+  .pane-header { margin-bottom: 1.5rem; }
+  .pane-title { font-size: 1.4rem; }
+  .pane-desc { font-size: 0.95rem; margin-bottom: 2rem; }
+  .tech-badges-grid { grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
 }
-
-
-
-
 
 /* ==========================================================================
    STYLISH BLUEPRINT SERVICES GRID STYLES
@@ -1228,20 +1038,17 @@
 
 .premium-services-section {
   position: relative;
-  padding: 8rem 2rem;
+  padding: 4rem 2rem; /* FIXED: Stripped duplicate space pads */
   background-color: var(--bg-dark);
   width: 100%;
   overflow: hidden;
   border-top: 1px solid rgba(255, 255, 255, 0.03);
 }
 
-/* Technical Blueprint Structural Grid Lines */
 .services-mesh-matrix {
   position: absolute;
   inset: 0;
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.003) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.003) 1px, transparent 1px);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.003) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.003) 1px, transparent 1px);
   background-size: 50px 50px;
   pointer-events: none;
 }
@@ -1264,7 +1071,6 @@
   z-index: 10;
 }
 
-/* --- Core Blueprint Grid Layout --- */
 .services-blueprint-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1272,7 +1078,6 @@
   width: 100%;
 }
 
-/* --- High-End Minimalist Terminal Panels --- */
 .blueprint-card {
   position: relative;
   background: linear-gradient(135deg, rgba(15, 22, 42, 0.4) 0%, rgba(7, 9, 19, 0.6) 100%);
@@ -1289,14 +1094,12 @@
   transition: var(--transition-smooth);
 }
 
-/* Micro-hover trace lighting interaction */
 .blueprint-card:hover {
   transform: translateY(-6px);
   border-color: rgba(0, 242, 254, 0.25);
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5), 0 0 30px rgba(0, 242, 254, 0.03);
 }
 
-/* Card Header Information Sub-Bar */
 .card-tech-header {
   display: flex;
   justify-content: space-between;
@@ -1324,7 +1127,6 @@
   letter-spacing: 0.5px;
 }
 
-/* Content Blocks Typographies */
 .blueprint-service-title {
   font-size: 1.4rem;
   font-weight: 800;
@@ -1341,13 +1143,8 @@
   -webkit-text-fill-color: transparent;
 }
 
-.blueprint-service-desc {
-  font-size: 0.95rem;
-  color: var(--text-muted);
-  line-height: 1.65;
-}
+.blueprint-service-desc { font-size: 0.95rem; color: var(--text-muted); line-height: 1.65; }
 
-/* Card Baseline Metadata Frame */
 .card-tech-footer {
   display: flex;
   justify-content: space-between;
@@ -1364,7 +1161,6 @@
   letter-spacing: 0.5px;
 }
 
-/* Small system ping status pulse glyph */
 .interactive-pulse-node {
   width: 6px;
   height: 6px;
@@ -1380,20 +1176,9 @@
 }
 
 @keyframes serviceNodePulse {
-  0% {
-    transform: scale(1);
-    opacity: 0.5;
-  }
-
-  50% {
-    transform: scale(1.4);
-    opacity: 1;
-  }
-
-  100% {
-    transform: scale(1);
-    opacity: 0.5;
-  }
+  0% { transform: scale(1); opacity: 0.5; }
+  50% { transform: scale(1.4); opacity: 1; }
+  100% { transform: scale(1); opacity: 0.5; }
 }
 
 /* ==========================================================================
@@ -1401,44 +1186,14 @@
    ========================================================================== */
 
 @media (max-width: 768px) {
-  .premium-services-section {
-    padding: 5rem 1.5rem;
-  }
-
-  /* Unfold multi-column arrays into continuous vertical linear flows */
-  .services-blueprint-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-
-  .blueprint-card {
-    padding: 2rem 1.25rem;
-    /* Drop internal spatial padding metrics for mobile spaces */
-    min-height: auto;
-    /* Remove fixed heights to let mobile text auto-expand fluidly */
-  }
-
-  .card-tech-header {
-    margin-bottom: 1.75rem;
-  }
-
-  .blueprint-service-title {
-    font-size: 1.25rem;
-  }
-
-  .blueprint-service-desc {
-    font-size: 0.9rem;
-  }
-
-  .card-tech-footer {
-    margin-top: 1.75rem;
-  }
+  .premium-services-section { padding: 4rem 1.5rem; }
+  .services-blueprint-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+  .blueprint-card { padding: 2rem 1.25rem; min-height: auto; }
+  .card-tech-header { margin-bottom: 1.75rem; }
+  .blueprint-service-title { font-size: 1.25rem; }
+  .blueprint-service-desc { font-size: 0.9rem; }
+  .card-tech-footer { margin-top: 1.75rem; }
 }
-
-
-
-
-
 
 /* ==========================================================================
    PREMIUM TELEMETRY & PRICING MATRIX STYLES
@@ -1446,7 +1201,7 @@
 
 .pricing-section {
   position: relative;
-  padding: 8rem 2rem;
+  padding: 4rem 2rem; /* FIXED: Reduced multi-padding tracking blocks */
   background-color: var(--bg-dark);
   width: 100%;
   overflow: hidden;
@@ -1481,7 +1236,6 @@
   z-index: 10;
 }
 
-/* --- Pricing Binary Grid Setup --- */
 .pricing-matrix-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -1491,7 +1245,6 @@
   align-items: center;
 }
 
-/* --- Premium Architecture Panels --- */
 .pricing-panel {
   position: relative;
   background: rgba(15, 22, 42, 0.4);
@@ -1512,7 +1265,6 @@
   box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
 }
 
-/* --- Elite Engine Highlight States --- */
 .pricing-panel.tier-highlight {
   background: rgba(15, 22, 42, 0.7);
   border: 1px solid rgba(0, 242, 254, 0.2);
@@ -1524,7 +1276,6 @@
   box-shadow: 0 30px 60px rgba(0, 0, 0, 0.7), 0 0 40px rgba(0, 242, 254, 0.1);
 }
 
-/* Top Ribbon Accent */
 .premium-ribbon {
   position: absolute;
   top: 1.5rem;
@@ -1539,7 +1290,6 @@
   letter-spacing: 0.5px;
 }
 
-/* Header Content Elements */
 .panel-header {
   border-bottom: 1px solid var(--glass-border);
   padding-bottom: 2rem;
@@ -1568,16 +1318,8 @@
   margin-bottom: 0.75rem;
 }
 
-.tier-summary {
-  font-size: 0.95rem;
-  color: var(--text-muted);
-  line-height: 1.5;
-}
-
-/* Pricing Presentation Blocks */
-.panel-pricing-block {
-  margin-bottom: 2.5rem;
-}
+.tier-summary { font-size: 0.95rem; color: var(--text-muted); line-height: 1.5; }
+.panel-pricing-block { margin-bottom: 2.5rem; }
 
 .price-wrapper {
   display: flex;
@@ -1586,46 +1328,13 @@
   margin-bottom: 0.5rem;
 }
 
-.currency {
-  font-size: 1.75rem;
-  font-weight: 600;
-  color: var(--text-main);
-}
-
-.amount {
-  font-size: 4.5rem;
-  font-weight: 800;
-  color: var(--text-main);
-  letter-spacing: -2px;
-  line-height: 1;
-}
-
-.amount.text-glow {
-  text-shadow: 0 0 30px rgba(0, 242, 254, 0.15);
-}
-
-.billing {
-  font-size: 1.1rem;
-  color: var(--text-muted);
-  font-weight: 500;
-}
-
-.billing-cycle {
-  font-size: 0.8rem;
-  font-weight: 500;
-  color: var(--text-muted);
-  display: block;
-}
-
-.text-cyan {
-  color: var(--accent-cyan);
-}
-
-/* Feature Checklist Blueprint */
-.panel-body {
-  margin-bottom: 3rem;
-  flex-grow: 1;
-}
+.currency { font-size: 1.75rem; font-weight: 600; color: var(--text-main); }
+.amount { font-size: 4.5rem; font-weight: 800; color: var(--text-main); letter-spacing: -2px; line-height: 1; }
+.amount.text-glow { text-shadow: 0 0 30px rgba(0, 242, 254, 0.15); }
+.billing { font-size: 1.1rem; color: var(--text-muted); font-weight: 500; }
+.billing-cycle { font-size: 0.8rem; font-weight: 500; color: var(--text-muted); display: block; }
+.text-cyan { color: var(--accent-cyan); }
+.panel-body { margin-bottom: 3rem; flex-grow: 1; }
 
 .tier-spec-list {
   list-style: none;
@@ -1662,51 +1371,19 @@
   box-shadow: 0 0 8px rgba(0, 242, 254, 0.2);
 }
 
-/* Convert buttons into full wide elements across rows */
-.tier-cta {
-  width: 100%;
-  justify-content: center;
-}
+.tier-cta { width: 100%; justify-content: center; }
 
 /* ==========================================================================
    RESPONSIVE ADAPTIVE ENGINE (768px BREAKPOINT)
    ========================================================================== */
 
 @media (max-width: 768px) {
-  .pricing-section {
-    padding: 5rem 1.5rem;
-  }
-
-  /* Transition panels into continuous vertical single layouts */
-  .pricing-matrix-grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-
-  .pricing-panel {
-    padding: 2.5rem 1.5rem;
-    /* Drop spacing footprints gracefully on devices */
-  }
-
-  .amount {
-    font-size: 3.5rem;
-    /* Rescale pricing size scales perfectly */
-  }
-
-  .premium-ribbon {
-    position: relative;
-    top: 0;
-    right: 0;
-    display: inline-block;
-    margin-bottom: 1.5rem;
-  }
+  .pricing-section { padding: 4rem 1.5rem; }
+  .pricing-matrix-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .pricing-panel { padding: 2.5rem 1.5rem; }
+  .amount { font-size: 3.5rem; }
+  .premium-ribbon { position: relative; top: 0; right: 0; display: inline-block; margin-bottom: 1.5rem; }
 }
-
-
-
-
-
-
 
 /* ==========================================================================
    CINEMATIC AUTOMATED SLIDER TESTIMONIAL STYLES
@@ -1714,7 +1391,7 @@
 
 .cinematic-testimonial-section {
   position: relative;
-  padding: 8rem 2rem;
+  padding: 4rem 2rem; /* FIXED: Consolidated layout bounds */
   background-color: var(--bg-dark);
   width: 100%;
   overflow: hidden;
@@ -1748,7 +1425,6 @@
   z-index: 10;
 }
 
-/* --- Main Card Enclosure Box --- */
 .cinematic-card-wrapper {
   background: linear-gradient(135deg, rgba(15, 22, 42, 0.4) 0%, rgba(7, 9, 19, 0.7) 100%);
   backdrop-filter: var(--glass-blur);
@@ -1757,56 +1433,28 @@
   border-radius: 20px;
   box-shadow: var(--shadow-overlay);
   overflow: hidden;
-  /* Clips secondary slides running outside bounds */
 }
 
-/* --------------------------------------------------------------------------
-   CSS AUTOMATION SLIDER TIMING ENGINE
-   -------------------------------------------------------------------------- */
 .auto-slider-engine {
   display: flex;
   width: 200%;
-  /* Spans full horizontal width to accommodate both layouts side-by-side */
-  /* 12 Second full rotation loop (6s per slide link) using a custom kinetic curve */
   animation: corporateSliderAuto 12s cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
 }
 
-/* Individual Slide Grouping Grid */
 .slide-pane-group {
   display: grid;
   grid-template-columns: 0.8fr 1.2fr;
   width: 50%;
-  /* Each slide occupies exactly one panel view screen width inside wrapper */
 }
 
-/* Pause keyframe translations on container cursor hover to let stakeholders read details */
-.cinematic-card-wrapper:hover .auto-slider-engine {
-  animation-play-state: paused;
-}
+.cinematic-card-wrapper:hover .auto-slider-engine { animation-play-state: paused; }
 
-/* Automated Translation Path Steps Matrix */
 @keyframes corporateSliderAuto {
-
-  0%,
-  45% {
-    transform: translateX(0%);
-  }
-
-  /* Slide 1 Focus Frame Window */
-  50%,
-  95% {
-    transform: translateX(-50%);
-  }
-
-  /* Slide 2 Focus Frame Window */
-  100% {
-    transform: translateX(0%);
-  }
-
-  /* Loop Reset Back transition */
+  0%, 45% { transform: translateX(0%); }
+  50%, 95% { transform: translateX(-50%); }
+  100% { transform: translateX(0%); }
 }
 
-/* --- Left Column: Identity Visual Pane --- */
 .cinematic-meta-pane {
   background: rgba(7, 9, 19, 0.4);
   padding: 4rem 3.5rem;
@@ -1840,48 +1488,13 @@
   align-self: flex-start;
 }
 
-.corp-logo-icon {
-  color: var(--accent-cyan);
-  font-size: 0.8rem;
-  text-shadow: 0 0 8px var(--accent-cyan);
-}
+.corp-logo-icon { color: var(--accent-cyan); font-size: 0.8rem; text-shadow: 0 0 8px var(--accent-cyan); }
+.corp-name-string { font-family: monospace; font-size: 0.75rem; font-weight: 700; color: var(--text-main); letter-spacing: 0.5px; }
+.client-identity-block { margin-top: 6rem; }
+.client-name { font-size: 1.6rem; font-weight: 800; color: var(--text-main); letter-spacing: -0.5px; margin-bottom: 0.25rem; }
+.client-role { font-size: 0.9rem; color: var(--text-muted); font-weight: 500; margin-bottom: 0.75rem; }
+.client-firm-tag { font-family: monospace; font-size: 0.75rem; color: var(--accent-blue); font-weight: 700; letter-spacing: 1px; }
 
-.corp-name-string {
-  font-family: monospace;
-  font-size: 0.75rem;
-  font-weight: 700;
-  color: var(--text-main);
-  letter-spacing: 0.5px;
-}
-
-.client-identity-block {
-  margin-top: 6rem;
-}
-
-.client-name {
-  font-size: 1.6rem;
-  font-weight: 800;
-  color: var(--text-main);
-  letter-spacing: -0.5px;
-  margin-bottom: 0.25rem;
-}
-
-.client-role {
-  font-size: 0.9rem;
-  color: var(--text-muted);
-  font-weight: 500;
-  margin-bottom: 0.75rem;
-}
-
-.client-firm-tag {
-  font-family: monospace;
-  font-size: 0.75rem;
-  color: var(--accent-blue);
-  font-weight: 700;
-  letter-spacing: 1px;
-}
-
-/* --- Right Column: Deep Technical Testimony Content --- */
 .cinematic-content-pane {
   padding: 4rem;
   display: flex;
@@ -1889,43 +1502,11 @@
   justify-content: center;
 }
 
-.system-log-tag {
-  font-family: monospace;
-  font-size: 0.8rem;
-  color: var(--text-muted);
-  letter-spacing: 1px;
-  margin-bottom: 2rem;
-}
-
-.rich-testimony-paragraph {
-  font-size: 1.35rem;
-  color: var(--text-main);
-  line-height: 1.65;
-  font-weight: 500;
-  letter-spacing: -0.3px;
-  margin-bottom: 1.5rem;
-}
-
-.rich-testimony-paragraph.secondary-paragraph {
-  font-size: 1.05rem;
-  color: var(--text-muted);
-  line-height: 1.6;
-  font-weight: 400;
-  margin-bottom: 3rem;
-}
-
-.font-bold {
-  font-weight: 800;
-}
-
-/* Footnote System Telemetry Row */
-.testimony-metric-row {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  border-top: 1px solid var(--glass-border);
-  padding-top: 2rem;
-}
+.system-log-tag { font-family: monospace; font-size: 0.8rem; color: var(--text-muted); letter-spacing: 1px; margin-bottom: 2rem; }
+.rich-testimony-paragraph { font-size: 1.35rem; color: var(--text-main); line-height: 1.65; font-weight: 500; letter-spacing: -0.3px; margin-bottom: 1.5rem; }
+.rich-testimony-paragraph.secondary-paragraph { font-size: 1.05rem; color: var(--text-muted); line-height: 1.6; font-weight: 400; margin-bottom: 3rem; }
+.font-bold { font-weight: 800; }
+.testimony-metric-row { display: flex; align-items: center; gap: 1.5rem; border-top: 1px solid var(--glass-border); padding-top: 2rem; }
 
 .footer-metric-pill {
   background: rgba(255, 255, 255, 0.02);
@@ -1945,127 +1526,36 @@
   box-shadow: 0 0 8px var(--accent-cyan);
 }
 
-.metric-accent-dot.dot-blue {
-  background-color: var(--accent-blue);
-  box-shadow: 0 0 8px var(--accent-blue);
-}
-
-.metric-text-string {
-  font-family: monospace;
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: var(--text-muted);
-  letter-spacing: 0.5px;
-}
-
-.cyan-glow {
-  color: var(--accent-cyan);
-  font-weight: 700;
-}
-
-.blue-glow {
-  color: var(--accent-blue);
-  font-weight: 700;
-}
+.metric-accent-dot.dot-blue { background-color: var(--accent-blue); box-shadow: 0 0 8px var(--accent-blue); }
+.metric-text-string { font-family: monospace; font-size: 0.75rem; font-weight: 600; color: var(--text-muted); letter-spacing: 0.5px; }
+.cyan-glow { color: var(--accent-cyan); font-weight: 700; }
+.blue-glow { color: var(--accent-blue); font-weight: 700; }
 
 /* ==========================================================================
    RESPONSIVE ADAPTIVE ENGINE (768px BREAKPOINT)
    ========================================================================== */
 
 @media (max-width: 768px) {
-  .cinematic-testimonial-section {
-    padding: 5rem 1.5rem;
-  }
+  .cinematic-testimonial-section { padding: 5rem 1.5rem; }
+  .auto-slider-engine { width: 200%; animation: corporateSliderAutoMobile 10s cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite; }
+  .slide-pane-group { grid-template-columns: 1fr; width: 50%; }
+  .cinematic-meta-pane { padding: 2.5rem 1.25rem; border-right: none; border-bottom: 1px solid var(--glass-border); }
+  .large-quote-glyph { font-size: 8rem; top: -0.5rem; left: 1rem; }
+  .client-identity-block { margin-top: 3.5rem; }
+  .client-name { font-size: 1.35rem; }
+  .cinematic-content-pane { padding: 2.5rem 1.25rem; }
+  .system-log-tag { margin-bottom: 1.25rem; }
+  .rich-testimony-paragraph { font-size: 1.1rem; line-height: 1.55; }
+  .rich-testimony-paragraph.secondary-paragraph { font-size: 0.95rem; margin-bottom: 2rem; }
+  .testimony-metric-row { flex-direction: column; align-items: flex-start; gap: 0.65rem; padding-top: 1.5rem; }
+  .footer-metric-pill { width: 100%; }
 
-  /* Adjust sliding kinematics for standard mobile viewport scrolling values */
-  .auto-slider-engine {
-    width: 200%;
-    /* Speeds up auto translation timings slightly to catch rapid swiping users */
-    animation: corporateSliderAutoMobile 10s cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
-  }
-
-  .slide-pane-group {
-    grid-template-columns: 1fr;
-    /* Stack columns vertically inside mobile slice windows */
-    width: 50%;
-  }
-
-  /* Left visual pane shifts to top block */
-  .cinematic-meta-pane {
-    padding: 2.5rem 1.25rem;
-    border-right: none;
-    border-bottom: 1px solid var(--glass-border);
-  }
-
-  .large-quote-glyph {
-    font-size: 8rem;
-    top: -0.5rem;
-    left: 1rem;
-  }
-
-  .client-identity-block {
-    margin-top: 3.5rem;
-  }
-
-  .client-name {
-    font-size: 1.35rem;
-  }
-
-  /* Right content pane shifts to main lower block */
-  .cinematic-content-pane {
-    padding: 2.5rem 1.25rem;
-  }
-
-  .system-log-tag {
-    margin-bottom: 1.25rem;
-  }
-
-  .rich-testimony-paragraph {
-    font-size: 1.1rem;
-    line-height: 1.55;
-  }
-
-  .rich-testimony-paragraph.secondary-paragraph {
-    font-size: 0.95rem;
-    margin-bottom: 2rem;
-  }
-
-  /* Stack telemetry items inside narrow mobile viewports */
-  .testimony-metric-row {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.65rem;
-    padding-top: 1.5rem;
-  }
-
-  .footer-metric-pill {
-    width: 100%;
-  }
-
-  /* Separate mobile animation profile tracking to maintain flawless translate steps */
   @keyframes corporateSliderAutoMobile {
-
-    0%,
-    45% {
-      transform: translateX(0%);
-    }
-
-    50%,
-    95% {
-      transform: translateX(-50%);
-    }
-
-    100% {
-      transform: translateX(0%);
-    }
+    0%, 45% { transform: translateX(0%); }
+    50%, 95% { transform: translateX(-50%); }
+    100% { transform: translateX(0%); }
   }
 }
-
-
-
-
-
-
 
 /* ==========================================================================
    STYLISH ARCHITECTURAL FAQ COMPONENT
@@ -2073,7 +1563,7 @@
 
 .faq-section {
   position: relative;
-  padding: 8rem 2rem;
+  padding: 4rem 2rem; /* FIXED: Reduced layout gap fields */
   background-color: var(--bg-dark);
   width: 100%;
   overflow: hidden;
@@ -2093,187 +1583,42 @@
 
 .faq-container {
   max-width: 900px;
-  /* Condensed width for centered, magazine-style layouts */
   margin: 0 auto;
   position: relative;
   z-index: 10;
 }
 
-/* --- Accordion Rows System --- */
-.faq-matrix {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.faq-node {
-  background: rgba(15, 22, 42, 0.4);
-  backdrop-filter: var(--glass-blur);
-  -webkit-backdrop-filter: var(--glass-blur);
-  border: 1px solid var(--glass-border);
-  border-radius: 8px;
-  overflow: hidden;
-  transition: var(--transition-smooth);
-}
-
-/* Trigger Button Custom Mechanics */
-.faq-trigger {
-  width: 100%;
-  background: transparent;
-  border: none;
-  padding: 1.75rem 2rem;
-  display: flex;
-  align-items: center;
-  text-align: left;
-  cursor: pointer;
-  position: relative;
-}
-
-.node-number {
-  font-family: monospace;
-  font-size: 0.9rem;
-  color: var(--accent-blue);
-  font-weight: 700;
-  margin-right: 1.25rem;
-  transition: var(--transition-smooth);
-}
-
-.node-question {
-  color: var(--text-main);
-  font-size: 1.2rem;
-  font-weight: 700;
-  letter-spacing: -0.3px;
-  flex-grow: 1;
-  padding-right: 2rem;
-  transition: var(--transition-smooth);
-}
-
-/* Stylish Animated Geometric Status Toggle Icon */
-.node-status-icon {
-  position: relative;
-  width: 14px;
-  height: 14px;
-}
-
-.node-status-icon::before,
-.node-status-icon::after {
-  content: '';
-  position: absolute;
-  background-color: var(--text-muted);
-  transition: var(--transition-smooth);
-}
-
-/* Horizontal segment */
-.node-status-icon::before {
-  top: 6px;
-  left: 0;
-  width: 100%;
-  height: 2px;
-}
-
-/* Vertical segment */
-.node-status-icon::after {
-  top: 0;
-  left: 6px;
-  width: 2px;
-  height: 100%;
-}
-
-/* --- Hover & Active Layout Rule Modifiers --- */
-.faq-node:hover {
-  border-color: rgba(0, 242, 254, 0.25);
-  background: rgba(15, 22, 42, 0.6);
-}
-
-.faq-node:hover .node-number {
-  color: var(--accent-cyan);
-  text-shadow: 0 0 10px rgba(0, 242, 254, 0.4);
-}
-
-/* State changes when accordion entry is opened */
-.faq-node.active {
-  border-color: rgba(79, 172, 254, 0.3);
-  background: rgba(15, 22, 42, 0.7);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
-}
-
-.faq-node.active .node-status-icon::after {
-  transform: rotate(90deg);
-  opacity: 0;
-  /* Melts the vertical crosshair line to leave a clean minimalist minus dash symbol */
-}
-
-.faq-node.active .node-status-icon::before {
-  background-color: var(--accent-cyan);
-}
-
-/* --- Content Panel Collapsing Calculations Engine --- */
-.faq-panel {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.faq-panel-inner {
-  padding: 0 2rem 2rem 4rem;
-  /* Aligns content paragraph directly under the question text */
-  border-top: 1px solid transparent;
-}
-
-.faq-panel-inner p {
-  color: var(--text-muted);
-  font-size: 1.02rem;
-  line-height: 1.65;
-}
+.faq-matrix { display: flex; flex-direction: column; gap: 1rem; }
+.faq-node { background: rgba(15, 22, 42, 0.4); backdrop-filter: var(--glass-blur); -webkit-backdrop-filter: var(--glass-blur); border: 1px solid var(--glass-border); border-radius: 8px; overflow: hidden; transition: var(--transition-smooth); }
+.faq-trigger { width: 100%; background: transparent; border: none; padding: 1.75rem 2rem; display: flex; align-items: center; text-align: left; cursor: pointer; position: relative; }
+.node-number { font-family: monospace; font-size: 0.9rem; color: var(--accent-blue); font-weight: 700; margin-right: 1.25rem; transition: var(--transition-smooth); }
+.node-question { color: var(--text-main); font-size: 1.2rem; font-weight: 700; letter-spacing: -0.3px; flex-grow: 1; padding-right: 2rem; transition: var(--transition-smooth); }
+.node-status-icon { position: relative; width: 14px; height: 14px; }
+.node-status-icon::before, .node-status-icon::after { content: ''; position: absolute; background-color: var(--text-muted); transition: var(--transition-smooth); }
+.node-status-icon::before { top: 6px; left: 0; width: 100%; height: 2px; }
+.node-status-icon::after { top: 0; left: 6px; width: 2px; height: 100%; }
+.faq-node:hover { border-color: rgba(0, 242, 254, 0.25); background: rgba(15, 22, 42, 0.6); }
+.faq-node:hover .node-number { color: var(--accent-cyan); text-shadow: 0 0 10px rgba(0, 242, 254, 0.4); }
+.faq-node.active { border-color: rgba(79, 172, 254, 0.3); background: rgba(15, 22, 42, 0.7); box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03); }
+.faq-node.active .node-status-icon::after { transform: rotate(90deg); opacity: 0; }
+.faq-node.active .node-status-icon::before { background-color: var(--accent-cyan); }
+.faq-panel { max-height: 0; overflow: hidden; transition: max-height 0.5s cubic-bezier(0.16, 1, 0.3, 1); }
+.faq-panel-inner { padding: 0 2rem 2rem 4rem; border-top: 1px solid transparent; }
+.faq-panel-inner p { color: var(--text-muted); font-size: 1.02rem; line-height: 1.65; }
 
 /* ==========================================================================
    RESPONSIVE ADAPTIVE ENGINE (768px BREAKPOINT)
    ========================================================================== */
 
 @media (max-width: 768px) {
-  .faq-section {
-    padding: 5rem 1.5rem;
-  }
-
-  .faq-trigger {
-    padding: 1.5rem 1.25rem;
-    align-items: flex-start;
-    /* Stack icon better if text strings wrap to extra lines */
-  }
-
-  .node-number {
-    font-size: 0.85rem;
-    margin-top: 0.15rem;
-    margin-right: 0.75rem;
-  }
-
-  .node-question {
-    font-size: 1.05rem;
-    /* Tone down scales to protect small mobile displays */
-    line-height: 1.4;
-  }
-
-  .node-status-icon {
-    margin-top: 0.35rem;
-  }
-
-  .faq-panel-inner {
-    padding: 0 1.25rem 1.5rem 1.25rem;
-    /* Flatten indentation lines for optimal mobile reading width */
-  }
-
-  .faq-panel-inner p {
-    font-size: 0.95rem;
-  }
+  .faq-section { padding: 5rem 1.5rem; }
+  .faq-trigger { padding: 1.5rem 1.25rem; align-items: flex-start; }
+  .node-number { font-size: 0.85rem; margin-top: 0.15rem; margin-right: 0.75rem; }
+  .node-question { font-size: 1.05rem; line-height: 1.4; }
+  .node-status-icon { margin-top: 0.35rem; }
+  .faq-panel-inner { padding: 0 1.25rem 1.5rem 1.25rem; }
+  .faq-panel-inner p { font-size: 0.95rem; }
 }
-
-
-
-
-
-
-
-
 
 /* ==========================================================================
    STYLISH KINETIC CTA MATRIX COMPONENT
@@ -2281,7 +1626,7 @@
 
 .cta-section {
   position: relative;
-  padding: 8rem 2rem;
+  padding: 4rem 2rem; /* FIXED: Removed large height gap buffers */
   background-color: var(--bg-dark);
   width: 100%;
   overflow: hidden;
@@ -2316,7 +1661,6 @@
   z-index: 10;
 }
 
-/* --- Premium Framed Action Board Matrix --- */
 .cta-matrix-board {
   position: relative;
   background: linear-gradient(135deg, rgba(15, 22, 42, 0.5) 0%, rgba(7, 9, 19, 0.8) 100%);
@@ -2329,24 +1673,18 @@
   overflow: hidden;
 }
 
-/* --- Style 1: Custom Kinetic Clip-Path Reveal Implementation --- */
+/* --- FIXED: Optimized Kinetic Reveal Module for standard flow weights --- */
 .kinetic-reveal-box {
   opacity: 0;
-  clip-path: inset(0 100% 0 0);
   transform: scale(0.98) translateY(20px);
+  transition: var(--transition-smooth);
 }
 
 .kinetic-reveal-box.aos-animate {
   opacity: 1;
-  clip-path: inset(0 0 0 0);
   transform: scale(1) translateY(0);
-  transition:
-    clip-path 1.4s cubic-bezier(0.16, 1, 0.3, 1),
-    opacity 1.4s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 1.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Structural Perimeter Accents */
 .board-frame-tags {
   display: flex;
   justify-content: space-between;
@@ -2355,60 +1693,13 @@
   margin-bottom: 3.5rem;
 }
 
-.terminal-code {
-  font-family: monospace;
-  font-size: 0.8rem;
-  color: var(--accent-cyan);
-  letter-spacing: 1px;
-}
-
-.terminal-node {
-  font-family: monospace;
-  font-size: 0.8rem;
-  color: var(--text-muted);
-  letter-spacing: 1px;
-}
-
-/* Content Core Typographies */
-.cta-content-core {
-  text-align: center;
-  max-width: 780px;
-  margin: 0 auto;
-}
-
-.cta-main-title {
-  font-size: 3.5rem;
-  font-weight: 800;
-  line-height: 1.2;
-  color: var(--text-main);
-  letter-spacing: -1.5px;
-  margin-bottom: 1.5rem;
-}
-
-.cta-supporting-text {
-  font-size: 1.15rem;
-  color: var(--text-muted);
-  line-height: 1.65;
-  margin-bottom: 3rem;
-}
-
-/* Button Layout Adjustments */
-.cta-buttons-matrix {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1.5rem;
-  margin-bottom: 4rem;
-}
-
-/* Live Telemetry Display Footer */
-.cta-live-telemetry {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  border-top: 1px solid var(--glass-border);
-  padding-top: 2rem;
-}
+.terminal-code { font-family: monospace; font-size: 0.8rem; color: var(--accent-cyan); letter-spacing: 1px; }
+.terminal-node { font-family: monospace; font-size: 0.8rem; color: var(--text-muted); letter-spacing: 1px; }
+.cta-content-core { text-align: center; max-width: 780px; margin: 0 auto; }
+.cta-main-title { font-size: 3.5rem; font-weight: 800; line-height: 1.2; color: var(--text-main); letter-spacing: -1.5px; margin-bottom: 1.5rem; }
+.cta-supporting-text { font-size: 1.15rem; color: var(--text-muted); line-height: 1.65; margin-bottom: 3rem; }
+.cta-buttons-matrix { display: flex; align-items: center; justify-content: center; gap: 1.5rem; margin-bottom: 4rem; }
+.cta-live-telemetry { display: flex; justify-content: center; gap: 2rem; border-top: 1px solid var(--glass-border); padding-top: 2rem; }
 
 .telemetry-pill {
   background: rgba(255, 255, 255, 0.02);
@@ -2429,37 +1720,12 @@
   animation: telemetryPulse 2s infinite ease-in-out;
 }
 
-.telemetry-data-label {
-  font-family: monospace;
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: var(--text-muted);
-  letter-spacing: 0.5px;
-}
-
-.text-cyan {
-  color: var(--accent-cyan);
-}
-
-.font-bold {
-  font-weight: 700;
-}
+.telemetry-data-label { font-family: monospace; font-size: 0.75rem; font-weight: 600; color: var(--text-muted); letter-spacing: 0.5px; }
 
 @keyframes telemetryPulse {
-  0% {
-    transform: scale(1);
-    opacity: 0.5;
-  }
-
-  50% {
-    transform: scale(1.3);
-    opacity: 1;
-  }
-
-  100% {
-    transform: scale(1);
-    opacity: 0.5;
-  }
+  0% { transform: scale(1); opacity: 0.5; }
+  50% { transform: scale(1.3); opacity: 1; }
+  100% { transform: scale(1); opacity: 0.5; }
 }
 
 /* ==========================================================================
@@ -2467,83 +1733,15 @@
    ========================================================================== */
 
 @media (max-width: 768px) {
-  .cta-section {
-    padding: 5rem 1.5rem;
-  }
-
-  .cta-matrix-board {
-    padding: 2.5rem 1.5rem;
-    /* Shrink internal spatial padding safely */
-    border-radius: 14px;
-  }
-
-  /* Flatten top system decorators out of active layouts to prioritize readable space */
-  .board-frame-tags {
-    margin-bottom: 2rem;
-  }
-
-  .terminal-code {
-    font-size: 0.7rem;
-    letter-spacing: 0px;
-  }
-
-  .terminal-node {
-    display: none;
-    /* Strip out secondary metrics text to protect mobile horizontal space */
-  }
-
-  /* Tone down heavy typography weights to avoid layout clipping */
-  .cta-main-title {
-    font-size: 2.25rem;
-    line-height: 1.25;
-    letter-spacing: -0.5px;
-  }
-
-  .cta-supporting-text {
-    font-size: 1rem;
-    margin-bottom: 2rem;
-  }
-
-  /* Re-align button blocks to uniform stacked matrices */
-  .cta-buttons-matrix {
-    flex-direction: column;
-    width: 100%;
-    gap: 1rem;
-    margin-bottom: 2.5rem;
-  }
-
-  .cta-primary,
-  .cta-secondary {
-    width: 100%;
-    /* Make buttons adapt to full fluid device widths */
-    padding: 0.95rem 2rem;
-  }
-
-  /* Stack system telemetry pills cleanly */
-  .cta-live-telemetry {
-    flex-direction: column;
-    gap: 0.65rem;
-    align-items: center;
-    padding-top: 1.5rem;
-  }
-
-  .telemetry-pill {
-    width: 100%;
-    justify-content: center;
-  }
-
-  /* Accelerate the kinetic mask reveals for optimal mobile frame rates */
-  .kinetic-reveal-box.aos-animate {
-    transition:
-      clip-path 0.8s cubic-bezier(0.16, 1, 0.3, 1),
-      opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
-      transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-  }
+  .cta-section { padding: 5rem 1.5rem; }
+  .cta-matrix-board { padding: 2.5rem 1.5rem; border-radius: 14px; }
+  .board-frame-tags { margin-bottom: 2rem; }
+  .terminal-code { font-size: 0.7rem; letter-spacing: 0px; }
+  .terminal-node { display: none; }
+  .cta-main-title { font-size: 2.25rem; line-height: 1.25; letter-spacing: -0.5px; }
+  .cta-supporting-text { font-size: 1rem; margin-bottom: 2rem; }
+  .cta-buttons-matrix { flex-direction: column; width: 100%; gap: 1rem; margin-bottom: 2.5rem; }
+  .cta-primary, .cta-secondary { width: 100%; }
+  .cta-live-telemetry { flex-direction: column; gap: 0.65rem; align-items: center; padding-top: 1.5rem; }
+  .telemetry-pill { width: 100%; }
 }
-
-
-
-
-
-
-

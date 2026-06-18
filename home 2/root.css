@@ -598,7 +598,7 @@ ul {
    ========================================================================== */
 .footer-v2 {
   position: relative;
-  padding: 8rem 0 4rem 0;
+  padding: 6rem 0 4rem 0;
   background-color: var(--bg-dark);
   border-top: 1px solid rgba(255, 255, 255, 0.03);
   z-index: 10;

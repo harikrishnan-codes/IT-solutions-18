@@ -13,7 +13,7 @@
   position: absolute;
   inset: 0;
   background-image: linear-gradient(rgba(255, 255, 255, 0.01) 1px, transparent 1px),
-                    linear-gradient(90deg, rgba(255, 255, 255, 0.01) 1px, transparent 1px);
+    linear-gradient(90deg, rgba(255, 255, 255, 0.01) 1px, transparent 1px);
   background-size: 50px 50px;
   background-position: center top;
   pointer-events: none;
@@ -43,7 +43,8 @@
   transition: var(--transition-smooth);
 }
 
-.filter-tag:hover, .active-tag {
+.filter-tag:hover,
+.active-tag {
   color: var(--text-main);
   border-color: var(--accent-violet);
   box-shadow: 0 0 12px rgba(168, 85, 247, 0.15);
@@ -77,9 +78,11 @@
 .reverse-layout {
   grid-template-columns: 0.9fr 1.1fr;
 }
+
 .reverse-layout .project-visual-surface {
   order: 2;
 }
+
 .reverse-layout .project-content-surface {
   order: 1;
 }
@@ -89,7 +92,8 @@
   position: relative;
   width: 100%;
   height: 360px;
-  background: var(--bg-surface); /* Premium deep warm plum velvet underlay matrix */
+  background: var(--bg-surface);
+  /* Premium deep warm plum velvet underlay matrix */
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
   border: 1px solid var(--glass-border);
@@ -126,8 +130,15 @@
 }
 
 @keyframes radarWavePulse {
-  0% { transform: scale(0.3); opacity: 1; }
-  100% { transform: scale(3.5); opacity: 0; }
+  0% {
+    transform: scale(0.3);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(3.5);
+    opacity: 0;
+  }
 }
 
 /* Asset-Free Micro Vector Animation 02: Cryptographic Security Scanner */
@@ -156,8 +167,15 @@
 }
 
 @keyframes systemScanVertical {
-  0%, 100% { top: 0%; }
-  50% { top: 100%; }
+
+  0%,
+  100% {
+    top: 0%;
+  }
+
+  50% {
+    top: 100%;
+  }
 }
 
 .matrix-code-nodes {
@@ -233,7 +251,9 @@
   letter-spacing: -0.01em;
 }
 
-.text-magenta { color: var(--accent-magenta) !important; }
+.text-magenta {
+  color: var(--accent-magenta) !important;
+}
 
 /* Interactive CTA Action Elements */
 .project-explore-btn {
@@ -261,6 +281,7 @@
 .project-explore-btn:hover {
   color: var(--text-main);
 }
+
 .project-explore-btn:hover i {
   transform: translateX(3px);
   color: var(--accent-magenta);
@@ -287,7 +308,7 @@
     gap: 0.75rem;
     -webkit-overflow-scrolling: touch;
   }
-  
+
   .filter-tag {
     flex-shrink: 0;
     padding: 0.5rem 1rem;
@@ -298,19 +319,22 @@
   }
 
   /* Discards alternating widescreen grid layouts completely into vertical streams */
-  .project-record-block, .reverse-layout {
+  .project-record-block,
+  .reverse-layout {
     grid-template-columns: 1fr;
     gap: 2.25rem;
   }
 
   /* Forces visual system panels to sit uniformly on top of details */
-  .project-visual-surface, .reverse-layout .project-visual-surface {
+  .project-visual-surface,
+  .reverse-layout .project-visual-surface {
     order: 1 !important;
     height: 240px;
     border-radius: var(--radius);
   }
 
-  .project-content-surface, .reverse-layout .project-content-surface {
+  .project-content-surface,
+  .reverse-layout .project-content-surface {
     order: 2 !important;
     text-align: center;
   }
@@ -337,7 +361,8 @@
   }
 
   .project-record-block:hover .project-visual-surface {
-    transform: translateY(-2px); /* Softens movement payloads explicit to mobile touch paths */
+    transform: translateY(-2px);
+    /* Softens movement payloads explicit to mobile touch paths */
   }
 }
 
@@ -355,7 +380,7 @@
 
 .project-blueprint-section {
   position: relative;
-  padding: 8rem 0;
+  padding: 5rem 0;
   background-color: var(--bg-dark);
   border-top: 1px solid var(--glass-border);
   overflow: hidden;
@@ -449,8 +474,10 @@
 }
 
 /* --- Interactive Active State Triggers --- */
-.directory-row-node:hover, .active-dir-row {
-  background: var(--bg-surface-hover); /* Plum block highlight match */
+.directory-row-node:hover,
+.active-dir-row {
+  background: var(--bg-surface-hover);
+  /* Plum block highlight match */
   border-color: rgba(168, 85, 247, 0.3);
   transform: translateX(6px);
 }
@@ -511,7 +538,10 @@
   font-size: 0.65rem;
   font-weight: 700;
 }
-.text-green { color: #10b981; }
+
+.text-green {
+  color: #10b981;
+}
 
 .sheet-heading {
   font-size: 1.5rem;
@@ -559,8 +589,13 @@
   font-weight: 600;
 }
 
-.text-violet { color: var(--accent-violet); }
-.text-magenta { color: var(--accent-magenta); }
+.text-violet {
+  color: var(--accent-violet);
+}
+
+.text-magenta {
+  color: var(--accent-magenta);
+}
 
 .terminal-box-footer {
   border-top: 1px solid rgba(255, 255, 255, 0.04);
@@ -608,9 +643,11 @@
   .directory-row-node {
     padding: 1rem 1.25rem;
   }
-  
-  .directory-row-node:hover, .active-dir-row {
-    transform: translateY(-2px); /* Swaps horizontal offset trajectory on mobile viewports */
+
+  .directory-row-node:hover,
+  .active-dir-row {
+    transform: translateY(-2px);
+    /* Swaps horizontal offset trajectory on mobile viewports */
   }
 
   .blueprint-terminal-box {
@@ -655,7 +692,7 @@
 
 .lifecycle-wall-section {
   position: relative;
-  padding: 8rem 0;
+  padding: 5rem 0;
   background-color: var(--bg-dark);
   border-top: 1px solid var(--glass-border);
 }
@@ -744,7 +781,8 @@
   }
 
   .lifecycle-telemetry-grid::before {
-    display: none; /* Discard horizontal rail to accommodate vertical flow */
+    display: none;
+    /* Discard horizontal rail to accommodate vertical flow */
   }
 
   .lifecycle-node {
@@ -771,7 +809,7 @@
 
 .cluster-status-section {
   position: relative;
-  padding: 8rem 0;
+  padding: 5rem 0;
   background-color: var(--bg-dark);
   border-top: 1px solid var(--glass-border);
   overflow: hidden;
@@ -838,9 +876,20 @@
 }
 
 /* Simulated Hardware Activity Resource Load Profiles */
-.load-low  { background-color: rgba(168, 85, 247, 0.05); border-color: rgba(168, 85, 247, 0.15); }
-.load-mid  { background-color: rgba(168, 85, 247, 0.15); border-color: rgba(168, 85, 247, 0.3); }
-.load-high { background-color: rgba(244, 63, 94, 0.15); border-color: rgba(244, 63, 94, 0.3); }
+.load-low {
+  background-color: rgba(168, 85, 247, 0.05);
+  border-color: rgba(168, 85, 247, 0.15);
+}
+
+.load-mid {
+  background-color: rgba(168, 85, 247, 0.15);
+  border-color: rgba(168, 85, 247, 0.3);
+}
+
+.load-high {
+  background-color: rgba(244, 63, 94, 0.15);
+  border-color: rgba(244, 63, 94, 0.3);
+}
 
 .load-pulse {
   background-color: var(--accent-magenta);
@@ -850,8 +899,15 @@
 }
 
 @keyframes hardwareActiveCorePulse {
-  0% { opacity: 0.4; filter: blur(1px); }
-  100% { opacity: 1; filter: blur(0px); }
+  0% {
+    opacity: 0.4;
+    filter: blur(1px);
+  }
+
+  100% {
+    opacity: 1;
+    filter: blur(0px);
+  }
 }
 
 /* ==========================================================================
@@ -860,7 +916,8 @@
 
 .live-telemetry-terminal {
   position: relative;
-  background: var(--bg-surface); /* Premium deep plum velvet matrix layout underlay */
+  background: var(--bg-surface);
+  /* Premium deep plum velvet matrix layout underlay */
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
   border: 1px solid var(--glass-border);
@@ -922,12 +979,27 @@
   line-height: 1.5;
 }
 
-.stream-log-row .time { color: var(--accent-magenta); opacity: 0.6; flex-shrink: 0; }
-.stream-log-row .event { color: var(--text-muted); }
+.stream-log-row .time {
+  color: var(--accent-magenta);
+  opacity: 0.6;
+  flex-shrink: 0;
+}
 
-.text-violet { color: var(--accent-violet) !important; }
-.text-magenta { color: var(--accent-magenta) !important; }
-.text-green { color: #10b981 !important; }
+.stream-log-row .event {
+  color: var(--text-muted);
+}
+
+.text-violet {
+  color: var(--accent-violet) !important;
+}
+
+.text-magenta {
+  color: var(--accent-magenta) !important;
+}
+
+.text-green {
+  color: #10b981 !important;
+}
 
 .terminal-footer-ticker {
   border-top: 1px solid rgba(255, 255, 255, 0.04);
@@ -1010,7 +1082,7 @@
 
 .project-faq-section {
   position: relative;
-  padding: 8rem 0;
+  padding: 5rem 0;
   background-color: var(--bg-dark);
   overflow: hidden;
 }
@@ -1046,7 +1118,8 @@
 
 .project-faq-row {
   position: relative;
-  background: var(--bg-surface); /* Luxury warm plum velvet undertone overlay layout */
+  background: var(--bg-surface);
+  /* Luxury warm plum velvet undertone overlay layout */
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
   border: 1px solid var(--glass-border);
@@ -1123,23 +1196,25 @@
 }
 
 /* Checked transformation calculations on container elements */
-.proj-accordion-toggle:checked ~ .project-faq-row,
+.proj-accordion-toggle:checked~.project-faq-row,
 .project-faq-row:has(.proj-accordion-toggle:checked) {
   border-color: var(--accent-violet);
-  background: rgba(38, 32, 59, 0.4); /* Highlight plum baseline match block */
+  background: rgba(38, 32, 59, 0.4);
+  /* Highlight plum baseline match block */
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4), 0 0 15px rgba(168, 85, 247, 0.1);
 }
 
 /* Rotate vector markers into a clean minus sign upon user click activation */
-.proj-accordion-toggle:checked + .proj-row-trigger .proj-vector-cross::before {
+.proj-accordion-toggle:checked+.proj-row-trigger .proj-vector-cross::before {
   background-color: var(--accent-magenta);
   transform: rotate(180deg);
 }
 
-.proj-accordion-toggle:checked + .proj-row-trigger .proj-vector-cross .cross-rail {
+.proj-accordion-toggle:checked+.proj-row-trigger .proj-vector-cross .cross-rail {
   background-color: var(--accent-magenta);
   transform: rotate(90deg);
-  opacity: 0; /* Clear out vertical segment perfectly to display clear minus */
+  opacity: 0;
+  /* Clear out vertical segment perfectly to display clear minus */
 }
 
 /* Dynamic slide reveal compartment limits */
@@ -1157,8 +1232,9 @@
 }
 
 /* Expand module panel using dynamic max height bounds */
-.proj-accordion-toggle:checked ~ .proj-expansion-panel {
-  max-height: 350px; /* Safe padding limit constraints for smooth travel movement */
+.proj-accordion-toggle:checked~.proj-expansion-panel {
+  max-height: 350px;
+  /* Safe padding limit constraints for smooth travel movement */
 }
 
 /* ==========================================================================
@@ -1180,13 +1256,15 @@
   }
 
   .proj-row-title {
-    font-size: var(--fs-p); /* Compresses row copy metrics cleanly to text caps */
+    font-size: var(--fs-p);
+    /* Compresses row copy metrics cleanly to text caps */
     line-height: 1.4;
   }
 
   .panel-content-inner {
     padding: 0 1.25rem 1.5rem 1.25rem;
-    font-size: var(--fs-p-sm); /* Standardizes text grids down to your 0.875rem body matrix scale */
+    font-size: var(--fs-p-sm);
+    /* Standardizes text grids down to your 0.875rem body matrix scale */
     line-height: 1.6;
   }
 }
@@ -1206,7 +1284,7 @@
 
 .project-cta-section {
   position: relative;
-  padding: 8rem 0 10rem 0;
+  padding: 5rem 0 5rem 0;
   background-color: var(--bg-dark);
   border-top: 1px solid var(--glass-border);
   overflow: hidden;
@@ -1230,7 +1308,8 @@
   z-index: 5;
   max-width: 920px;
   margin: 0 auto;
-  background: var(--bg-surface); /* Premium warm plum velvet base layout */
+  background: var(--bg-surface);
+  /* Premium warm plum velvet base layout */
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
   border: 1px solid var(--glass-border);
@@ -1270,12 +1349,14 @@
   height: 6px;
   border-radius: 50%;
 }
+
 .status-ping-green {
   background-color: #10b981;
   box-shadow: 0 0 10px #10b981;
 }
 
-.frame-label, .frame-id {
+.frame-label,
+.frame-id {
   font-family: monospace;
   font-size: 0.7rem;
   letter-spacing: 1px;
@@ -1315,9 +1396,17 @@
   margin-bottom: 4rem;
 }
 
-.text-magenta { color: var(--accent-magenta); }
-.icon-slide { transition: transform 0.3s ease; }
-.btn-main:hover .icon-slide { transform: translateX(4px); }
+.text-magenta {
+  color: var(--accent-magenta);
+}
+
+.icon-slide {
+  transition: transform 0.3s ease;
+}
+
+.btn-main:hover .icon-slide {
+  transform: translateX(4px);
+}
 
 /* Technical Reference Lines */
 .gateway-spec-footer {
@@ -1331,10 +1420,23 @@
   color: var(--text-muted);
 }
 
-.gateway-spec-footer .spec-footer-metric { display: flex; gap: 0.5rem; }
-.gateway-spec-footer .lbl { opacity: 0.3; }
-.gateway-spec-footer .val { color: var(--text-main); font-weight: 600; }
-.text-green { color: #10b981 !important; }
+.gateway-spec-footer .spec-footer-metric {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.gateway-spec-footer .lbl {
+  opacity: 0.3;
+}
+
+.gateway-spec-footer .val {
+  color: var(--text-main);
+  font-weight: 600;
+}
+
+.text-green {
+  color: #10b981 !important;
+}
 
 /* ==========================================================================
    768PX RESPONSIVE BREAKPOINT PARADIGM (MOBILE COMPRESSION RE-ENGINE)
@@ -1356,7 +1458,8 @@
   }
 
   .frame-id {
-    display: none; /* Empties out structural clutter to keep clean spacing boundaries */
+    display: none;
+    /* Empties out structural clutter to keep clean spacing boundaries */
   }
 
   .gateway-main-title {

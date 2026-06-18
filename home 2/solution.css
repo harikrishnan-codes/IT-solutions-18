@@ -136,7 +136,7 @@
 
 .threat-isolation-section {
   position: relative;
-  padding: 8rem 0;
+  padding: 5rem 0;
   background-color: var(--bg-dark);
   border-top: 1px solid var(--glass-border);
   overflow: hidden;
@@ -412,7 +412,7 @@
 
 .case-ledger-section {
   position: relative;
-  padding: 8rem 0;
+  padding: 5rem 0;
   background-color: var(--bg-dark);
   border-top: 1px solid var(--glass-border);
 }
@@ -654,7 +654,7 @@
 
 .horizon-slider-section {
   position: relative;
-  padding: 10rem 0;
+  padding: 5rem 0;
   background-color: var(--bg-dark);
   border-top: 1px solid var(--glass-border);
   overflow: hidden;
@@ -932,7 +932,7 @@
 
 .ops-matrix-section {
   position: relative;
-  padding: 8rem 0;
+  padding: 5rem 0;
   background-color: var(--bg-dark);
   border-top: 1px solid var(--glass-border);
   overflow: hidden;
@@ -1248,7 +1248,7 @@
 
 .tech-faq-section {
   position: relative;
-  padding: 8rem 0;
+  padding: 5rem 0;
   background-color: var(--bg-dark);
   overflow: hidden;
 }
@@ -1509,7 +1509,7 @@
 
 .gateway-cta-section {
   position: relative;
-  padding: 10rem 0;
+  padding: 5rem 0;
   background-color: var(--bg-dark);
   overflow: hidden;
 }
